@@ -1,5 +1,5 @@
 ###################
-What is CodeIgniter
+SARUGO
 ###################
 
 CodeIgniter is an Application Development Framework - a toolkit - for people
