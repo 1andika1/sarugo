@@ -25,12 +25,32 @@ class adm_sarugo extends CI_Controller {
         $this->load->view('admin/adm_statis_rpage');
         $this->load->view('templates/footer');
     }
-
+    /* 
+     Section to create new statis page 
+     */
     public function statis_create()
     {
         $this->load->view('admin/adm_statis_cpage');
         $this->load->view('templates/footer');
     }
+    // method to add and store new data of hal_statis to db
+    public function add_new_hal_statis()
+    {
+        var_dump($_POST,$_FILES);die();
+
+        // get data from post method
+        $judul          = $_POST["judul_hlmstat"];
+        $isi            = $_POST["isi_hlmsat"];
+        $gambar         = $_POST["gambar"];
+        $addToBeranda   = $_POST["tampilkan_hlmstat"];
+
+    }
+
+    // methode to upload image
+    
+    // end of method to upload image
+
+    /* end section from add new static page */
 
     public function statis_update()
     {

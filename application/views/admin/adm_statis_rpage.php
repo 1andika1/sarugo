@@ -30,7 +30,7 @@
                      </div>
                  </div>
                  <div class="table-data__tool-right">
-                     <a href="statis_create"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                     <a href="<?= base_url('admin/statisController/statis_create')?>"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
                          <i class="zmdi zmdi-plus"></i>tambah data</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                          <!-- <select class="js-select2" name="type">

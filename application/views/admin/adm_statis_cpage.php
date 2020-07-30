@@ -21,7 +21,7 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?php echo site_url('admin/statisController/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
@@ -51,15 +51,7 @@
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>
-                <div class="row form-group">
-                    <div class="col col-md-3">
-                        <label for="text-input" class=" form-control-label">Link Halaman</label>
-                    </div>
-                    <div class="col-12 col-md-9">
-                        <input type="text" id="link_hlmstat" name="link_hlmstat" class="form-control">
-                        <small class="form-text text-muted">Masukan Link Halaman Statis</small>
-                    </div>
-                </div>
+                
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label class=" form-control-label">Tampilkan di Beranda?</label>
@@ -67,15 +59,13 @@
                     <div class="col col-md-9">
                         <div class="form-check-inline form-check">
                             <label for="inline-checkbox1" class="form-check-label ">
-                                <input type="checkbox" id="tampilkan_hlmstat" name="tampilkan_hlmstat" value="option1" class="form-check-input">Ya
+                                <input type="checkbox" id="tampilkan_hlmstat" name="tampilkan_hlmstat" value="1" class="form-check-input">Ya
                             </label>
                         </div>
                     </div>
                 </div>
-                
-            </form>
-        </div>
-        <div class="card-footer">
+
+                <div class="card-footer">
             <button type="submit" class="btn btn-primary btn-sm">
                 <i class="fa fa-dot-circle-o"></i> Submit
             </button>
@@ -83,6 +73,10 @@
                 <i class="fa fa-ban"></i> Reset
             </button>
         </div>
+                
+            </form>
+        </div>
+       
     </div>
     
 </div>

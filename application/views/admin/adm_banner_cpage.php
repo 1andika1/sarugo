@@ -33,12 +33,12 @@
                     </div>
                 </div>
 
-                <div class="row form-group">
+                <div class="d-none row form-group">
                 
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Link Halaman</label>
                     </div>
-                    <div class="col-12 col-md-9">
+                    <div class="d-none col-12 col-md-9">
                         <input type="text" id="link_banner" name="link_banner" class="form-control">
                         <small class="form-text text-muted">Masukan Link Halaman Statis</small>
                     </div>
