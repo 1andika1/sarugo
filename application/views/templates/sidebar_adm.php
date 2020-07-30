@@ -16,12 +16,12 @@
                         <nav class="navbar-sidebar">
                             <ul class="list-unstyled navbar__list">
                                 <li>
-                                    <a class="js-arrow" href="home_page">
+                                    <a class="js-arrow" href="home">
                                         <i class="fas fa-home"></i>Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="statis_read">
+                                    <a href="statisController">
                                         <i class="fas fa-chart-bar"></i>Halaman Statis</a>
                                 </li>
                                 <li>

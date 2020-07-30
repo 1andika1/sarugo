@@ -46,12 +46,12 @@
                  <table class="table table-data2">
                      <thead>
                          <tr>
-                             <th>
+                             <!-- <th>
                                  <label class="au-checkbox">
                                      <input type="checkbox">
                                      <span class="au-checkmark"></span>
                                  </label>
-                             </th>
+                             </th> -->
                              <th>no</th>
                              <th>judul</th>
                              <th>link halaman</th>
@@ -59,16 +59,17 @@
                          </tr>
                      </thead>
                      <tbody>
+                        <?php $counter=1; foreach ($halaman as $key => $value): ?>
                          <tr class="tr-shadow">
-                             <td>
+                             <!-- <td>
                                  <label class="au-checkbox">
                                      <input type="checkbox">
                                      <span class="au-checkmark"></span>
                                  </label>
-                             </td>
-                             <td>1</td>
+                             </td> -->
+                             <td><?= $counter++ ?></td>
                              <td>
-                                 <span>Profil dan Sejarah</span>
+                                 <span><?= $value->judul?></span>
                              </td>
                              <td class="link">halamanprofil.html</td>
                         
@@ -87,34 +88,7 @@
                              </td>
                              <td></td>
                          </tr>
-                         <tr class="tr-shadow">
-                             <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </td>
-                             <td>2</td>
-                             <td>
-                                 <span>Akses dan Lokasi</span>
-                             </td>
-                             <td class="link">halamanakses.html</td>
-                             
-                             <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button>
-                                     <a href="statis_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
-                                 </div>
-                             </td>
-                             <td></td>
-                         </tr>
+                         <?php endforeach ?>
                      </tbody>
                  </table>
              </div>

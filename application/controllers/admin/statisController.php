@@ -10,7 +10,8 @@ class StatisController extends CI_Controller{
     
     public function index()
     {
-        $this->load->view('admin/adm_statis_rpage');
+        $data['halaman'] = $this->StaticPageModel->getAllStaticPage();
+        $this->load->view('admin/adm_statis_rpage',$data);
         $this->load->view('templates/footer');
     }
     /* 
@@ -66,5 +67,8 @@ class StatisController extends CI_Controller{
             return 'assets/images/statis/'.$nama;
         }
     }
+    // end of section of add new static page
+
+
 }
 ?>

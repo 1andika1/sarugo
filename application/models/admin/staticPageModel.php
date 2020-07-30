@@ -15,4 +15,9 @@ class StaticPageModel extends CI_Model{
 
         $this->db->insert("hal_statis",$data);
     }
+
+    public function getAllStaticPage()
+    {
+        return $this->db->get("hal_statis")->result();
+    }
 }
