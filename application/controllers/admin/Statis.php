@@ -1,6 +1,6 @@
 <?php
 
-class StatisController extends CI_Controller{
+class Statis extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
@@ -32,7 +32,7 @@ class StatisController extends CI_Controller{
         $judul          = $_POST["judul_hlmstat"];
         $isi            = $_POST["isi_hlmsat"];
         $gambar         = $this->upload();
-        $addToBeranda   = $_POST["tampilkan_hlmstat"];
+        $addToBeranda   = isset($_POST["tampilkan_hlmstat"])?true:false;
 
         if(!$gambar){
             echo `<script> alert(" gagal upload gambar") </script>`;
@@ -40,7 +40,7 @@ class StatisController extends CI_Controller{
 
         
             $this->StaticPageModel->add($judul,$isi,$gambar,$addToBeranda);
-            redirect(base_url('admin/statisController/'));
+            redirect(base_url('admin/statis/'));
         
 
     }
@@ -69,6 +69,44 @@ class StatisController extends CI_Controller{
     }
     // end of section of add new static page
 
+    // edit
+    public function edit()
+    {
+        $data["halaman"] = $this->StaticPageModel->getDataByID($_GET["id"]);
+        $this->load->view("admin/adm_statis_upage",$data);
+        $this->load->view("templates/footer");
+    }
+
+    // upload
+    public function update()
+    {
+        $judul          = $_POST["judul_hlmstat"];
+        $isi            = $_POST["isi_hlmsat"];
+        $gambar         = $this->upload();
+        $addToBeranda   = isset($_POST["tampilkan_hlmstat"])?true:false;
+
+        if(!$gambar){
+            echo `<script> alert(" gagal upload gambar") </script>`;
+        }
+
+        $data= array(
+            "judul"=>$judul,
+            "isi"   => $isi,
+            "gambar"=> $gambar,
+            "add_to_beranda"=> $addToBeranda
+        );
+        
+            $this->StaticPageModel->update($_POST["id"],$data);
+            redirect(base_url('admin/statis/'));
+        
+    }
+
+    // delete page
+    public function delete()
+    {
+       $this->StaticPageModel->delete($_GET["id"]);
+       redirect(base_url("admin/statis"));
+    }
 
 }
 ?>

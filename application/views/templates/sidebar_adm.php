@@ -1,7 +1,7 @@
 <!-- MENU SIDEBAR-->
 <aside class="menu-sidebar d-none d-lg-block">
                     <div >
-                    <a  href="home_page">
+                    <a  href="<?=base_url("admin/home")?>">
                             <img src="<?= base_url() ?>assets/images/sarugo-logo.png" alt="SARUGO" />
                         </a>
                     </div>
@@ -16,12 +16,12 @@
                         <nav class="navbar-sidebar">
                             <ul class="list-unstyled navbar__list">
                                 <li>
-                                    <a class="js-arrow" href="home">
+                                    <a class="js-arrow" href="<?=base_url("admin/home")?>">
                                         <i class="fas fa-home"></i>Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="statisController">
+                                    <a href="<?=base_url("admin/statis")?>">
                                         <i class="fas fa-chart-bar"></i>Halaman Statis</a>
                                 </li>
                                 <li>

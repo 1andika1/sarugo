@@ -20,4 +20,23 @@ class StaticPageModel extends CI_Model{
     {
         return $this->db->get("hal_statis")->result();
     }
+
+    public function getDataByID($id)
+    {
+        return $this->db->get_where("hal_statis",["id"=>$id])->result();
+    }
+
+    // update data
+    public function update($id,$data)
+    {
+       $this->db->where("id",$id);
+       $this->db->update("hal_statis",$data);
+    }
+
+    // delete data from database
+    public function delete($id)
+    {
+        $this->db->where("id",$id);
+        $this->db->delete("hal_statis");
+    }
 }

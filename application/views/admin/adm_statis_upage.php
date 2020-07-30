@@ -1,4 +1,4 @@
-<div class="main-content">
+<?php $data = $halaman[0]?><div class="main-content">
      <div class="section__content section__content--p30">
          <div class="container-fluid">
              <div class="row">
@@ -21,14 +21,14 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-                
+            <form action="<?php echo base_url('admin/statis/update'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <input type="hidden" name="id" value="<?=$data->id?>">
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Judul Halaman</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="judul_hlmstat" name="judul_hlmstat" class="form-control">
+                        <input value="<?=$data->judul?>" type="text" id="judul_hlmstat" name="judul_hlmstat" class="form-control">
                         <small class="form-text text-muted">Masukan Judul Halaman Statis</small>
                     </div>
                 </div>
@@ -38,7 +38,8 @@
                         <label for="textarea-input" class=" form-control-label">Isi Halaman Statis</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="isi_hlmsat" id="isi_hlmstat" rows="9" placeholder="Masukkan isi halaman statis ..." class="form-control"></textarea>
+                        <textarea name="isi_hlmsat" id="isi_hlmstat" rows="9" placeholder="Masukkan isi halaman statis ..." class="form-control"><?= $data->isi ?>
+                        </textarea>
                     </div>
                 </div>
                 
@@ -51,15 +52,7 @@
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>
-                <div class="row form-group">
-                    <div class="col col-md-3">
-                        <label for="text-input" class=" form-control-label">Link Halaman</label>
-                    </div>
-                    <div class="col-12 col-md-9">
-                        <input type="text" id="link_hlmstat" name="link_hlmstat" class="form-control">
-                        <small class="form-text text-muted">Masukan Link Halaman Statis</small>
-                    </div>
-                </div>
+                
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label class=" form-control-label">Tampilkan di Beranda?</label>
@@ -67,21 +60,21 @@
                     <div class="col col-md-9">
                         <div class="form-check-inline form-check">
                             <label for="inline-checkbox1" class="form-check-label ">
-                                <input type="checkbox" id="tampilkan_hlmstat" name="tampilkan_hlmstat" value="option1" class="form-check-input">Ya
+                                <input <?= $data->add_to_beranda?"checked":"";?> type="checkbox" id="tampilkan_hlmstat" name="tampilkan_hlmstat" value="option1" class="form-check-input">Ya
                             </label>
                         </div>
                     </div>
                 </div>
                 
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Batal
+                    </button>
+                </div>
             </form>
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Batal
-            </button>
         </div>
     </div>
     

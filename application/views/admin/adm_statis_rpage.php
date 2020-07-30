@@ -30,7 +30,7 @@
                      </div>
                  </div>
                  <div class="table-data__tool-right">
-                     <a href="<?= base_url('admin/statisController/statis_create')?>"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                     <a href="<?= base_url('admin/statis/statis_create')?>"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
                          <i class="zmdi zmdi-plus"></i>tambah data</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                          <!-- <select class="js-select2" name="type">
@@ -78,12 +78,14 @@
                                      <button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                          <i class="zmdi zmdi-eye"></i>
                                      </button>
-                                     <a href="statis_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                     <a href='<?=base_url("admin/statis/edit?id=$value->id")?>'><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>
                                      </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
+                                     <a href="<?= base_url("admin/statis/delete?id=$value->id") ?>">
+                                        <button  class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                     </a>
                                  </div>
                              </td>
                              <td></td>
