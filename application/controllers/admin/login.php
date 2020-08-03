@@ -12,7 +12,7 @@ class login extends CI_Controller {
         //$this->load->model('');
     }
 
-    public function start_login()
+    public function index()
     {
         $this->load->view('templates/login_view');
     }

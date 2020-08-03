@@ -85,6 +85,8 @@ class Statis extends CI_Controller{
         $gambar         = $this->upload();
         $addToBeranda   = isset($_POST["tampilkan_hlmstat"])?true:false;
 
+        if(!$gambar)
+            $gambar = $this->db->get_where("hal_statis",["id"=>$_POST["id"]])->result()[0]["gambar"];
         if(!$gambar){
             echo `<script> alert(" gagal upload gambar") </script>`;
         }
