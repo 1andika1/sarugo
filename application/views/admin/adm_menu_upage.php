@@ -13,8 +13,9 @@
              <div class="row m-t-25">
                  <div class="col-sm-6 col-lg-3">
                  </div>
-             </div>
- 
+             </div> 
+
+
 <div class="col-lg-12">
     <div class="card">
         <!--<div class="card-header">
@@ -38,7 +39,17 @@
                         <label for="text-input" class=" form-control-label">Link Halaman</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input value="<?= $menu->link_hal_statis ?>" type="text" id="link_menu" name="link_menu" class="form-control">
+                    <div class="rs-select2--primary rs-select2--md rs-select2--primary">
+                            <select class="js-select2" name="link_menu">
+                                <option >None</option>
+                                <?php foreach ($titles as $key => $value) : ?>
+                                     <option selected="<?=  $menu->link_hal_statis ==  $value->judul ? 'selected' : ''?>" value="<?= $value->judul?>"><?= $value->judul ?></option>
+                                     <option selected="<?=  $menu->link_hal_statis ==  $value->judul ? 'selected' : ''?>" value="<?= $value->judul?>"><?= $menu->link_hal_statis ?></option>
+                                
+                                <?php endforeach ?>
+                            </select>
+                            <div class="dropDownSelect2"></div>
+                        </div>
                         <small class="form-text text-muted">Masukan Link Halaman Statis</small>
                     </div>
                 </div>

@@ -20,7 +20,7 @@
                  <div class="table-data__tool-left">
                      <div class="rs-select2--light rs-select2--md">
                      <form class="form-header form-header" action="" method="post">
-                                    <input class="au-input au-input--w400" type="text" placeholder="Cari data ...">
+                                    <input class="au-input au-input--w400" type="text" placeholder="Cari Menu ...">
                                     <button class="au-btn--submit" type="submit">
                                         <i class="zmdi zmdi-search"></i>
                                     </button>
@@ -29,13 +29,13 @@
                  </div>
                  <div class="table-data__tool-right">
                  <a href="<?=base_url("admin/menu/add")?>"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                         <i class="zmdi zmdi-plus"></i>Tambah Data</button></a>
+                         <i class="zmdi zmdi-plus"></i>Tambah Menu</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <!-- <select class="js-select2" name="type">
                              <option selected="selected">Export</option>
                              <option value="">Option 1</option>
                              <option value="">Option 2</option>
-                         </select>-->
+                         </select> -->
                          <div class="dropDownSelect2"></div>
                      </div>
                  </div>
@@ -46,7 +46,7 @@
                          <tr> 
                              <th>no</th>
                              <th>menu</th>
-                             <th>link halaman</th>
+                             <th> halaman</th>
                              <th>Status</th>
                              <th>aksi</th>
                          </tr>
@@ -80,6 +80,8 @@
                                      </a>
                                  </div>
                              </td>
+                             <td></td>
+                             <td></td>
                              <td></td>
                          </tr>
                          <?php endforeach ?>

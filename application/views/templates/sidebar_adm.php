@@ -29,41 +29,41 @@
                                         <i class="fas fa-bars"></i>Menu</a>
                                 </li>
                                 <li>
-                                    <a href="submenu_read">
+                                    <a href="<?=base_url("admin/submenu")?>">
                                         <i class="fas fa-indent"></i>Sub Menu
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="banner_read">
+                                    <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-picture-o"></i>Banner/Slider
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="wisata_read">
+                                    <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-location-arrow"></i>Wisata
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="produk_read">
+                                    <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-tag"></i>Produk
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="paketwisata_read">
+                                    <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-bookmark"></i>Paket Wisata
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="testimoni_read">
+                                    <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-comment"></i>Testimoni
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="berita_read">
+                                    <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-desktop"></i>Berita
                                     </a>
                                 </li>

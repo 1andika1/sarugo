@@ -39,4 +39,11 @@ class StaticPageModel extends CI_Model{
         $this->db->where("id",$id);
         $this->db->delete("hal_statis");
     }
+
+    // fungsi untuk mengambil semua judul halaman statis
+    public function getAllTitle()
+    {
+        $this->db->select("judul");
+        return $this->db->get("hal_statis")->result();
+    }
 }

@@ -18,7 +18,10 @@ class Menu extends CI_Controller{
     public function add()
     {
         # add new menu
-        $this->load->view('admin/adm_menu_cpage');
+        // berikan data2 judul halaman statis ke halaman create menu
+        $data["halaman"] = $this->StaticPageModel->getAllTitle();
+        // var_dump($data);die();
+        $this->load->view('admin/adm_menu_cpage',$data);
         $this->load->view('templates/footer');
     }
     public function addnew()
@@ -38,6 +41,7 @@ class Menu extends CI_Controller{
 
     public function update()
     {
+        $data["titles"] = $this->StaticPageModel->getAllTitle();
         $data["menu"] = $this->MenuModel->getMenuById($_GET["id"])->result()[0];
         $this->load->view('admin/adm_menu_upage',$data);
         $this->load->view('templates/footer');

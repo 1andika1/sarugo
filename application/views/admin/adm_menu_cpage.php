@@ -38,7 +38,16 @@
                         <label for="text-input" class=" form-control-label">Link Halaman</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="link_menu" name="link_menu" class="form-control">
+                        <!-- <input type="text" id="link_menu" name="link_menu" class="form-control"> -->
+                        <div class="rs-select2--primary rs-select2--md rs-select2--primary">
+                            <select class="js-select2" name="link_menu">
+                                <option selected="selected">None</option>
+                                <?php foreach ($halaman as $key => $value) : ?>
+                                    <option value="<?= $value->judul?>"><?= $value->judul?></option>
+                                <?php endforeach ?>
+                            </select>
+                            <div class="dropDownSelect2"></div>
+                        </div>
                         <small class="form-text text-muted">Masukan Link Halaman Statis</small>
                     </div>
                 </div>
