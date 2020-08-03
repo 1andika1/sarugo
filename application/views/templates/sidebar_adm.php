@@ -25,7 +25,7 @@
                                         <i class="fas fa-chart-bar"></i>Halaman Statis</a>
                                 </li>
                                 <li>
-                                    <a href="menu_read">
+                                    <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-bars"></i>Menu</a>
                                 </li>
                                 <li>

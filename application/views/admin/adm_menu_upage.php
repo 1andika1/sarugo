@@ -21,14 +21,14 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-                
+            <form action="<?php echo base_url('admin/menu/updateData'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <input type="hidden" name="id" value="<?= $menu->id ?>">
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Nama Menu</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="nama_menu" name="nama_menu" class="form-control">
+                        <input value="<?= $menu->nama_menu ?>" type="text" id="nama_menu" name="nama_menu" class="form-control">
                         <small class="form-text text-muted">Masukan nama menu</small>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <label for="text-input" class=" form-control-label">Link Halaman</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="link_menu" name="link_menu" class="form-control">
+                        <input value="<?= $menu->link_hal_statis ?>" type="text" id="link_menu" name="link_menu" class="form-control">
                         <small class="form-text text-muted">Masukan Link Halaman Statis</small>
                     </div>
                 </div>
@@ -49,21 +49,21 @@
                     <div class="col col-md-9">
                         <div class="form-check-inline form-check">
                             <label for="inline-checkbox1" class="form-check-label ">
-                                <input type="checkbox" id="tampilkan_menu" name="tampilkan_menu" value="option1" class="form-check-input">Ya
+                                <input <?= $menu->status_menu  ? "checked":"" ?> type="checkbox" id="tampilkan_menu" name="tampilkan_menu" value="1" class="form-check-input">Ya
                             </label>
                         </div>
                     </div>
                 </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Batal
+                    </button>
+                </div>
                 
             </form>
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Batal
-            </button>
         </div>
     </div>
     

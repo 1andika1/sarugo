@@ -28,7 +28,7 @@
                      </div>
                  </div>
                  <div class="table-data__tool-right">
-                 <a href="menu_create"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                 <a href="<?=base_url("admin/menu/add")?>"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
                          <i class="zmdi zmdi-plus"></i>Tambah Data</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <!-- <select class="js-select2" name="type">
@@ -43,13 +43,7 @@
              <div class="table-responsive table-responsive-data2">
                  <table class="table table-data2">
                      <thead>
-                         <tr>
-                             <th>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </th>
+                         <tr> 
                              <th>no</th>
                              <th>menu</th>
                              <th>link halaman</th>
@@ -58,66 +52,38 @@
                          </tr>
                      </thead>
                      <tbody>
-                         <tr class="tr-shadow">
+
+                        <?php $count=1; foreach ($menu as $key => $value) : ?>
+                         <tr class="tr-shadow"> 
+                             <td><?=$count++?></td>
                              <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
+                                 <span><?= $value->nama_menu ?></span>
                              </td>
-                             <td>1</td>
+                             <td class="link"><?= $value->link_hal_statis ?></td>
                              <td>
-                                 <span>Home</span>
-                             </td>
-                             <td class="link">halamanhome.html</td>
-                             <td>
-                                 <span class="status--process">Aktif</span>
+                                 <span class="status--<?= $value->status_menu? "process" : ""?>"><?= $value->status_menu ? "Aktif" : "Tidak Aktif" ?></span>
                              </td>
                              <td>
                                  <div class="table-data-feature">
                                      <button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                          <i class="zmdi zmdi-eye"></i>
                                      </button>
-                                     <a href="menu_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                     <a href="<?=base_url("admin/menu/update?id=$value->id")?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>
                                      </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
+                                    
+                                     <a href="<?=base_url("admin/menu/delete?id=$value->id")?>">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+
+                                     </a>
                                  </div>
                              </td>
                              <td></td>
                          </tr>
-                         <tr class="tr-shadow">
-                             <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </td>
-                             <td>2</td>
-                             <td>
-                                 <span>Tentang Kami</span>
-                             </td>
-                             <td class="link">halamantentang.html</td>
-                             <td>
-                                 <span class="status--denied">Nonaktif</span>
-                             </td>
-                             <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button>
-                                     <a href="menu_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
-                                 </div>
-                             </td>
-                             <td></td>
-                         </tr>
+                         <?php endforeach ?>
+                          
                      </tbody>
                  </table>
              </div>

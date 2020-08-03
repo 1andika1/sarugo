@@ -21,7 +21,7 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?= base_url('admin/menu/addnew'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
@@ -49,21 +49,21 @@
                     <div class="col col-md-9">
                         <div class="form-check-inline form-check">
                             <label for="inline-checkbox1" class="form-check-label ">
-                                <input type="checkbox" id="tampilkan_menu" name="tampilkan_menu" value="option1" class="form-check-input">Ya
+                                <input type="checkbox" id="tampilkan_menu" name="tampilkan_menu" value="1" class="form-check-input">Ya
                             </label>
                         </div>
                     </div>
                 </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
                 
             </form>
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Submit
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Reset
-            </button>
         </div>
     </div>
     
