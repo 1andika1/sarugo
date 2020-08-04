@@ -5,7 +5,9 @@ class Testimoni extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('templates/usersTemplates/header'); 
+		$data['menu'] = $this->MenuModel->getAllMenu();
+		$data['subMenu'] = $this->SubMenuModel->getAllSubMenu(); 
+		$this->load->view('templates/usersTemplates/header',$data);
 		$this->load->view('User/Testimoni');
 		$this->load->view('templates/usersTemplates/footer');
     }

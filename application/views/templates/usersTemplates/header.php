@@ -119,9 +119,37 @@
           <li><a href="<?=base_url("berita")?> ">Berita</a></li>
 
           <?php foreach ($menu as $key => $sebuahMenu) : ?>
-            <?php if($sebuahMenu->status_menu>0) : ?>
-            <li><a href="<?=base_url("menu?judul_hal_statis=$sebuahMenu->link_hal_statis&&?id=$sebuahMenu->id")?> "><?= $sebuahMenu->nama_menu?></a></li>
-            <?php endif ?>
+                <?php $hasChild = false ; $dataSubMenu=[]; ?>
+
+            <?php if($sebuahMenu->status_menu>0) : ?>  <!-- check for status active or not -->
+              <?php foreach ($subMenu as $key => $sebuahSubMenu) : ?>
+                    <?php if($sebuahSubMenu->id_menu==$sebuahMenu->id){
+                      $hasChild =true;
+                      array_push($dataSubMenu,$sebuahSubMenu);
+                    } ?>
+              <?php endforeach ?>
+                  
+                  <!-- if it has child then use this template -->
+                  <?php if($hasChild) : ?>
+                    
+                    <li class="drop-down"><a href="<?=base_url("menu?judul_hal_statis=$sebuahMenu->link_hal_statis&&?id=$sebuahMenu->id")?> " ><?= $sebuahMenu->nama_menu?></a>
+                      <ul>
+
+                        <?php foreach ($dataSubMenu as $key => $sebuahDataSubMenu) :?>
+                            <li><a href="<?=base_url("menu?judul_hal_statis=$sebuahDataSubMenu->hal_statis&&?id=$sebuahDataSubMenu->id")?> "><?= $sebuahDataSubMenu->nama_sub_menu ?></a></li>
+                         <?php endforeach ?>
+                      </ul>
+
+                    </li>
+
+                  <?php else : ?>
+                      <li>
+                        <a href="<?=base_url("menu?judul_hal_statis=$sebuahMenu->link_hal_statis&&?id=$sebuahMenu->id")?> "><?= $sebuahMenu->nama_menu?></a>
+                      </li> 
+                  <?php endif ?>
+
+            <?php endif ?> <!-- end of check status -->
+
           <?php endforeach ?>
 
         </ul>
