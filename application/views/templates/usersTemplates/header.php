@@ -99,10 +99,10 @@
 
           <li class="drop-down"><a href="<?=base_url("wisata")?>">Wisata</a>
             <ul>
-              <li><a href="<?=base_url("WisataAlam")?> ">Wisata Alam</a></li>
-              <li><a href="<?=base_url("WisataAgro")?> ">Wisata Agro</a></li>
-              <li><a href="<?=base_url("WisataKuliner")?> ">Wisata Kuliner</a></li>
-              <li><a href="<?=base_url("WisataAdat")?> ">Wisata Adat/Budaya</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataAlam")?> ">Wisata Alam</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataAgro")?> ">Wisata Agro</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataKuliner")?> ">Wisata Kuliner</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataAdat")?> ">Wisata Adat/Budaya</a></li>
             </ul>
           </li>
 

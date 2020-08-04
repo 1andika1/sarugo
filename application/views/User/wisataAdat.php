@@ -6,11 +6,11 @@
   <div class="container">
 
     <div class="d-flex justify-content-between align-items-center">
-      <h2>Wisata Adat</h2>
+      <h2>Wisata Adat/Budaya</h2>
       <ol>
         <li><a href="<?=base_url("")?>">Beranda</a></li>
         <li><a href="<?=base_url("wisata")?>">Wisata</a></li>
-        <li>Wisata Adat</li>
+        <li>Wisata Adat/Budaya</li>
       </ol>
     </div>
 
