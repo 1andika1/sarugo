@@ -42,7 +42,7 @@ class Menu extends CI_Controller{
     public function update()
     {
         $data["titles"] = $this->StaticPageModel->getAllTitle();
-        $data["menu"] = $this->MenuModel->getMenuById($_GET["id"])->result()[0];
+        $data["menu"] = $this->MenuModel->getMenuById($_GET["id"])->result()[0]; 
         $this->load->view('admin/adm_menu_upage',$data);
         $this->load->view('templates/footer');
     }

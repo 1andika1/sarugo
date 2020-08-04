@@ -21,14 +21,14 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?php echo site_url('admin/submenu/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Nama Menu</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="nama_submenu" name="nama_submenu" class="form-control">
+                        <input type="text" id="nama_submenu" name="nama_sub_menu" class="form-control">
                         <small class="form-text text-muted">Masukan nama menu</small>
                     </div>
                 </div>
@@ -58,11 +58,11 @@
                     </div>
                     <div class="col-12 col-md-9">
                         <div class="rs-select2--primary rs-select2--md rs-select2--primary">
-                            <select class="js-select2" name="menu_utama">
+                            <select class="js-select2" name="hal_statis">
                                 <option >None</option>
                                 
                                 <?php foreach ($dataHalaman as $key => $halaman) : ?>
-                                     <option   value="<?= $halaman->id?>"><?= $halaman->judul ?></option>
+                                     <option   value="<?= $halaman->judul?>"><?= $halaman->judul ?></option>
                                 
                                 <?php endforeach ?>
                             </select>
