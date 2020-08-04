@@ -10,14 +10,17 @@ class SubMenu extends CI_Controller{
     }
     public function index()
     {
-        
-        $this->load->view('admin/adm_submenu_rpage');
+        $data["dataSubMenu"] = $this->SubMenuModel->getAllSubMenu(); 
+        $data["dataMenu"] = $this->MenuModel->getAllMenu(); 
+        $this->load->view('admin/adm_submenu_rpage',$data);
         $this->load->view('templates/footer');
     }
 
     public function create()
     {
-        $this->load->view('admin/adm_submenu_cpage');
+        $data["dataHalaman"] = $this->StaticPageModel->getAllStaticPage();
+        $data["dataMenu"] = $this->MenuModel->getAllMenu();  
+        $this->load->view('admin/adm_submenu_cpage',$data);
         $this->load->view('templates/footer');
     }
     public function update()

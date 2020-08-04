@@ -43,55 +43,52 @@
              <div class="table-responsive table-responsive-data2">
                  <table class="table table-data2">
                      <thead>
-                         <tr>
-                             <th>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </th>
+                         <tr> 
                              <th>no</th>
                              <th>sub menu</th>
-                             <th>menu</th>
+                             <th>menu utama</th>
                              <th>link halaman</th>
                              <th>Status</th>
                              <th>aksi</th>
                          </tr>
                      </thead>
                      <tbody>
-                          
+                          <?php $count=1; foreach ($dataSubMenu as $key => $subMenu) : ?>
                          <tr class="tr-shadow">
+                              
+                             <td><?=$count++?></td>
                              <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
+                                 <span><?=$subMenu->nama_sub_menu?></span>
                              </td>
-                             <td>2</td>
-                             <td>
-                                 <span>Akses dan Lokasi</span>
-                             </td>
-                             <td class="link">Tentang Kami</td>
-                             <td class="link">halamanprofil.html</td>
+                             <?php foreach ($dataMenu as $key => $menu): ?>
+                                <?php if($menu->id == $subMenu->id_menu) : ?>
+                                    <td class="link"><?=$menu->nama_menu?></td>
+                                <?php endif ?>
+                             <?php endforeach ?>
+                             <td class="link"> <?=$subMenu->hal_statis?> </td>
                              
                              <td>
-                                 <span class="status--denied">Nonaktif</span>
+                                 <span class="status--<?=$subMenu->status_sub_menu>0?'process':'denied'?>"><?=$subMenu->status_sub_menu>0?"Aktif" : "Nonaktif"?></span>
                              </td>
                              <td>
                                  <div class="table-data-feature">
                                      <button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                          <i class="zmdi zmdi-eye"></i>
                                      </button>
-                                     <a href="<?= base_url('admin/submenu/update')?>" ><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                     <a href='<?= base_url("admin/submenu/update?id=$subMenu->id")?>' ><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>
                                      </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
+                                     <a href='<?= base_url("admin/submenu/delete?id=$subMenu->id")?>'>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                     </a>
                                  </div>
                              </td>
                              <td></td>
                          </tr>
+
+                         <?php endforeach ?>
                      </tbody>
                  </table>
              </div>

@@ -61,7 +61,7 @@
                              </td>
                              <td class="link"><?= $value->link_hal_statis ?></td>
                              <td>
-                                 <span class="status--<?= $value->status_menu? "process" : ""?>"><?= $value->status_menu ? "Aktif" : "Tidak Aktif" ?></span>
+                                 <span class="status--<?= $value->status_menu? "process" : "denied"?>"><?= $value->status_menu ? "Aktif" : "Nonaktif" ?></span>
                              </td>
                              <td>
                                  <div class="table-data-feature">
