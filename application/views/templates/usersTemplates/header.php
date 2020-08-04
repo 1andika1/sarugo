@@ -118,6 +118,12 @@
           <li><a href="<?=base_url("Testimoni")?>">Testimoni</a></li>
           <li><a href="<?=base_url("berita")?> ">Berita</a></li>
 
+          <?php foreach ($menu as $key => $sebuahMenu) : ?>
+            <?php if($sebuahMenu->status_menu>0) : ?>
+            <li><a href="<?=base_url("menu?judul_hal_statis=$sebuahMenu->link_hal_statis&&?id=$sebuahMenu->id")?> "><?= $sebuahMenu->nama_menu?></a></li>
+            <?php endif ?>
+          <?php endforeach ?>
+
         </ul>
 
       </nav>
