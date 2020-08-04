@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-12 col-md-9">
                         
-                        <div class="rs-select2--primary rs-select2--md rs-select2--primary">
+                        <div class="col-md-6 col-lg-6 col-sm-6">
                             <select class="js-select2" name="menu_utama">
                                 <option >None</option>
 

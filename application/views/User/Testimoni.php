@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Testimoni</h2>
           <ol>
-            <li><a href="index.html">Beranda</a></li>
+            <li><a href="<?= base_url()?>">Beranda</a></li>
             <li>Testimoni</li>
           </ol>
         </div>

@@ -1,16 +1,15 @@
- 
-  <main id="main">
+<main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Paket Wisata 2</h2>
+          <h2>Paket Wisata 4</h2>
           <ol>
             <li><a href="<?=base_url()?>">Beranda</a></li>
             <li><a href="<?=base_url("paket")?>">Paket Wisata</a></li>
-            <li>Paket Wisata 2</li>
+            <li>Paket Wisata 4</li>
           </ol>
         </div>
 
@@ -22,7 +21,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="align-items-center">
-              <h4 style="text-align: center;">Paket Wisata 2</h4>
+              <h4 style="text-align: center;">Paket Wisata 4</h4>
           </div>
         </div>
       </div>
@@ -97,4 +96,4 @@
         </section>
     <!-- end section -->
 
-  </main><!-- End #main --> 
+  </main><!-- End #main -->
