@@ -95,7 +95,7 @@
       <nav class="nav-menu d-none d-lg-block">
 
         <ul>
-          <li class="active"><a href="<?=base_url()?>">Beranda</a></li>
+          <li class=""><a href="<?=base_url()?>">Beranda</a></li>
 
           <li class="drop-down"><a href="<?=base_url("wisata")?>">Wisata</a>
             <ul>
@@ -158,6 +158,6 @@
       <br><br><!-- .nav-menu -->
 
     </div>
-  </header>
+  </header> <br><br>
 
   <!-- End Header -->
