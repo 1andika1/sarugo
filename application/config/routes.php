@@ -57,3 +57,5 @@ $route['Paket'] = 'paket';
 //$route['product'] = 'product';
 
 $route['admin/statis'] = 'admin/statisController/index';
+// defined route
+$route['admin'] = "admin/login";

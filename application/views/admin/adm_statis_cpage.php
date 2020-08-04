@@ -21,7 +21,7 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('admin/statisController/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?php echo site_url('admin/statis/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
