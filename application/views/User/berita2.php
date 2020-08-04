@@ -71,7 +71,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="index.html"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <h1 class="logo"> <a href="<?= base_url()?>"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -121,8 +121,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Berita 2</h2>
           <ol>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="berita.html">Berita</a></li>
+            <li><a href="<?=base_url("")?>">Beranda</a></li>
+            <li><a href="<?=base_url("berita")?>">Berita</a></li>
             <li>Berita 2</li>
           </ol>
         </div>
@@ -138,18 +138,18 @@
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src="<?=base_url()?>Web_Statis/assets/img/blog-2.jpg" alt="" class="img-fluid" width="100%">
+                <img src="<?=base_url()?>Web_Statis/assets/img/blog-1.jpg" alt="" class="img-fluid" width="100%">
               </div>
 
               <h2 class="entry-title">
-                <a href="Berita1.html">hal-hal baru yang ada di wisata saribu gonjong</a>
+                <a href="<?=base_url("berita?berita=berita1")?>">hal-hal baru yang ada di wisata saribu gonjong</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="Berita1.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="Berita1.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="Berita1.html">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="<?=base_url("berita?berita=berita1")?>">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="<?=base_url("berita?berita=berita1")?>"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="<?=base_url("berita?berita=berita1")?>">12 Comments</a></li>
                 </ul>
               </div>
 

@@ -40,6 +40,7 @@
 <body>
 
   <!-- ======= Header ======= -->
+  <!-- headertop -->
   <header id="header" class="fixed-top ">
     <div class="header_top">
       <div class="container">
@@ -71,7 +72,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="<?= base_url()?>"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <h1 class="logo"> <a href="<?=base_url("")?>"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -110,110 +111,112 @@
 
     </div>
   </header><br><br>
-  <!-- End Header -->
 
-  <main id="main">
+<!-- End Header -->
+<main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Wisata Adat</h2>
+      <ol>
+        <li><a href="<?=base_url("")?>">Beranda</a></li>
+        <li><a href="<?=base_url("wisata")?>">Wisata</a></li>
+        <li>Wisata Adat</li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+ <!-- ======= Pricing Section ======= -->
+ <section id="pricing" class="pricing">
       <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Paket Wisata 2</h2>
-          <ol>
-            <li><a href="<?=base_url()?>">Beranda</a></li>
-            <li><a href="<?=base_url("paket")?>">Paket Wisata</a></li>
-            <li>Paket Wisata 2</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- section -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="align-items-center">
-              <h4 style="text-align: center;">Paket Wisata 2</h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="col-lg-10 col-md-10 col-sm-10" > -->
-        <section class="testimonials-item">
-          <div class="row">
-            <div class="col-lg-12">
-              <table align="center" border="1" style="width: 75%; background-color:darkgray; cursor: pointer;">
-                <tr style="text-align: center; color: white;">
-                    <th id="tombol_harga" class="bg-dark" >Harga</th>
-                    <th id="tombol_ket">Keterangan</th>
-                    <th id="tombol_jadwal">Jadwal</oth>
-                </tr>
-            </table><br>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="box featured">
+              <h3>Foto dan Video</h3>
+              <div class="row">
+              <!-- gambar1 -->
+              <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+                <div class="box featured">
+                  <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
+                  <div class="btn-wrap">
+                    <a class="btn-buy">ket. gambar</a>
+                  </div>
+                </div>
+              </div>
+              <!-- gambar2 -->
+              <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+                <div class="box featured">
+                  <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
+                  <div class="btn-wrap">
+                    <a class="btn-buy">ket. gambar</a>
+                  </div>
+                </div>
+              </div>
+              <!-- gambar3 -->
+              <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+                <div class="box featured">
+                  <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
+                  <div class="btn-wrap">
+                    <a class="btn-buy">ket. gambar</a>
+                  </div>
+                </div>
+              </div>
+              <!-- gambar4 -->
+              <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+                <div class="box featured">
+                  <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
+                  <div class="btn-wrap">
+                    <a class="btn-buy">ket. gambar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <table id="tabel_harga" align="center" border="1" style="width: 75%; background-color: white;">
-                <tr>
-                  <td style="width: 50%; text-align: center;">Jumlah orang</td>
-                  <td style="width: 50%; text-align: center;">10</td>
-                </tr>
-                <tr>
-                  <td  style="width: 50%; text-align: center;">Jumlah Hari</td>
-                  <td  style="width: 50%; text-align: center;">3 Hari</td>
-                </tr>
-                <tr>
-                  <td  style="width: 50%; text-align: center;">Total Biaya</td>
-                  <td style="width: 50%; text-align: center;">Rp.300.00</td>
-                </tr>
-              </table>
-              <table id="tabel_ket" align="center" class="table d-none" style="width: 75%;" border="1">
-                <tbody>
-                  <tr>
-                    <td style="width: 30%; text-align: center;">Object Wisata</td>
-                    <td><ul>
-                      <li> Wisata ambil jeruk</li>
-                      <li> Wisata mandi di sungai</li>
-                      <li> Wisata bikin souvenir</li>
-                    </ul></td>
-                  </tr>
-                  <tr>
-                    <td style="width: 30%; text-align: center;">Fasilitas</td>
-                    <td><ul>
-                      <li>Makan</li>
-                      <li> Minum</li>
-                      <li> Penginapan</li>
-                    </ul></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table id="tabel_jadwal" align="center" class="table d-none" style="width: 75%;" border="1">
-                <tr>
-                  <td style="width: 30%; text-align: center;"> Hari Pertama </td>
-                  <td style="text-align: center;">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+
+            <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+              <div class="row">
+                <div class="box featured">
+                  <h3>Keterangan Wisata</h3>
+                  <h5>Penjelasan mengenai wisata alam yang panjang dan Selengkap lengkapnya <br>
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laboru</td>
-                </tr>
-                <tr>
-                  <td style="width: 30%; text-align: center;"> Hari kedua </td>
-                  <td style="text-align: center;">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laboru</td>
-                </tr>
-              </table>
+                    culpa qui officia deserunt mollit anim id est laborum</h5>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+      </div>
+    </section><!-- End Pricing Section -->
+    <!-- map -->
+    <section>
+      <div class="container">
+        <div class="row justify-content-md-center">
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#basicModal">Lihat Rute Wisata Adat</a>
+        </div>
+      </div>
+      <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <iframe width="1100" height="315" src="https://www.google.co.id/maps/place/Bofet+Pergaulan/@-0.229835,100.6309176,15z/data=!4m5!3m4!1s0x2e2ab4aefa212925:0xb1f0b044ce780890!8m2!3d-0.2272335!4d100.6275344" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
-          
-          </div>
-        </section>
-    <!-- end section -->
-
+        </div>
+      </div>
+    </section>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" style="padding:0; position:fixed; left:0; bottom:0; width:100%; text-align:center;">
+  <footer id="footer">
     <div class="container">
       <div class="copyright">
         &copy; 2020<strong><span> Website Sarugo</span></strong>
@@ -243,43 +246,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    const tombol_harga = document.querySelector('#tombol_harga')
-    const tabel_harga = document.querySelector("#tabel_harga")
-    const tombol_ket = document.querySelector('#tombol_ket')
-    const tabel_ket = document.querySelector("#tabel_ket")
-    const tombol_jadwal = document.querySelector('#tombol_jadwal')
-    const tabel_jadwal = document.querySelector("#tabel_jadwal")
-
-    tombol_harga.addEventListener('click',tampil)
-    tombol_ket.addEventListener('click',tampil2)
-    tombol_jadwal.addEventListener('click',tampil3)
-
-    function tampil(){
-      tabel_harga.className = ""
-      tabel_jadwal.className = "d-none"
-      tabel_ket.className = "d-none"
-      tombol_harga.className = "bg-dark"
-      tombol_ket.className = ""
-      tombol_jadwal.className = ""
-    }
-    function tampil2(){
-      tabel_ket.className = ""
-      tabel_jadwal.className = "d-none"
-      tabel_harga.className = "d-none"
-      tombol_ket.className = "bg-dark"
-      tombol_harga.className = ""
-      tombol_jadwal.className = ""
-    }
-    function tampil3(){
-      tabel_jadwal.className = ""
-      tabel_harga.className = "d-none"
-      tabel_ket.className = "d-none"
-      tombol_jadwal.className = "bg-dark"
-      tombol_ket.className = ""
-      tombol_harga.className = ""
-    }
-  </script>
 
 </body>
 

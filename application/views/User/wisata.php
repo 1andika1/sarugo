@@ -72,7 +72,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="index.html"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <h1 class="logo"> <a href="<?= base_url()?>"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -143,13 +143,13 @@
                     </div>
 
                     <h2 class="entry-title">
-                    <a href="WisataAlam.html">Wisata Alam</a>
+                    <a href="<?=base_url("wisata?wisata=wisataAlam")?>">Wisata Alam</a>
                     </h2>
 
                     <div class="entry-meta">
                     <ul>
-                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="WisataAlam.html">admin</a></li>
-                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="WisataAlam.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="<?=base_url("wisata?wisata=wisataAlam")?>">admin</a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="<?=base_url("wisata?wisata=wisataAlam")?>"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                     </ul>
                     </div>
 
@@ -158,7 +158,7 @@
                         Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta zena prista maraeda talan mas indera.
                     </p>
                     <div class="read-more">
-                        <a href="WisataAlam.html">Read More</a>
+                        <a href="<?=base_url("wisata?wisata=wisataAlam")?>">Read More</a>
                     </div>
                     </div>
 
@@ -173,13 +173,13 @@
                     </div>
 
                     <h2 class="entry-title">
-                    <a href="WisataAgro.html">Wisata Agro</a>
+                    <a href="<?=base_url("wisata?wisata=wisataAgro")?>">Wisata Agro</a>
                     </h2>
 
                     <div class="entry-meta">
                     <ul>
-                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="WisataAgro.html">admin</a></li>
-                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="WisataAgro.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="<?=base_url("wisata?wisata=wisataAgro")?>">admin</a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="<?=base_url("wisata?wisata=wisataAgro")?>"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                     </ul>
                     </div>
 
@@ -188,7 +188,7 @@
                         Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias.
                     </p>
                     <div class="read-more">
-                        <a href="WisataAgro.html">Read More</a>
+                        <a href="<?=base_url("wisata?wisata=wisataAgro")?>">Read More</a>
                     </div>
                     </div>
 
@@ -203,13 +203,13 @@
                     </div>
 
                     <h2 class="entry-title">
-                    <a href="WisataKuliner.html">Wisata Kuliner</a>
+                    <a href="<?=base_url("wisata?wisata=wisataKuliner")?>">Wisata Kuliner</a>
                     </h2>
 
                     <div class="entry-meta">
                     <ul>
-                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="WisataKuliner.html">admin</a></li>
-                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="WisataKuliner.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="<?=base_url("wisata?wisata=wisataKuliner")?>">admin</a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="<?=base_url("wisata?wisata=wisataKuliner")?>"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                     </ul>
                     </div>
 
@@ -218,7 +218,7 @@
                         Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis tara kero pakla metaruna nedore stan.
                     </p>
                     <div class="read-more">
-                        <a href="WisataKuliner.html">Read More</a>
+                        <a href="<?=base_url("wisata?wisata=wisataKuliner")?>">Read More</a>
                     </div>
                     </div>
 
@@ -233,13 +233,13 @@
                     </div>
 
                     <h2 class="entry-title">
-                    <a href="WisataAdat.html">Wisata Adat/Budaya</a>
+                    <a href="<?=base_url("wisata?wisata=wisataAdat")?>">Wisata Adat/Budaya</a>
                     </h2>
 
                     <div class="entry-meta">
                     <ul>
-                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="WisataAdat.html">admin</a></li>
-                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="WisataAdat.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="<?=base_url("wisata?wisata=wisataAdat")?>">admin</a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="<?=base_url("wisata?wisata=wisataAdat")?>"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                     </ul>
                     </div>
 
@@ -248,7 +248,7 @@
                         Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
                     </p>
                     <div class="read-more">
-                        <a href="WisataAdat.html">Read More</a>
+                        <a href="<?=base_url("wisata?wisata=wisataAdat")?>">Read More</a>
                     </div>
                     </div>
 

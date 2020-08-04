@@ -66,7 +66,7 @@
     <div class="header_top">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-lg-8 col-sm-8">
+          <div class="col-md-8">
             <div class="full">
               <div class="topbar-left">
                 <ul class="list-inline">
@@ -75,8 +75,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-4 col-sm-4 right_section_header_top">
-            <div class="topbar-right">
+          <div class="col-md-4 right_section_header_top">
+            <div class="float-right">
               <div class="social_icon">
                 <ul class="list-inline">
                   <div class="social-links mt-3">
@@ -93,40 +93,40 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="index.html"><img src="Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <h1 class="logo"> <a href="<?= base_url()?>"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
 
         <ul>
-          <li class="active"><a href="index.html">Beranda</a></li>
+          <li><a href="<?= base_url()?>">Beranda</a></li>
 
-          <li class="drop-down"><a href="Wisata.html">Wisata</a>
+          <li class="drop-down"><a href="<?=base_url("wisata")?>">Wisata</a>
             <ul>
-              <li><a href="WisataAlam.html">Wisata Alam</a></li>
-              <li><a href="WisataAgro.html">Wisata Agro</a></li>
-              <li><a href="WisataKuliner.html">Wisata Kuliner</a></li>
-              <li><a href="WisataAdat.html">Wisata Adat/Budaya</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataAlam")?>">Wisata Alam</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataAgro")?>">Wisata Agro</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataKuliner")?>">Wisata Kuliner</a></li>
+              <li><a href="<?=base_url("wisata?wisata=wisataAdat")?>">Wisata Adat/Budaya</a></li>
             </ul>
           </li>
 
           <li><a href="<?=base_url("product")?>">Product</a></li>
-          <li class="drop-down"><a href="<?=base_url("paket")?>" >Paket Wisata</a>
+          <li class="drop-down"><a href="<?=base_url("paket")?>">Paket Wisata</a>
             <ul>
-              <li><a href="Paket1.html">Paket Wisata 1</a></li>
-              <li><a href="Paket2.html">Paket Wisata 2</a></li>
-              <li><a href="Paket3.html">Paket Wisata 3</a></li>
-              <li><a href="Paket4.html">Paket Wisata 4</a></li>
+              <li><a href="<?=base_url("paket?paket=paket1")?>">Paket Wisata 1</a></li>
+              <li><a href="<?=base_url("paket?paket=paket2")?>">Paket Wisata 2</a></li>
+              <li><a href="<?=base_url("paket?paket=paket3")?>">Paket Wisata 3</a></li>
+              <li><a href="<?=base_url("paket?paket=paket4")?>">Paket Wisata 4</a></li>
             </ul>
           </li>
           <li><a href="<?=base_url("Testimoni")?>">Testimoni</a></li>
-          <li><a href="berita.html">Berita</a></li>
+          <li><a href="<?=base_url("berita")?>">Berita</a></li>
 
         </ul>
 
       </nav>
-      <br><br><!-- .nav-menu -->
+      <!-- .nav-menu -->
 
      <!--  <a href="index.html" class="get-started-btn ml-auto">Get Started</a> -->
 

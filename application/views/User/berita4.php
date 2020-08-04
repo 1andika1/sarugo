@@ -119,11 +119,11 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Berita 1</h2>
+          <h2>Berita 4</h2>
           <ol>
             <li><a href="<?=base_url("")?>">Beranda</a></li>
             <li><a href="<?=base_url("berita")?>">Berita</a></li>
-            <li>Berita 1</li>
+            <li>Berita 4</li>
           </ol>
         </div>
 

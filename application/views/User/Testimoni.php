@@ -74,7 +74,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="index.html"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <h1 class="logo"> <a href="<?= base_url()?>"><img src="<?= base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -93,7 +93,7 @@
           </li>
 
           <li><a href="<?=base_url("product")?>">Product</a></li>
-          <li class="drop-down active"><a href="<?=base_url("paket")?>">Paket Wisata</a>
+          <li class="drop-down"><a href="<?=base_url("paket")?>">Paket Wisata</a>
             <ul>
               <li><a href="<?=base_url("paket?paket=paket1")?>">Paket Wisata 1</a></li>
               <li><a href="<?=base_url("paket?paket=paket2")?>">Paket Wisata 2</a></li>
@@ -122,7 +122,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Testimoni</h2>
           <ol>
-            <li><a href="index.html">Beranda</a></li>
+            <li><a href="<?= base_url()?>">Beranda</a></li>
             <li>Testimoni</li>
           </ol>
         </div>

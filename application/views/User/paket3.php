@@ -119,11 +119,11 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Paket Wisata 2</h2>
+          <h2>Paket Wisata 3</h2>
           <ol>
             <li><a href="<?=base_url()?>">Beranda</a></li>
             <li><a href="<?=base_url("paket")?>">Paket Wisata</a></li>
-            <li>Paket Wisata 2</li>
+            <li>Paket Wisata 3</li>
           </ol>
         </div>
 
@@ -135,7 +135,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="align-items-center">
-              <h4 style="text-align: center;">Paket Wisata 2</h4>
+              <h4 style="text-align: center;">Paket Wisata 3</h4>
           </div>
         </div>
       </div>
@@ -157,16 +157,16 @@
             <div class="col-lg-12">
               <table id="tabel_harga" align="center" border="1" style="width: 75%; background-color: white;">
                 <tr>
-                  <td style="width: 50%; text-align: center;">Jumlah orang</td>
-                  <td style="width: 50%; text-align: center;">10</td>
+                  <td>Jumlah orang</td>
+                  <td>10</td>
                 </tr>
                 <tr>
-                  <td  style="width: 50%; text-align: center;">Jumlah Hari</td>
-                  <td  style="width: 50%; text-align: center;">3 Hari</td>
+                  <td>Jumlah Hari</td>
+                  <td>3 Hari</td>
                 </tr>
                 <tr>
-                  <td  style="width: 50%; text-align: center;">Total Biaya</td>
-                  <td style="width: 50%; text-align: center;">Rp.300.00</td>
+                  <td>Total Biaya</td>
+                  <td>Rp.300.00</td>
                 </tr>
               </table>
               <table id="tabel_ket" align="center" class="table d-none" style="width: 75%;" border="1">
@@ -208,6 +208,7 @@
           
           </div>
         </section>
+    
     <!-- end section -->
 
   </main><!-- End #main -->
@@ -219,10 +220,6 @@
         &copy; 2020<strong><span> Website Sarugo</span></strong>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
         Designed by <a href="https://kominfo.limapuluhkotakab.go.id/">Diskominfo Kab. Lima Puluh Kota</a>
       </div>
     </div>
