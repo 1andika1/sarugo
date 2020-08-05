@@ -8,18 +8,18 @@
       <div class="carousel-inner" role="listbox">
 
        
-        <div class="carousel-item ">
-        
-          <video autoplay muted loop id="myVideo" >
-            <source src="https://limapuluhkotakab.go.id/assets/images/iconhome/videopakai.mp4" type="video/mp4" style>
-          </video>
-
+        <div class="carousel-item active px-0"style="margin:0;padding:0;">
+          <div class="carousel-container mx-0" style="margin:0;padding:0;">
+            <video autoplay muted loop id="myVideo" width="100%" style="position: absolute; min-height: 100%; min-width: 100%; right: 0px; bottom: 0px; position: center" >
+              <source src="https://limapuluhkotakab.go.id/assets/images/iconhome/videopakai.mp4" type="video/mp4" style>
+            </video>
+          </div>
         </div>
    
       
       <?php foreach ($dataBanner as $key => $banner) : ?>
       
-        <div class="carousel-item <?=$key==0?"active": ""?>" style='background-image:url(<?=base_url().$banner->foto?>)'>
+        <div class="carousel-item " style='background-image:url(<?=base_url().$banner->foto?>)'>
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown"><?= $banner->judul ?></h2>
