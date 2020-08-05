@@ -119,7 +119,9 @@
 
 
    <?php foreach ($dataHalStatis as $key => $halStatis) :?>
-    <!-- ======= Static Page Section ======= -->
+    <?php if($halStatis->add_to_beranda) : ?>
+
+      <!-- ======= Static Page Section ======= -->
     <section id="about" class="about">
       <div class="container">
         <div class="container display1">
@@ -148,6 +150,7 @@
     </section>
     <!-- End Static Page Section -->
 
+    <?php endif?>
    <?php endforeach ?>
 
   </main><!-- End #main -->
