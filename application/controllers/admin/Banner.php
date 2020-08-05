@@ -11,13 +11,15 @@ class Banner extends CI_Controller{
 
     public function index()
     {
-        $this->load->view('admin/adm_banner_rpage');
+        $data["dataBanner"] = $this->BannerModel->getAllBanner(); 
+        $this->load->view('admin/adm_banner_rpage',$data);
         $this->load->view('templates/footer');
     }
 
     public function edit()
     {
-        $this->load->view('admin/adm_banner_upage');
+        $data["banner"] = $this->BannerModel->getBannerByID($_GET["id"])[0];
+        $this->load->view('admin/adm_banner_upage',$data);
         $this->load->view('templates/footer');
     }
 
@@ -29,7 +31,7 @@ class Banner extends CI_Controller{
 
     public function delete()
     {
-        // $this->BannerModel->delete($_GET["id"]);
+        $this->BannerModel->delete($_GET["id"]);
         redirect("admin/banner");
     }
 
@@ -38,8 +40,7 @@ class Banner extends CI_Controller{
     public function add()
     {
         // var_dump($_POST,$_FILES);die();
-        // var_dump( $_FILES);die();
-        // get data from post method
+        // var_dump( $_FILES);die(); 
         $judul          = $_POST["judul"]; 
         $foto         = $this->upload();
         $tgl_posting   = date("Y:m:d h:i");
@@ -83,4 +84,27 @@ class Banner extends CI_Controller{
     }
     // end of section of add new static page
     
+
+    // update data
+    public function update()
+    {
+        $judul          = $_POST["judul"]; 
+        $foto         = $this->upload();
+        $tgl_posting   = date("Y:m:d h:i");
+        $id_banner      = $_POST["id_banner"];
+        $databanner = $this->BannerModel->getBannerByID($id_banner)[0]->foto; 
+
+        $foto = $foto ? $foto :  $databanner;   
+        if(!$foto){
+            echo `<script> alert(" gagal upload gambar") </script>`;
+        }
+
+        $data = array(
+            "judul" =>$judul,
+            "foto"  =>$foto,
+            "tgl_posting" => $tgl_posting
+        );
+            $this->BannerModel->update($id_banner,$data);
+            redirect(base_url('admin/banner/'));
+    }
 }

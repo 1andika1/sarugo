@@ -21,47 +21,38 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-                
+            <form action="<?php echo base_url('admin/banner/update'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <input type="hidden" name="id_banner" value="<?= $banner->id_banner ?>">
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Judul Banner</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="judul_banner" name="judul_banner" class="form-control">
+                        <input value="<?= $banner->judul ?>" type="text" id="judul" name="judul" class="form-control">
                         <small class="form-text text-muted">Masukan judul banner</small>
                     </div>
                 </div>
 
-                <div class="row form-group">
-                
-                    <div class="col col-md-3">
-                        <label for="text-input" class=" form-control-label">Link Halaman</label>
-                    </div>
-                    <div class="col-12 col-md-9">
-                        <input type="text" id="link_banner" name="link_banner" class="form-control">
-                        <small class="form-text text-muted">Masukan Link Halaman Statis</small>
-                    </div>
-                </div>
+                 
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
-                        <label for="file-input" class=" form-control-label">Upload Gambar</label>
+                        <label required for="file-input" class=" form-control-label">Upload Gambar</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="file" id="gbr_banner" name="gbr_banner" class="form-control-file">
+                        <input value="<?= base_url().$banner->foto ?>" type="file" id="gbr_banner" name="gbr_banner" class="form-control-file">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Batal
+                    </button>
+                </div>
             </form>
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Batal
-            </button>
         </div>
     </div>
     

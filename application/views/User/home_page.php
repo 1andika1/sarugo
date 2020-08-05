@@ -7,36 +7,30 @@
 
       <div class="carousel-inner" role="listbox">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="carousel-container">
-            <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Wisata Saribu Gonjong</h2>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-            </div>
-          </div>
-        </div>
+       
+        <div class="carousel-item ">
+        
+          <video autoplay muted loop id="myVideo" >
+            <source src="https://limapuluhkotakab.go.id/assets/images/iconhome/videopakai.mp4" type="video/mp4" style>
+          </video>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item active">
+        </div>
+   
+      
+      <?php foreach ($dataBanner as $key => $banner) : ?>
+      
+        <div class="carousel-item <?=$key==0?"active": ""?>" style='background-image:url(<?=base_url().$banner->foto?>)'>
           <div class="carousel-container">
             <div class="container">
-              <video width="100%" height="75%" onloadeddata="this.play()" style="padding-top: 130px;">
-                <source src="Web_Statis/assets/vid/prologue.mp4" type="video/mp4">
-              </video>
+              <h2 class="animate__animated animate__fadeInDown"><?= $banner->judul ?></h2>
+              <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
             </div>
           </div>
         </div>
+        
+      <?php endforeach ?>
 
-        <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(Web_Statis/assets/img/slide/slide-2.jpg)">
-          <div class="carousel-container">
-            <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Akses Wisata</h2>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-            </div>
-          </div>
-        </div>
+     
 
       </div>
 

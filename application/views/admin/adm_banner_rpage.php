@@ -48,32 +48,34 @@
                          </tr>
                      </thead>
                      <tbody>
-                         <tr class="tr-shadow">
+                         <?php $counter=1; foreach ($dataBanner as $key => $banner) : ?>
+                            <tr class="tr-shadow">
                               
-                             <td>1</td>
-                             <td>
-                                 <span><?= "dataBanner->judul" ?></span>
-                             </td>
-                             <td class="link">  
-                                    Hello
-                                
-                             <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button>
-                                     <a href="<?= base_url("admin/banner/edit?id=")?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button></a>
-                                     <a href="<?= base_url("admin/banner/delete?id=")?>">
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                            <i class="zmdi zmdi-delete"></i>
-                                        </button>
-                                     </a>
-                                 </div>
-                             </td>
-                             <td></td>
-                         </tr>
+                              <td><?= $counter++ ?></td>
+                              <td>
+                                  <span><?= $banner->judul ?></span>
+                              </td>
+                              <td class="link">  
+                              <a href="<?= base_url().$banner->foto ?>"><?= base_url().$banner->foto ?></a>
+                                 
+                              <td>
+                                  <div class="table-data-feature">
+                                      <button class="item" data-toggle="tooltip" data-placement="top" title="View">
+                                          <i class="zmdi zmdi-eye"></i>
+                                      </button>
+                                      <a href="<?= base_url("admin/banner/edit?id=$banner->id_banner")?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                          <i class="zmdi zmdi-edit"></i>
+                                      </button></a>
+                                      <a href="<?= base_url("admin/banner/delete?id=$banner->id_banner")?>">
+                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                             <i class="zmdi zmdi-delete"></i>
+                                         </button>
+                                      </a>
+                                  </div>
+                              </td>
+                              <td></td>
+                          </tr>
+                         <?php endforeach ?>
                           
                      </tbody>
                  </table>

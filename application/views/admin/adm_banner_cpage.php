@@ -40,8 +40,9 @@
                         <label for="file-input" class=" form-control-label">Upload Gambar</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="file" id="gbr_banner" name="gbr_banner" class="form-control-file input_foto">
+                        <input required type="file" id="gbr_banner" name="gbr_banner" class="d-inline input_foto">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
+                        <small style="color:red;font-weight:bold"  >ukuran 1045 x 613 px</small><br>
                         <img width="100" id="preview_photo" src="" alt="No Image" class=" ">
                     </div>
                 </div>
