@@ -57,14 +57,27 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
-        <div class="container">
+        <div class="container display1">
             <h3 id="tengah"> Profile dan Sejarah</h3>
-          </div>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
+        </div>
+            <div class="container">
+              <div class="row">
+              <div class="col-md-2"></div>
+                <div class="col-md-8">
+                <div class="entry-img">
+                  <img src="<?=base_url()?>Web_Statis/assets/img/blog-1.jpg" alt="" class="img-fluid" width="100%">
+                </div>
+                <div class="col-md-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-5">
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
             <ul>
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
               <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
@@ -103,6 +116,39 @@
 
       </div>
     </section>
+
+
+   <?php foreach ($dataHalStatis as $key => $halStatis) :?>
+    <!-- ======= Static Page Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="container display1">
+            <h3 id="tengah"> <?= $halStatis->judul ?></h3>
+        </div>
+            <div class="container">
+              <div class="row">
+              <div class="col-md-2"></div>
+                <div class="col-md-8">
+                <div class="entry-img">
+                  <img src="<?=base_url().$halStatis->gambar?>" alt="" class="img-fluid" width="100%">
+                </div>
+                <div class="col-md-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-5">
+              <p>
+                <?= $halStatis->isi ?>
+              </p>
+            </div>
+             
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Static Page Section -->
+
+   <?php endforeach ?>
 
   </main><!-- End #main -->
  

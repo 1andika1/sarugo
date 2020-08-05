@@ -25,6 +25,10 @@ class StaticPageModel extends CI_Model{
     {
         return $this->db->get_where("hal_statis",["id"=>$id])->result();
     }
+    public function getDataByTitle($title)
+    {
+        return $this->db->get_where("hal_statis",["judul"=>$title])->result();
+    }
 
     // update data
     public function update($id,$data)
