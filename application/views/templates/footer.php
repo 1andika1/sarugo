@@ -41,6 +41,17 @@
 
                 <!-- Main JS-->
                 <script src="<?= base_url() ?>assets/js/main.js"></script>
+
+                <script>
+                    $(document).ready(function(){ 
+                    $(".perbesar").fancybox({
+                        openEffect: "none",
+                        closeEffect: "none"
+                    });
+                });
+                
+                
+                </script>
 </body>
 
 </html>

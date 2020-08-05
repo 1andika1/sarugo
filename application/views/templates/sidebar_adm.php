@@ -34,7 +34,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?=base_url("admin/menu")?>">
+                                    <a href="<?=base_url("admin/banner")?>">
                                         <i class="fas fa-picture-o"></i>Banner/Slider
                                     </a>
                                 </li>

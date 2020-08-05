@@ -23,6 +23,8 @@
   <script src="<?= base_url()?>Web_Statis/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="<?= base_url()?>Web_Statis/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
+
+
   <!-- Template Main JS File -->
   <script src="Web_Statis/assets/js/main.js"></script>
 
