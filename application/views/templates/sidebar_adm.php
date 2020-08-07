@@ -39,7 +39,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?=base_url("admin/menu")?>">
+                                    <a href="<?=base_url("admin/wisata")?>">
                                         <i class="fas fa-location-arrow"></i>Wisata
                                     </a>
                                 </li>

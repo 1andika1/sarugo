@@ -28,8 +28,8 @@
                      </div>
                  </div>
                  <div class="table-data__tool-right">
-                     <a href="wisata_create"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                         <i class="zmdi zmdi-plus"></i>Tambah Data</button></a>
+                     <a href="<?=base_url("admin/wisata/create")?>"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                         <i class="zmdi zmdi-plus"></i>Tambah Data Wisata</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <!-- <select class="js-select2" name="type">
                              <option selected="selected">Export</option>
@@ -44,12 +44,7 @@
                  <table class="table table-data2">
                      <thead>
                          <tr>
-                             <th>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </th>
+                              
                              <th>no</th>
                              <th>jenis wisata</th>
                              <th>link halaman</th>
@@ -58,12 +53,7 @@
                      </thead>
                      <tbody>
                          <tr class="tr-shadow">
-                             <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </td>
+                             
                              <td>1</td>
                              <td>
                                  <span>Wisata Alam</span>
@@ -84,33 +74,7 @@
                                  </div>
                              </td>
                          </tr>
-                         <tr class="tr-shadow">
-                             <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </td>
-                             <td>2</td>
-                             <td>
-                                 <span>Wisata Kuliner</span>
-                             </td>
-                             <td class="link">halaman2.html</td>
-                            
-                             <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button>
-                                     <a href="wisata_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
-                                 </div>
-                             </td>
-                         </tr>
+                          
                      </tbody>
                  </table>
              </div>
