@@ -22,6 +22,25 @@
 
         <div class="row">
 
+        <?php foreach ($dataPaketWisata as $key => $paketWisata) : ?>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <div class="box featured">
+              <h3><?= $paketWisata->nama_paket_wisata ?></h3>
+              <ul>
+                <li><?= $paketWisata->jumlah_hari ?> Hari Liburan</li>
+                <li>Max <?= $paketWisata->jumlah_orang ?> Orang</li>
+                <li>Beragam fasilitas</li>
+                <li>+ Pemandu Wisata</li> 
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <h4><sup>Rp.</sup><?= $paketWisata->biaya ?><span></span></h4>
+              <div class="btn-wrap">
+                <a href="<?=base_url("paket?paket=paket1")?>" class="btn-buy">Lihat Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        <?php endforeach ?>
+
           <div class="col-lg-3 col-md-6">
             <div class="box featured">
               <h3>Paket Wisata 1</h3>

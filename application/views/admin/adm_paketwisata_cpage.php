@@ -16,12 +16,9 @@
              </div>
  
 <div class="col-lg-12">
-    <div class="card">
-        <!--<div class="card-header">
-            <strong>Basic Form</strong> Elements
-        </div>-->
+    <div class="card"> 
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?= base_url('admin/paketwisata/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
@@ -29,22 +26,22 @@
                     </div>
                     
                     <div class="col-12 col-md-9">
-                        <input type="text" id="judul_hlmstat" name="judul_hlmstat" class="form-control">
+                        <input required type="text" id="judul_hlmstat" name="nama_paket_wisata" class="form-control">
                         <small class="form-text text-muted">Masukan Nama Paket Wisata</small>
                     </div>
                 </div>
 
                 <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Menu</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <p class="form-control-static">Wisata</p>
-                                                </div>
-                                            </div>
+                    <div class="col col-md-3">
+                        <label class=" form-control-label">Menu</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <p class="form-control-static">Paket Wisata</p>
+                    </div>
+                </div>
 
 
-                <div class="row form-group">
+                <div class="d-none row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Link Halaman</label>
                     </div>
@@ -54,7 +51,7 @@
                     </div>
                 </div>
 
-                <div class="row form-group">
+                <div class="d-none row form-group">
                     <div class="col col-md-3">
                         <label for="file-input" class=" form-control-label">Upload Gambar</label>
                     </div>
@@ -71,8 +68,18 @@
                     </div>
                     
                     <div class="col-12 col-md-9">
-                        <input type="text" id="judul_hlmstat" name="judul_hlmstat" class="form-control">
+                        <input required placeholder="1" min="1" max="100" type="number" id="judul_hlmstat" name="jumlah_orang" class="form-control">
                         <small class="form-text text-muted">Masukan jumlah orang</small>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="text-input" class=" form-control-label">Biaya/Harga (Rp)</label>
+                    </div>
+                    
+                    <div class="col-12 col-md-9">
+                        <input required placeholder="Masukkan biaya perjalanan paket wisata.." min="1000" max="9999999999" type="number" id="judul_hlmstat" name="biaya" class="form-control">
+                        <small class="form-text text-muted">Masukan biaya perjalanan</small>
                     </div>
                 </div>
 
@@ -82,9 +89,12 @@
                     </div>
                     
                     <div class="col-12 col-md-9">
-                        <input type="text" id="judul_hlmstat" name="judul_hlmstat" class="form-control">
+                        <input id="jumlah_hari" required placeholder="1" type="number" min="1" max="100"   name="jumlah_hari" class="form-control">
                         <small class="form-text text-muted">Masukan Jumlah hari</small>
                     </div>
+                </div>
+                <div class="jadwal">
+
                 </div>
                 
                 <!-- jumlah hari loop hingga ke-n-->
@@ -94,7 +104,7 @@
                         <label for="textarea-input" class=" form-control-label">Objek Wisata</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="isi_hlmsat" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
+                        <textarea name="objek_wisata" id="isi_hlmstat" rows="9" placeholder="Masukkan objek wisata apa saja yang dapat dikunjungi oleh pengunjung ..." class="form-control"></textarea>
                     </div>
                 </div>
 
@@ -103,11 +113,11 @@
                         <label for="textarea-input" class=" form-control-label">Fasilitas</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="isi_hlmsat" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
+                        <textarea name="fasilitas" id="isi_hlmstat" rows="9" placeholder="Masukkan fasilitas yang disediakan untuk pengunjung ..." class="form-control"></textarea>
                     </div>
                 </div>
                 
-                <div class="row form-group">
+                <div class="d-none row form-group">
                     <div class="col col-md-3">
                         <label class=" form-control-label">Tampilkan di Beranda?</label>
                     </div>
@@ -119,17 +129,45 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
                 
             </form>
         </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Submit
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Reset
-            </button>
-        </div>
+        
     </div>
     
 </div>
+
+<script>
+    const jadwal = document.querySelector(".jadwal")
+    const jumlah_hari = document.querySelector("#jumlah_hari")
+    jumlah_hari.addEventListener("change",generateForm)
+    jumlah_hari.addEventListener("keyup",generateForm)
+ 
+    function generateForm() {
+        jadwal.innerHTML = '';
+       for(let index=1;index<=parseInt(jumlah_hari.value);index++){
+        jadwal.innerHTML += `<div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="text-input" class=" form-control-label"> &emsp; > Hari Ke-${index}</label>
+                    </div>
+                    
+                    <div class="col-12 col-md-9">
+                        <input id="jumlah_hari" required placeholder="Masukkan kegiatan yang akan dilakukan" type="text"    name="jadwal${index}" class="form-control">
+                        <small class="form-text text-muted">Masukan Kegiatan hari ke-${index}</small>
+                    </div>
+                </div>`;
+       }
+    };
+ 
+
+    
+</script>

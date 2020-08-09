@@ -1,6 +1,7 @@
 <!-- ambil dulu semua data yang diperlukan pada saat menampilkan header dan menu -->
 
-<?php $subMenuWisata = $this->WisataModel->getAllWisata();  
+<?php $subMenuWisata = $this->WisataModel->getAllWisata();
+      $subMenuPaketWisata = $this->PaketWisataModel->getAllPaketWisata();   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -116,6 +117,9 @@
           <li><a href="<?=base_url("product")?>">Product</a></li>
           <li class="drop-down"><a href="<?=base_url("paket")?>" >Paket Wisata</a>
             <ul>
+              <?php foreach ($subMenuPaketWisata as $key => $paketWisata) : ?>
+                <li><a href="<?=base_url("paket/detailpaket?id_paket_wisata=$paketWisata->id_paket_wisata")?> "><?= $paketWisata->nama_paket_wisata ?> </a></li>
+              <?php endforeach ?>
               <li><a href="<?=base_url("paket")?>?paket=paket1">Paket Wisata 1</a></li>
               <li><a href="<?=base_url("paket")?>?paket=paket2">Paket Wisata 2</a></li>
               <li><a href="<?=base_url("paket")?>?paket=paket3">Paket Wisata 3</a></li>

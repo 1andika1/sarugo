@@ -28,14 +28,10 @@
                      </div>
                  </div>
                  <div class="table-data__tool-right">
-                     <a href="paketwisata_create" ><button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                         <i class="zmdi zmdi-plus"></i>Tambah Data</button></a>
+                     <a href="<?= base_url("admin/paketwisata/create") ?>" ><button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                         <i class="zmdi zmdi-plus"></i>Tambah Paket Wisata</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                        <!-- <select class="js-select2" name="type">
-                             <option selected="selected">Export</option>
-                             <option value="">Option 1</option>
-                             <option value="">Option 2</option>
-                         </select> -->
+                         
                          <div class="dropDownSelect2"></div>
                      </div>
                  </div>
@@ -44,15 +40,10 @@
                  <table class="table table-data2">
                      <thead>
                          <tr>
-                             <th>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </th>
+                              
                              <th>no</th>
                              <th>Paket Wisata</th>
-                             <th>Halaman Statis</th>
+                             <!-- <th>Halaman Statis</th> -->
                              <th>Jumlah Orang</th>
                              <th>Jumlah Hari</th>
                              <th>Biaya</th>
@@ -62,69 +53,41 @@
                      </thead>
                      <tbody>
                          <tr class="tr-shadow">
+                         <?php $counter=1; foreach($dataPaketWisata as $key => $paketWisata) : ?>     
+
+                             <td><?= $counter++ ?></td>
                              <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
+                                 <span><?= $paketWisata->nama_paket_wisata ?></span>
                              </td>
-                             <td>1</td>
+                             <!-- <td class="link">halamanprofil.html</td> -->
+                             <td><?= $paketWisata->jumlah_orang ?></td>
                              <td>
-                                 <span>Paket 1</span>
-                             </td>
-                             <td class="link">halamanprofil.html</td>
-                             <td>5</td>
-                             <td>
-                                 3
+                             <?= $paketWisata->jumlah_hari ?>
                              </td>
                              <td>
-                                 Rp 500.000
-</td>
+                                 Rp <?= $paketWisata->biaya ?>
+                            </td>
                              <td>
                                  <div class="table-data-feature">
                                      <button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                          <i class="zmdi zmdi-eye"></i>
                                      </button>
-                                     <a href="paketwisata_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                     <a href="<?= base_url("admin/paketwisata/edit?id_paket_wisata=$paketWisata->id_paket_wisata") ?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>
                                      </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
+                                     <a href="<?= base_url("admin/paketwisata/delete?id_paket_wisata=$paketWisata->id_paket_wisata") ?>">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                     </a>
+                                     
                                  </div>
                              </td>
                          </tr>
-                         <tr class="tr-shadow">
-                             <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </td>
-                             <td>2</td>
-                             <td>
-                                 <span>Paket 2</span>
-                             </td>
-                             <td class="link">halamanakses.html</td>
-                             <td>8</td>
-                             <td>
-                                 5
-                             </td>
-                             <td> Rp 800.000 </td>
-                             <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button>
-                                     <a href="paketwisata_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
-                                 </div>
-                             </td>
-                         </tr>
+                         <?php endforeach ?>
+
+                         
+                          
                      </tbody>
                  </table>
              </div>

@@ -51,7 +51,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="<?=base_url("admin/menu")?>">
+                                    <a href="<?=base_url("admin/paketwisata")?>">
                                         <i class="fas fa-bookmark"></i>Paket Wisata
                                     </a>
                                 </li>
