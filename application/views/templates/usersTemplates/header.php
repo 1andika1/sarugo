@@ -90,7 +90,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="<?=base_url()?>"><img src="Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <h1 class="logo"> <a href="<?=base_url()?>"><img src="<?=base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
      
       <nav class="nav-menu d-none d-lg-block">
 

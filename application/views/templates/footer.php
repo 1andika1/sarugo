@@ -52,6 +52,22 @@
                 
                 
                 </script>
+
+
+<script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeJNuO2KtgjA59chaLOW-R2gniZDIRk4g&callback=initMap">
+</script>
+      
+
+
+  <script>
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+
+  </script>
+
 </body>
 
 </html>

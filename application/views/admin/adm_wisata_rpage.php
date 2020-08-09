@@ -31,11 +31,7 @@
                      <a href="<?=base_url("admin/wisata/create")?>"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
                          <i class="zmdi zmdi-plus"></i>Tambah Data Wisata</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                        <!-- <select class="js-select2" name="type">
-                             <option selected="selected">Export</option>
-                             <option value="">Option 1</option>
-                             <option value="">Option 2</option>
-                         </select>-->
+                       
                          <div class="dropDownSelect2"></div>
                      </div>
                  </div>
@@ -47,33 +43,39 @@
                               
                              <th>no</th>
                              <th>jenis wisata</th>
-                             <th>link halaman</th>
+                             <th>Deskripsi</th>
                              <th>aksi</th>
                          </tr>
                      </thead>
                      <tbody>
+
+                     <?php $counter=1; foreach ($dataWisata as $key => $wisata) : ?>
                          <tr class="tr-shadow">
                              
-                             <td>1</td>
+                             <td><?=$counter++?></td>
                              <td>
-                                 <span>Wisata Alam</span>
+                                 <span><?= $wisata->nama_wisata ?></span>
                              </td>
-                             <td class="link">halaman1.html</td>
+                             <td class="link"><?= substr($wisata->keterangan,0,150).'.....' ?></td>
                              
                              <td>
                                  <div class="table-data-feature">
                                      <button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                          <i class="zmdi zmdi-eye"></i>
                                      </button>
-                                     <a href="wisata_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                     <a href="<?= base_url("admin/wisata/edit?id=$wisata->id_wisata")?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>
                                      </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
+                                     <a href="<?= base_url("admin/wisata/delete?id=$wisata->id_wisata")?>">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                     </a>
                                  </div>
                              </td>
                          </tr>
+
+                         <?php endforeach ?>
                            
                      </tbody>
                  </table>

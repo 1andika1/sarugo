@@ -16,49 +16,35 @@
              </div>
  
 <div class="col-lg-12">
-    <div class="card">
-        <!--<div class="card-header">
-            <strong>Basic Form</strong> Elements
-        </div>-->
+    <div class="card"> 
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?php echo base_url('admin/wisata/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Jenis Wisata</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="judul_banner" name="judul_banner" class="form-control">
-                        <small class="form-text text-muted">Masukan jenis wisata</small>
+                        <input required placeholder="Wisata Alam" type="text" id="judul_banner" name="nama_wisata" class="form-control">
+                        <small class="form-text text-muted">Masukan jenis wisata , misal : "Wisata Alam"</small>
                     </div>
                 </div>
 
                 <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Menu</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <p class="form-control-static">Wisata</p>
-                                                </div>
-                                            </div>
-
-                <div class="row form-group">
-                
                     <div class="col col-md-3">
-                        <label for="text-input" class=" form-control-label">Link Halaman</label>
+                        <label class=" form-control-label">Menu</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="link_banner" name="link_banner" class="form-control">
-                        <small class="form-text text-muted">Masukan Link Halaman Statis</small>
+                        <p class="form-control-static">Wisata</p>
                     </div>
-                </div>
+                </div> 
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="file-input" class=" form-control-label">Upload Gambar</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="file" id="gbr_banner" name="gbr_banner" class="form-control-file">
+                        <input required type="file" id="gbr_banner" name="gambar" class="form-control-file">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>
@@ -67,31 +53,32 @@
                         <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="isi_hlmsat" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
+                        <textarea name="keterangan" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
                     </div>
                 </div>
+
                 <div class="row form-group">
                     <div class="col col-md-3">
-                        <label class=" form-control-label">Tampilkan di Beranda?</label>
+                        <label for="textarea-input" class=" form-control-label">Lokasi</label>
                     </div>
-                    <div class="col col-md-9">
-                        <div class="form-check-inline form-check">
-                            <label for="inline-checkbox1" class="form-check-label ">
-                                <input type="checkbox" id="tampilkan_hlmstat" name="tampilkan_hlmstat" value="option1" class="form-check-input">Ya
-                            </label>
-                        </div>
-                    </div>
+                    <div class="col-12 col-md-9">
+                        <input class="form-control" name="lokasi" type="text" id="mapsearch">
+                        <!-- <div class="form-control" id="map-canvas"></div> -->
+                        <small class="form-text text-muted">Masukkan alamat/lokasi</small>
+                     </div>
                 </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
+                 
                 
             </form>
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Submit
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Reset
-            </button>
         </div>
     </div>
     

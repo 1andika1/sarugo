@@ -18,36 +18,40 @@
             <div class="container">
 
             <div class="row">
-
+            <?php foreach ($dataWisata as $key => $wisata) : ?>
+                <!-- template wisata -->
                 <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <article class="entry">
 
                     <div class="entry-img">
-                    <img src="<?=base_url("Web_Statis/assets/img/blog-1.jpg")?>" alt="" class="img-fluid">
+                    <img src="<?=base_url("$wisata->gambar")?>" alt="" class="img-fluid">
                     </div>
 
                     <h2 class="entry-title">
-                    <a href="<?=base_url("wisata?wisata=wisataAlam")?>">Wisata Alam</a>
+                    <a href="<?=base_url("wisata/detailwisata?id=$wisata->id_wisata")?>"><?=$wisata->nama_wisata?></a>
                     </h2>
 
                     <div class="entry-meta">
                     <ul>
-                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="<?=base_url("wisata?wisata=wisataAlam")?>">admin</a></li>
-                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="<?=base_url("wisata?wisata=wisataAlam")?>"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="<?=base_url("wisata/detailwisata?id=$wisata->id_wisata")?>">admin</a></li>
+                        <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="<?=base_url("wisata/detailwisata?id=$wisata->id_wisata")?>"><time datetime="<?=$wisata->tgl_post?>"><?=$wisata->tgl_post?></time></a></li>
                     </ul>
                     </div>
 
                     <div class="entry-content">
                     <p>
-                        Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta zena prista maraeda talan mas indera.
+                       <?=substr($wisata->keterangan,0,200)?>
                     </p>
                     <div class="read-more">
-                        <a href="<?=base_url("wisata?wisata=wisataAlam")?>">Read More</a>
+                        <a href="<?=base_url("wisata/detailwisata?id=$wisata->id_wisata")?>">Read More</a>
                     </div>
                     </div>
 
                 </article><!-- End blog entry -->
                 </div>
+                <!-- akhir template wisata -->
+
+                <?php endforeach ?>
 
                 <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <article class="entry">
