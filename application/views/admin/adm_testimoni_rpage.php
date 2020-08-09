@@ -27,15 +27,7 @@
                                 </form>
                      </div>
                  </div>
-                 <div class="table-data__tool-right">
-                     <!--<a href="testimoni_fpage"><button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                         <i class="zmdi zmdi-plus"></i>Tambah Data</button>
-                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                         <select class="js-select2" name="type">
-                             <option selected="selected">Export</option>
-                             <option value="">Option 1</option>
-                             <option value="">Option 2</option>
-                         </select> -->
+                 <div class="table-data__tool-right"> 
                          <div class="dropDownSelect2"></div>
                      </div>
                  </div>
@@ -43,13 +35,7 @@
              <div class="table-responsive table-responsive-data2">
                  <table class="table table-data2">
                      <thead>
-                         <tr>
-                             <th>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </th>
+                         <tr> 
                              <th>no</th>
                              <th>nama</th>
                              <th>pekerjaan</th>
@@ -60,70 +46,49 @@
                          </tr>
                      </thead>
                      <tbody>
-                         <tr class="tr-shadow">
+                     <?php $counter=1; foreach ($dataTestimoni as $key => $testi) :?>
+
+                         <tr class="tr-shadow"> 
+                             <td><?= $counter++ ?></td>
                              <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
+                                 <span><?= $testi->nama_testi ?></span>
                              </td>
-                             <td>1</td>
+                             <td><?= $testi->pekerjaan_testi ?></td>
+                             <td><?= $testi->alamat_testi ?></td>
+                             <td><?= $testi->pesan_testi ?></td>
                              <td>
-                                 <span>Andi</span>
-                             </td>
-                             <td>Pegawai</td>
-                             <td>Padang</td>
-                             <td>Wisatanya Bagus</td>
-                             <td>
-                                 <span class="status--process">Aktif</span>
+                                 <span class="status--process"><?= $testi->tampilkan? "Tampil":"Belum Tampil" ?></span>
                              </td>
                              <td>
                                  <div class="table-data-feature">
-                                 <a href="testimoni_create"><button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button></a>
-                                     <!--<button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button>-->
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                    <?php if(!$testi->tampilkan) : ?>
+                                        <form action="<?= base_url("admin/testimoni/tampilkan") ?>" method="post">
+                                            <input type="hidden" name="id_testi" value="<?= $testi->id_testi ?>">
+                                            <button type="submit" class="btn-primary p-1 rounded mr-1"  data-toggle="tooltip" data-placement="top" title="View">
+                                            <i class="zmdi zmdi-eye"></i>Tampilkan
+                                            </button>
+                                        </form>
+                                    <?php endif ?>
+                                     
+                                        
+                                    <a href="<?= base_url("admin/testimoni/delete?id_testi=$testi->id_testi") ?>"><button class="item btn-danger text-light" data-toggle="tooltip" data-placement="top" title="Delete">
                                          <i class="zmdi zmdi-delete"></i>
-                                     </button>
+                                     </button></a>
+                                       
                                  </div>
                              </td>
                          </tr>
-                         <tr class="tr-shadow">
-                             <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </td>
-                             <td>2</td>
-                             <td>
-                                 <span>Budi</span>
-                             </td>
-                             <td>Guru</td>
-                             <td>Bukittinggi</td>
-                             <td>Tempatnya Oke</td>
-                             <td>
-                                 <span class="status--denied">Nonaktif</span>
-                             </td>
-                             <td>
-                                 <div class="table-data-feature">
-                                 <a href="testimoni_create"><button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button></a>
-                                     <!--<button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button>-->
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
-                                 </div>
-                             </td>
-                         </tr>
+
+                         <?php endforeach?>
+
+                          
                      </tbody>
                  </table>
+
+                    <?php if($counter==1):?>
+                        <h3 class="text-center">Belum ada testimoni dari pengunjung!</h3>
+                    <?php endif ?>
+
              </div>
              <!-- END DATA TABLE -->
          </div>

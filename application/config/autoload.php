@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('admin/StaticPageModel','admin/MenuModel','admin/SubMenuModel','admin/BannerModel','admin/WisataModel','admin/ResourceModel','admin/ProdukModel','admin/PaketWisataModel');
+$autoload['model'] = array('admin/StaticPageModel','admin/MenuModel','admin/SubMenuModel','admin/BannerModel','admin/WisataModel','admin/ResourceModel','admin/ProdukModel','admin/PaketWisataModel','admin/TestimoniModel');

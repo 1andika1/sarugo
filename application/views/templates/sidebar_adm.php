@@ -57,7 +57,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="<?=base_url("admin/menu")?>">
+                                    <a href="<?=base_url("admin/testimoni")?>">
                                         <i class="fas fa-comment"></i>Testimoni
                                     </a>
                                 </li>
