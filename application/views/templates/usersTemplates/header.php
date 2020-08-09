@@ -1,3 +1,7 @@
+<!-- ambil dulu semua data yang diperlukan pada saat menampilkan header dan menu -->
+
+<?php $subMenuWisata = $this->WisataModel->getAllWisata();  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,6 +103,9 @@
 
           <li class="drop-down"><a href="<?=base_url("wisata")?>">Wisata</a>
             <ul>
+            <?php foreach($subMenuWisata as $key => $sub) : ?>
+              <li><a href="<?=base_url("wisata/detailwisata?id=$sub->id_wisata")?> "><?=$sub->nama_wisata?></a></li>
+            <?php endforeach ?>
               <li><a href="<?=base_url("wisata?wisata=wisataAlam")?> ">Wisata Alam</a></li>
               <li><a href="<?=base_url("wisata?wisata=wisataAgro")?> ">Wisata Agro</a></li>
               <li><a href="<?=base_url("wisata?wisata=wisataKuliner")?> ">Wisata Kuliner</a></li>

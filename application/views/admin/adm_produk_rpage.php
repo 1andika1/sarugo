@@ -28,14 +28,10 @@
                      </div>
                  </div>
                  <div class="table-data__tool-right">
-                     <a href="produk_create" ><button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                         <i class="zmdi zmdi-plus"></i>Tambah Data</button></a>
+                     <a href="<?=base_url("admin/produk/create")?>" ><button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                         <i class="zmdi zmdi-plus"></i>Tambah Produk</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                         <!--<select class="js-select2" name="type">
-                             <option selected="selected">Export</option>
-                             <option value="">Option 1</option>
-                             <option value="">Option 2</option>
-                         </select>-->
+                        
                          <div class="dropDownSelect2"></div>
                      </div>
                  </div>
@@ -44,12 +40,7 @@
                  <table class="table table-data2">
                      <thead>
                          <tr>
-                             <th>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </th>
+                              
                              <th>no</th>
                              <th>nama</th>
                              <th>harga</th>
@@ -59,66 +50,39 @@
                          </tr>
                      </thead>
                      <tbody>
+                     <?php $counter=1; foreach($dataProduk as $key => $produk): ?>
+
                          <tr class="tr-shadow">
+                              
+                             <td><?=$counter++?></td>
                              <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
+                                 <span><?=$produk->nama_produk?></span>
                              </td>
-                             <td>1</td>
+                             <td >Rp <?=$produk->harga_satuan?></td>
+                             <td><?=$produk->berat_satuan?> Kg</td>
                              <td>
-                                 <span>Produk 1</span>
-                             </td>
-                             <td >Rp 20.000</td>
-                             <td>1 Kg</td>
-                             <td>
-                                 Gula, Susu, Coklat
+                                <?=$produk->komposisi?>
                              </td>
                              <td>
                                  <div class="table-data-feature">
                                      <button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                          <i class="zmdi zmdi-eye"></i>
                                      </button>
-                                     <a href="produk_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                     <a href="<?= base_url("admin/produk/edit?id_produk=$produk->id_produk") ?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>
                                      </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
+                                     <a href="<?= base_url("admin/produk/delete?id_produk=$produk->id_produk") ?>"> 
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                     </a>
+                                     
                                  </div>
                              </td>
                          </tr>
-                         <tr class="tr-shadow">
-                             <td>
-                                 <label class="au-checkbox">
-                                     <input type="checkbox">
-                                     <span class="au-checkmark"></span>
-                                 </label>
-                             </td>
-                             <td>2</td>
-                             <td>
-                                 <span>Produk 2</span>
-                             </td>
-                             <td>Rp 10.000</td>
-                             <td>2 Kg</td>
-                             <td>
-                                 Telur, Garam, Tepung
-                             </td>
-                             <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
-                                     </button>
-                                     <a href="produk_update"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                         <i class="zmdi zmdi-edit"></i>
-                                     </button></a>
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                         <i class="zmdi zmdi-delete"></i>
-                                     </button>
-                                 </div>
-                             </td>
-                         </tr>
+
+                        <?php endforeach ?>
+                          
                      </tbody>
                  </table>
              </div>

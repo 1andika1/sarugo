@@ -45,7 +45,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="<?=base_url("admin/menu")?>">
+                                    <a href="<?=base_url("admin/produk")?>">
                                         <i class="fas fa-tag"></i>Produk
                                     </a>
                                 </li>

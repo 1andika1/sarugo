@@ -7,6 +7,8 @@ class product extends CI_Controller {
 	{
 		$data['menu'] = $this->MenuModel->getAllMenu();
 		$data['subMenu'] = $this->SubMenuModel->getAllSubMenu(); 
+
+		$data["dataProduk"] = $this->ProdukModel->getAllProduk();
 		$this->load->view('templates/usersTemplates/header',$data);
 		$this->load->view('User/product');
 		$this->load->view('templates/usersTemplates/footer');

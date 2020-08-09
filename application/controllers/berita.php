@@ -10,6 +10,6 @@ class berita extends CI_Controller {
         $data['subMenu'] = $this->SubMenuModel->getAllSubMenu(); 
         $this->load->view('templates/usersTemplates/header',$data);
         $this->load->view("User/$berita");
-		    $this->load->view('templates/usersTemplates/footer');
+		$this->load->view('templates/usersTemplates/footer');
     }
 }

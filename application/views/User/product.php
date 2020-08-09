@@ -17,35 +17,41 @@
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
     <div class="container">
+
+    <?php foreach($dataProduk as $key => $produk): ?>
+      <!-- template produk -->
       <div class="row  justify-content-md-center">
         <div class="col-md-10">
           <div class="icon-box">
             <div class="container">
               <div class="row justify-content-md-center border">
-                <h4>Nama Produk</h4>
+                <h4><?= $produk->nama_produk ?></h4>
               </div>
             </div>
             <div class="container">
               <div class="row">
                 <div class="col-md-4 border">
-                  <img src="<?= base_url()?>Web_Statis/assets/img/product2.jpg" alt="">
+                  <img width="100%" src="<?= base_url("$produk->gambar")?> " alt="">
                 </div>
                 <div class="col-md-8 border">
                   <table class="table border" >
                       <tr>
-                        <td>Harga Satuan: </td>
+                        <td>Harga Satuan: <?= $produk->harga_satuan ?> </td>
                       </tr>
                       <tr>
-                        <td>Berat Satuan: </td>
+                        <td>Berat Satuan: <?= $produk->berat_satuan ?> </td>
                       </tr>
                       <tr>
-                        <td>Komposisi: </td>
+                        <td>Komposisi: <?= $produk->komposisi ?> </td>
                       </tr>
                       <tr>
-                        <td>Keterangan: </td>
+                        <td>Keterangan: <?= $produk->keterangan ?> </td>
                       </tr>
                       <tr>
-                        <td style="text-align: center;">Penjelasan produk</td>
+                        <td  >Penjelasan produk : 
+                          <?= $produk->penjelasan_produk ?> 
+                        </td>
+                        
                       </tr>
                   </table>
                 </div>
@@ -54,6 +60,9 @@
           </div>
         </div>
       </div>
+      <!-- akhir template Produk -->
+      <?php endforeach  ?>
+
       <div class="row  justify-content-md-center">
         <div class="col-md-10">
           <div class="icon-box">
