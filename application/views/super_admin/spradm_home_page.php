@@ -26,13 +26,7 @@
                                              <i class="zmdi zmdi-account-o"></i>
                                          </div>
                                          <div class="text">
-                                             <?php
-                                                foreach ($data as $row) {
-                                                ?>
-                                                 <h2><?php echo $row->jumlah; ?></h2>
-                                             <?php
-                                                }
-                                                ?>
+                                              <h2><?= $data ?></h2>
                                              <span>Admin Aktif</span>
                                          </div>
                                      </div>

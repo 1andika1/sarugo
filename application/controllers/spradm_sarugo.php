@@ -3,9 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class spradm_sarugo extends CI_Controller {
 
+	public function checkAdmin()
+	{
+		// var_dump($this->session->spradmin);die();
+		if(!isset($this->session->spradmin)){
+			redirect(base_url("admin"));
+		}
+	}
     public function __construct()
-    {
-        parent ::__construct();
+    {	
+		parent ::__construct();
+		$this->checkAdmin();
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar_spradm');
         $this->load->model('super_admin/akun_model');
@@ -27,6 +35,8 @@ class spradm_sarugo extends CI_Controller {
 
     public function akun_create()
     {
+
+		// var_dump($_POST);die();
         $config = array(
 			array(
 				'field' => 'nip_admin',
@@ -96,6 +106,7 @@ class spradm_sarugo extends CI_Controller {
 
 		$this->form_validation->set_error_delimiters('<div class="alert alert-danger"><li>', '</li></div>');
 		$this->form_validation->set_rules($config);
+		// $_POST["password_admin"] = $_POST["konfpass_admin"]= md5($_POST["password_admin"]);
 
 		if ($this->form_validation->run() == FALSE) {
             $this->load->view('super_admin/spradm_akun_cpage');

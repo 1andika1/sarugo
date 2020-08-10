@@ -20,6 +20,39 @@
       <div class="container">
 
         <div class="row">
+        <?php foreach ($dataBerita as $key => $berita) : ?>
+         <!-- template berita -->
+         <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="<?= base_url("$berita->gambar")?> " alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="<?=base_url("berita/detailberita?id_berita=$berita->id_berita")?>"><?= $berita->judul_berita ?></a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i>  admin </li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time datetime="2020-01-01"><?= $berita->tgl_post ?></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  <?= substr($berita->keterangan,0,200)."..." ?>
+                </p>
+                <div class="read-more">
+                  <a href="<?=base_url("berita/detailberita?id_berita=$berita->id_berita")?>">Read More</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+         <!-- akhir template berita -->
+         <?php endforeach ?>
           
           <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <article class="entry">
@@ -50,6 +83,7 @@
 
             </article><!-- End blog entry -->
           </div>
+
 
           <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <article class="entry">

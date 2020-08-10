@@ -73,9 +73,14 @@ class akun_model extends CI_Model
 
 	public function count()
 	{
-		$sql = "SELECT count(nip_admin) as jumlah FROM akun";
-		$query = $this->db->query($sql);
-		return $query->result();
+		// $sql = "SELECT count(nip_admin) as jumlah FROM akun where 'level'<=1";
+		// $query = $this->db->query($sql);
+		// return $query->result();
+
+		$this->db->where('level <', 2);
+		$this->db->from('akun');
+		return$this->db->count_all_results(); 
+		
 	}
 
 }

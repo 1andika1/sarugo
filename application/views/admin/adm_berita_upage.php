@@ -21,14 +21,14 @@
             <strong>Basic Form</strong> Elements
         </div>-->
         <div class="card-body card-block">
-            <form action="<?php echo site_url('adm_sarugo/statis_fpage'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-                
+            <form action="<?= base_url('admin/berita/update'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <input type="hidden" name="id_berita" value="<?=$dataBerita->id_berita?>">
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">Judul Berita</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="judul_hlmstat" name="judul_hlmstat" class="form-control">
+                        <input value="<?= $dataBerita->judul_berita ?>" type="text" id="judul_hlmstat" name="judul_berita" class="form-control">
                         <small class="form-text text-muted">Masukan Judul Berita</small>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <label for="textarea-input" class=" form-control-label">Isi Berita</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="isi_hlmsat" id="isi_hlmstat" rows="9" placeholder="Masukkan isi berita ..." class="form-control"></textarea>
+                        <textarea name="isi_berita" id="isi_hlmstat" rows="9" placeholder="Masukkan isi berita ..." class="form-control"><?= $dataBerita->keterangan ?></textarea>
                     </div>
                 </div>
                 
@@ -47,12 +47,12 @@
                         <label for="file-input" class=" form-control-label">Upload Gambar</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="file" id="gbr_hlmstat" name="gbr_hlmstat" class="form-control-file">
+                        <input type="file" id="gbr_hlmstat" name="gambar" class="form-control-file">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>
                 
-                <div class="row form-group">
+                <div class="d-none row form-group">
                     <div class="col col-md-3">
                         <label class=" form-control-label">Tampilkan di Beranda?</label>
                     </div>
@@ -64,17 +64,19 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
+                    </button>
+                    <button onClick="window.history.back()" type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Batal
+                    </button>
+                </div>
                 
             </form>
         </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Batal
-            </button>
-        </div>
+       
     </div>
     
 </div>

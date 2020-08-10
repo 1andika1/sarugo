@@ -63,7 +63,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="<?=base_url("admin/menu")?>">
+                                    <a href="<?=base_url("admin/berita")?>">
                                         <i class="fas fa-desktop"></i>Berita
                                     </a>
                                 </li>

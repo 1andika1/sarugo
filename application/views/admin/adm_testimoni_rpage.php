@@ -41,6 +41,7 @@
                              <th>pekerjaan</th>
                              <th>alamat</th>
                              <th>testimoni</th>
+                             <th>bintang</th>
                              <th>status</th>
                              <th>aksi</th>
                          </tr>
@@ -55,7 +56,8 @@
                              </td>
                              <td><?= $testi->pekerjaan_testi ?></td>
                              <td><?= $testi->alamat_testi ?></td>
-                             <td><?= $testi->pesan_testi ?></td>
+                             <td><?= substr($testi->pesan_testi,0,20)."..." ?></td>
+                             <td><?= $testi->bintang ?></td>
                              <td>
                                  <span class="status--process"><?= $testi->tampilkan? "Tampil":"Belum Tampil" ?></span>
                              </td>

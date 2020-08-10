@@ -1,3 +1,18 @@
+<?php
+$userData ;
+    // var_dump($this->session->userdata);die();
+    // check admin
+    if(isset($this->session->spradmin)){ 
+        $userData = $this->session->spradmin;
+    }else if(!isset($this->session->admin)){
+        redirect(base_url("admin"));
+    }else{
+        $userData = $this->session->admin;
+    }
+    
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -266,7 +281,7 @@
                                             <img src="images/" />
                                         </div>-->
                                                 <div class="content">
-                                                    <a class="js-acc-btn" href="#">Admin</a>
+                                                    <a class="js-acc-btn" href="#"><?= $userData->username_admin?></a>
                                                 </div>
                                                 <div class="account-dropdown js-dropdown">
                                                     <div class="info clearfix">
@@ -277,9 +292,9 @@
                                                         </div>-->
                                                         <div class="content">
                                                             <h5 class="name">
-                                                                <a href="#">Admin</a>
+                                                                <a href="#"><?= $userData->username_admin?></a>
                                                             </h5>
-                                                            <span class="email">Admin@example.com</span>
+                                                            <span class="email"><?= $userData->email_admin ?></span>
                                                         </div>
                                                     </div>
                                                     <!-- <div class="account-dropdown__body">
@@ -293,7 +308,7 @@
                                                 </div>
                                             </div>-->
                                                     <div class="account-dropdown__footer">
-                                                        <a href="#">
+                                                        <a href="<?= base_url("admin/login/logout") ?>">
                                                             <i class="zmdi zmdi-power"></i>Logout</a>
                                                     </div>
                                                 </div>
