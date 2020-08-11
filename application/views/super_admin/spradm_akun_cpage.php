@@ -16,10 +16,7 @@
              </div>
  
 <div class="col-lg-12">
-    <div class="card">
-        <!--<div class="card-header">
-            <strong>Basic Form</strong> Elements
-        </div>-->
+    <div class="card"> 
         <div class="card-body card-block">
             <form action="<?php echo site_url('spradm_sarugo/akun_create'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
@@ -95,14 +92,39 @@
                         <span class="text-danger"><?php echo form_error('konfpass_admin') ?></span>
                     </div>
                 </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="text-input" class=" form-control-label">Hak Akses </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <!-- <input type="password" id="konfpass_admin" name="konfpass_admin" class="form-control">
+                        <small class="form-text text-muted">Masukan Password Admin</small>
+                        <span class="text-danger"><?php echo form_error('konfpass_admin') ?></span> -->
+
+                        <div id="hak_access"></div>
+                        <button id="hal_wisata">Halaman Statis</button>
+                        <button id="menu"> Menu</button>
+                        <button id="sub_menu">Sub Menu</button>
+                        <button id="event">Event</button>
+                        <button id="banner" class="primary">Banner</button>
+                        <button id="wisata" class="primary">Wisata</button>
+                        <button id="produk">Produk</button>
+                        <button id="paket_wisata" class="primary">Paket Wisata</button>
+                        <button id="testimoni" class="primary">Testimoni</button>
+                        <button id="all" class="primary">All</button>
+                        <button id="superadmin" class="primary">Super Admin</button>
+                    </div>
+                </div>
+
                 <div>
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Submit
-            </button>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Reset
-            </button>
-        </div>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
             </form>
         </div>
         

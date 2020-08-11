@@ -104,7 +104,7 @@
         <ul>
           <li class=""><a href="<?=base_url()?>">Beranda</a></li>
 
-          <li class=""><a href="#event">Event</a></li>
+          <li class=""><a href="<?=base_url("#event")?>">Event</a></li>
 
           <li class="drop-down"><a href="<?=base_url("wisata")?>">Wisata</a>
             <ul>
