@@ -5,11 +5,11 @@
   <div class="container">
 
     <div class="d-flex justify-content-between align-items-center">
-      <h2><?= $berita->judul_berita ?></h2>
+      <h2><?= $event->nama_event ?></h2>
       <ol>
         <li><a href="<?=base_url("")?>">Beranda</a></li>
-        <li><a href="<?=base_url("berita")?>">Berita</a></li>
-        <li><?= $berita->judul_berita ?></li>
+        <li><a href="<?=base_url("")?>">Event</a></li>
+        <li><?= $event->nama_event ?></li>
       </ol>
     </div>
 
@@ -24,24 +24,24 @@
         <article class="entry entry-single">
 
           <div class="entry-img">
-            <img src="<?=base_url("$berita->gambar")?> " alt="" class="img-fluid" width="100%">
+            <img src="<?=base_url("$event->gambar")?> " alt="" class="img-fluid rounded" width="100%">
           </div>
 
           <h2 class="entry-title">
-                <?= $berita->judul_berita ?> 
+                <?= $event->nama_event ?> 
           </h2>
 
           <div class="entry-meta">
             <ul>
-              <li class="d-flex align-items-center"><i class="icofont-user"></i>  Admin </li>
-              <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time datetime="<?= $berita->tgl_post ?>"><?= $berita->tgl_post ?></time> </li>
+              <!-- <li class="d-flex align-items-center"><i class="icofont-user"></i>  Admin </li>
+              <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time datetime="<?= $event->tgl_awal ?>"><?= $berita->tgl_post ?></time> </li> -->
              
              </ul>
           </div>
 
           <div class="entry-content">
           
-            <p>&emsp; &emsp; <?= $berita->keterangan ?></p>
+            <p>&emsp; &emsp; <?= $event->keterangan ?></p>
 
           </div>
 
@@ -49,9 +49,9 @@
             <!-- xx -->
 
             <div class="float-right share">
-              <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
-              <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
-              <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
+              <a href="https://twitter.com" title="Share on Twitter"><i class="icofont-twitter"></i></a>
+              <a href="https://facebook.com" title="Share on Facebook"><i class="icofont-facebook"></i></a>
+              <a href="https://instagram.com" title="Share on Instagram"><i class="icofont-instagram"></i></a>
             </div>
 
           </div>
@@ -67,11 +67,11 @@
 
           <h3 class="sidebar-title">Recent Posts</h3>
           <div class="sidebar-item recent-posts">
-            <?php foreach ($dataBerita as $key => $berita) : ?>
+            <?php foreach ($dataEvent as $key => $event) : ?>
                 <div class="post-item clearfix">
-                <img width="100%" src="<?= base_url("$berita->gambar") ?>" alt="gambar">
-                <h4><a href="Berita2.html"><?=  $berita->judul_berita ?></a></h4>
-                <time datetime="<?=  $berita->judul_berita ?>"><?=  $berita->tgl_post ?></time>
+                    <img width="100%" src="<?= base_url("$event->gambar") ?>" alt="gambar">
+                    <h4><a href="event2.html"><?=  $event->nama_event ?></a></h4>
+                    <time datetime="<?=  $event->tgl_awal ?>"><?=  $event->tgl_awal ?></time>
                 </div>
             <?php endforeach ?>
 

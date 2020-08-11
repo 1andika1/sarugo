@@ -48,23 +48,83 @@
   </section><!-- End Hero -->
 
   <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="container display1">
-            <h3 id="tengah"> Profile dan Sejarah</h3>
+<!-- test halaman berita -->
+ 
+<!-- ======= Blog Section ======= -->
+<section id="blog" class="blog">
+  <div class="container">
+    <!-- test -->
+        <div class="row">
+          <!-- <div class="col-md-8"></div> -->
+          <div class="col-lg-12 position-sticky bg-light ">
+            <article id="event" class="entry entry-single  shadow  rounded">
+              <div class="sidebar mb-0 shadow-none bg-white "> 
+                <h3 class="sidebar-title text-center display-2">Event</h3>
+                  <div class="sidebar-item recent-posts">
+                    
+                    <?php foreach ($dataEvent as $key => $event) : ?>
+                      <a href="<?= base_url("event?id_event=$event->id_event") ?>">  
+                        <div class="post-item shadow p-3 bg-light rounded clearfix">
+                          <img class="rounded" src="<?= base_url("$event->gambar") ?>" width="100%" alt="">
+                          <h4><a href="<?= base_url("event?id_event=$event->id_event") ?>"><?=  $event->nama_event  ?></a></h4>
+                          <time datetime="2020-01-01"><?=  $event->tgl_awal ?></time>
+                        </div>
+                      </a>
+                    <?php endforeach?>
+
+                    <div class="post-item clearfix">
+                      <img src="assets/img/business-26.jpg" alt="">
+                      <h4><a href="Berita4.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+
+                    <div class="post-item clearfix">
+                      <img src="assets/img/business-30.jpg" alt="">
+                      <h4><a href="Berita5.html">Laborum corporis quo dara net para</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+
+                    <div class="post-item clearfix">
+                      <img src="assets/img/business-16.jpg" alt="">
+                      <h4><a href="Berita6.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+
+                  </div> 
+                </div> 
+              </div><!-- End blog sidebar -->
+            <!-- </div> -->
         </div>
-            <div class="container">
-              <div class="row">
-              <div class="col-md-2"></div>
-                <div class="col-md-8">
-                <div class="entry-img">
-                  <img src="<?=base_url()?>Web_Statis/assets/img/blog-1.jpg" alt="" class="img-fluid" width="100%">
-                </div>
-                <div class="col-md-2"></div>
-                </div>
+    <!-- test -->
+
+
+    <!-- Sejarah, Lokasi dan halaman statis -->
+    <div class="row ">
+      <div class="col-lg-12 entries ">
+        <article class="entry entry-single shadow p-3 mb-5 bg-white rounded ">
+
+          <h2 class="entry-title text-center">
+               Sejarah
+          </h2>
+          
+           
+          <div class="row justify-content-md-center" >
+            <div class="col-md-8 ">
+              <div class="entry-img">
+                <img src="<?=base_url()?>Web_Statis/assets/img/blog-1.jpg" alt="" class="img-fluid" width="100%">
               </div>
-            </div>
+            </div>  
+          </div>
+          
+          <div class="entry-meta">
+            <!-- <ul>
+              <li class="d-flex align-items-center"><i class="icofont-user"></i>  Admin </li>
+              <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time datetime="123456">123456</time> </li>
+             
+             </ul> -->
+          </div>
+
+          <div class="entry-content"> 
             <div class="container mt-5">
               <p>
                 Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -81,71 +141,122 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End About Section -->
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-    <div class="container">
-      <div class="container">
-        <h3 id="tengah"> Akses Lokasi</h3>
-        <!-- maps -->
-            <div id="googleMap" style="width:100%;height:380px;"> </div>
-            <!-- end maps -->
-          </div>
-          <br>  
-          <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-          </div>
-        </div>
 
-      </div>
-    </section>
+          </div>
+
+          <div class="entry-footer clearfix">
+            <!-- xx -->
+
+            <div class="float-right share">
+              <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
+              <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
+              <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
+            </div>
+
+          </div>
+
+        </article><!-- End blog entry -->
 
 
-   <?php foreach ($dataHalStatis as $key => $halStatis) :?>
+        <article class="entry entry-single shadow p-3 mb-5 bg-white rounded ">
+
+          <h3 id="tengah"> Akses Lokasi</h3>  
+          <!-- maps -->
+              <div id="googleMap" style="width:100%;height:380px;"> </div>  
+          <!-- end maps --> 
+            <br>  
+              <p>
+                &emsp;&emsp;Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum
+              </p>
+              <p class="font-italic">
+              &emsp;&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p> 
+
+        </article><!-- End blog entry -->
+
+        
+
+    <!-- halaman static -->
+    <?php foreach ($dataHalStatis as $key => $halStatis) :?>
     <?php if($halStatis->add_to_beranda) : ?>
 
       <!-- ======= Static Page Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="container display1">
-            <h3 id="tengah"> <?= $halStatis->judul ?></h3>
-        </div>
-            <div class="container">
-              <div class="row">
-              <div class="col-md-2"></div>
-                <div class="col-md-8">
+      <article class="entry entry-single shadow p-3 mb-5 bg-white rounded">
+          <div class="container display1 mb-3">
+            <h3 id="tengah" class="fw-600 upp"> <?= $halStatis->judul ?></h3>
+          </div>
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-8">
                 <div class="entry-img">
-                  <img src="<?=base_url().$halStatis->gambar?>" alt="" class="img-fluid" width="100%">
-                </div>
-                <div class="col-md-2"></div>
+                  <img src="<?=base_url().$halStatis->gambar?>" alt="" class="img-fluid rounded" width="100%">
                 </div>
               </div>
             </div>
-            <div class="container mt-5">
-              <p>
-                <?= $halStatis->isi ?>
-              </p>
-            </div>
-             
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Static Page Section -->
+          
+          <div class="container mt-5">
+            <p>&emsp;&emsp;
+              <?= $halStatis->isi ?>
+            </p>
+          </div>
 
-    <?php endif?>
-   <?php endforeach ?>
+         </article><!-- End blog entry -->
+         
+      <!-- End Static Page Section -->
+
+        <?php endif?>
+      <?php endforeach ?>
+      <!-- akhir halaman Static -->
+
+      </div><!-- End blog entries list -->
+
+      <div class="d-none col-lg-4 position-sticky bg-light">
+
+        <div class="sidebar  ">
+ 
+
+          <h3 class="sidebar-title">Recent Posts</h3>
+          <div class="sidebar-item recent-posts">
+             
+
+            <div class="post-item clearfix">
+              <img src="assets/img/business-20.jpg" alt="">
+              <h4><a href="Berita3.html">Quidem autem et impedit</a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+            <div class="post-item clearfix">
+              <img src="assets/img/business-26.jpg" alt="">
+              <h4><a href="Berita4.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+            <div class="post-item clearfix">
+              <img src="assets/img/business-30.jpg" alt="">
+              <h4><a href="Berita5.html">Laborum corporis quo dara net para</a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+            <div class="post-item clearfix">
+              <img src="assets/img/business-16.jpg" alt="">
+              <h4><a href="Berita6.html">Et dolores corrupti quae illo quod dolor</a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+          </div><!-- End sidebar recent posts-->
+        </div><!-- End sidebar -->
+      </div><!-- End blog sidebar -->
+    </div>
+  </div>
+</section><!-- End Blog Section -->
+
+<!-- akhir test halaman aberita -->
+
+
 
   </main><!-- End #main -->
  

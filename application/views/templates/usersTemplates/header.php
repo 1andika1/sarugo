@@ -13,6 +13,8 @@
   <title>SARUGO</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/images/logo-bulat.png">
 
 
   <!-- Menyisipkan library Google Maps -->
@@ -102,6 +104,8 @@
         <ul>
           <li class=""><a href="<?=base_url()?>">Beranda</a></li>
 
+          <li class=""><a href="#event">Event</a></li>
+
           <li class="drop-down"><a href="<?=base_url("wisata")?>">Wisata</a>
             <ul>
             <?php foreach($subMenuWisata as $key => $sub) : ?>
@@ -143,7 +147,10 @@
                   <!-- if it has child then use this template -->
                   <?php if($hasChild) : ?>
                     
-                    <li class="drop-down"><a href="<?=base_url("menu?judul_hal_statis=$sebuahMenu->link_hal_statis&&?id=$sebuahMenu->id")?> " ><?= $sebuahMenu->nama_menu?></a>
+                    <li class="drop-down">
+                      <a >
+                          <?= $sebuahMenu->nama_menu?>
+                        </a>
                       <ul>
 
                         <?php foreach ($dataSubMenu as $key => $sebuahDataSubMenu) :?>

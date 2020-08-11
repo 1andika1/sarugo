@@ -25,6 +25,10 @@
                                         <i class="fas fa-chart-bar"></i>Halaman Statis</a>
                                 </li>
                                 <li>
+                                    <a href="<?=base_url("admin/event")?>">
+                                        <i class="fas fa-calendar"></i>Event</a>
+                                </li>
+                                <li>
                                     <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-bars"></i>Menu</a>
                                 </li>
