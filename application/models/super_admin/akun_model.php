@@ -39,7 +39,7 @@ class akun_model extends CI_Model
 			$this->telp_admin,
             $this->email_admin,
 			$this->username_admin,
-            $this->password_admin
+            md5($this->password_admin)
             
 		);
 		$this->db->query($sql);

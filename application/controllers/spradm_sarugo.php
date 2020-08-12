@@ -51,9 +51,8 @@ class spradm_sarugo extends CI_Controller {
 			array(
 				'field' => 'nama_admin',
 				'label' => 'Nama Admin',
-				'rules' => 'required|alpha_numeric_spaces',
-				'errors' => array(
-					'required' => '%s tidak boleh kosong',
+				'rules' => 'alpha_numeric_spaces',
+				'errors' => array( 
 					'alpha_numeric_spaces' => '%s hanya berisi huruf (A-Z)'
 				)
 			),
@@ -112,10 +111,33 @@ class spradm_sarugo extends CI_Controller {
             $this->load->view('super_admin/spradm_akun_cpage');
             $this->load->view('templates/footer');
 		} else {
+
+			var_dump($_POST);die();
+
+			$nama_admin = $_POST["nama_admin"];
+			$nip_admin = $_POST["nip_admin"];
+			$telp_admin = $_POST["telp_admin"];
+			$email_admin = $_POST["email_admin"];
+			$username_admin = $_POST["username_admin"];
+			$password_admin = $_POST["password_admin"];
+			$konfpass_admin = $_POST["konfpass_admin"];
+
+			$hal_statis 	= isset($_POST["hal_statis"])? $_POST["hal_statis"]: false;
+			$menu 			= isset($_POST["menu"])? $_POST["menu"] : false;
+			$sub_menu 		= isset($_POST["sub_menu"])? $_POST["sub_menu"] : false;
+			$event 			= isset($_POST["event"])? $_POST["event"] : false;
+			$banner 		= isset($_POST["banner"])? $_POST["banner"] : false;
+			$wisata 		= isset($_POST["wisata"])? $_POST["wisata"]: false;
+			$produk 		= isset($_POST["produk"])? $_POST["produk"]: false;
+			$paket_wisata 	= isset($_POST["paket_wisata"])? $_POST["paket_wisata"] : false;
+			$testimoni 		= isset($_POST["testimoni"])? $_POST["testimoni"] : false;
+			$all 			= isset($_POST["all"])? $_POST["all"] : false;
+
+
 			$this->db->insert('akun', $_POST);
 			redirect('spradm_sarugo/akun_read');
 		}
-	}
+	} 
     
 
     public function akun_update($id)
