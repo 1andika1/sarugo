@@ -116,19 +116,7 @@
       const inputTesti = document.querySelector("#inputTesti")
       const inputStar = document.querySelector("#inputStar")
       const kotakTestimony = document.querySelector("#kotakTestimony")
-      // const star = document.querySelector('input[name="star"]:checked').value
-      // const bintang = "";
-
-      // for(i = 0;i<star;i++){
-      //      bintang += `
-      //       <input type="radio" checked name="star" id="star1" ><label for="star1"></label>
-      //     `
-      //   }
-
-
       
-      
-
       kirim.addEventListener("click",(event)=>{
         event.preventDefault();
         displayTesti();
@@ -159,6 +147,29 @@
       </div>`
         
       }
+
+
+      console.log("hello from bottom")
+</script>      
+
+    
+
+    <script>  
+      var lastScrollTop = 0;
+
+       
+      document.addEventListener("scroll", function(){  
+        var st = window.pageYOffset || document.documentElement.scrollTop;  
+        if (st > lastScrollTop){
+            // downscroll code 
+            topheader.className = "container d-none"
+        } else {
+            // upscroll code 
+            topheader.className = " container"
+        }
+        lastScrollTop = st <= 0 ? 0 : st;  
+      }, false);
+
     </script>
 </body>
 
