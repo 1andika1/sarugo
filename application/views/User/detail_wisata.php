@@ -32,7 +32,7 @@
                         <div class="box featured">
                         <img width="100%" src="<?=base_url("$resource->link_resource")?>" alt="pict1">
                         <div class="btn-wrap">
-                            <a href="#keteranganUtama" id="buttonKet<?=$counter?>" class="btn-buy">ket. gambar</a>
+                            <!--<a href="#keteranganUtama" id="buttonKet<?=$counter?>" class="btn-buy">ket. gambar</a>-->
                             <small id="keterangan<?=$counter++ ?>" class="d- "> <?= $resource->keterangan ?></small>
                         </div>
                         </div>
@@ -44,7 +44,7 @@
                             <source src="<?=base_url("$resource->link_resource")?>" type="video/mp4" style>
                         </video>
                         <div class="btn-wrap">
-                            <a href="#keteranganUtama" id="buttonKet<?=$counter?>" class="btn-buy">ket. video</a>
+                            <!--<a href="#keteranganUtama" id="buttonKet<?=$counter?>" class="btn-buy">ket. video</a>-->
                             <small id="keterangan<?=$counter++ ?>" class="d- "> <?= $resource->keterangan ?></small>
                         </div>
                         </div>
