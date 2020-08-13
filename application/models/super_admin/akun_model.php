@@ -66,7 +66,7 @@ class akun_model extends CI_Model
 	public function read()
 	{
 		$sql = "SELECT nip_admin, nama_admin, telp_admin, email_admin, username_admin
-		from akun";
+		from akun WHERE level < 2";
 		$query = $this->db->query($sql);
 		return $query->result();
 	}

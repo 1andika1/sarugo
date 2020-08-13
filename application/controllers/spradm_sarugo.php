@@ -107,37 +107,108 @@ class spradm_sarugo extends CI_Controller {
 		$this->form_validation->set_rules($config);
 		// $_POST["password_admin"] = $_POST["konfpass_admin"]= md5($_POST["password_admin"]);
 
-		if ($this->form_validation->run() == FALSE) {
+		if ($this->form_validation->run() == FALSE) { 
             $this->load->view('super_admin/spradm_akun_cpage');
             $this->load->view('templates/footer');
 		} else {
+			$this->add();
 
-			var_dump($_POST);die();
+			// var_dump($_POST);die();
 
-			$nama_admin = $_POST["nama_admin"];
-			$nip_admin = $_POST["nip_admin"];
-			$telp_admin = $_POST["telp_admin"];
-			$email_admin = $_POST["email_admin"];
-			$username_admin = $_POST["username_admin"];
-			$password_admin = $_POST["password_admin"];
-			$konfpass_admin = $_POST["konfpass_admin"];
+			// $nama_admin = $_POST["nama_admin"];
+			// $nip_admin = $_POST["nip_admin"];
+			// $telp_admin = $_POST["telp_admin"];
+			// $email_admin = $_POST["email_admin"];
+			// $username_admin = $_POST["username_admin"];
+			// $password_admin = $_POST["password_admin"];
+			// $konfpass_admin = $_POST["konfpass_admin"];
 
-			$hal_statis 	= isset($_POST["hal_statis"])? $_POST["hal_statis"]: false;
-			$menu 			= isset($_POST["menu"])? $_POST["menu"] : false;
-			$sub_menu 		= isset($_POST["sub_menu"])? $_POST["sub_menu"] : false;
-			$event 			= isset($_POST["event"])? $_POST["event"] : false;
-			$banner 		= isset($_POST["banner"])? $_POST["banner"] : false;
-			$wisata 		= isset($_POST["wisata"])? $_POST["wisata"]: false;
-			$produk 		= isset($_POST["produk"])? $_POST["produk"]: false;
-			$paket_wisata 	= isset($_POST["paket_wisata"])? $_POST["paket_wisata"] : false;
-			$testimoni 		= isset($_POST["testimoni"])? $_POST["testimoni"] : false;
-			$all 			= isset($_POST["all"])? $_POST["all"] : false;
+			// $hal_statis 	= isset($_POST["hal_statis"])? $_POST["hal_statis"]: false;
+			// $menu 			= isset($_POST["menu"])? $_POST["menu"] : false;
+			// $sub_menu 		= isset($_POST["sub_menu"])? $_POST["sub_menu"] : false;
+			// $event 			= isset($_POST["event"])? $_POST["event"] : false;
+			// $banner 		= isset($_POST["banner"])? $_POST["banner"] : false;
+			// $wisata 		= isset($_POST["wisata"])? $_POST["wisata"]: false;
+			// $produk 		= isset($_POST["produk"])? $_POST["produk"]: false;
+			// $paket_wisata 	= isset($_POST["paket_wisata"])? $_POST["paket_wisata"] : false;
+			// $testimoni 		= isset($_POST["testimoni"])? $_POST["testimoni"] : false;
+			// $all 			= isset($_POST["all"])? $_POST["all"] : false;
 
 
-			$this->db->insert('akun', $_POST);
-			redirect('spradm_sarugo/akun_read');
+			// $this->db->insert('akun', $_POST);
+			// redirect('spradm_sarugo/akun_read');
 		}
 	} 
+
+	public function add()
+	{
+			   
+			$nama_admin = htmlspecialchars($_POST["nama_admin"]);
+			$nip_admin = $_POST["nip_admin"];
+			$telp_admin = $_POST["telp_admin"];
+			$email_admin = htmlspecialchars($_POST["email_admin"]);
+			$username_admin = htmlspecialchars($_POST["username_admin"]);
+			$password_admin = htmlspecialchars($_POST["password_admin"]);
+
+			$password_admin = md5($password_admin);
+			// $konfpass_admin = $_POST["konfpass_admin"];
+
+			$hal_statis 	= isset($_POST["hal_statis"])? true: false;
+			$menu 			= isset($_POST["menu"])? true : false;
+			$sub_menu 		= isset($_POST["sub_menu"])? true : false;
+			$event 			= isset($_POST["event"])? true : false;
+			$banner 		= isset($_POST["banner"])? true : false;
+			$wisata 		= isset($_POST["wisata"])? true: false;
+			$produk 		= isset($_POST["produk"])? true: false;
+			$paket_wisata 	= isset($_POST["paket_wisata"])? true : false;
+			$testimoni 		= isset($_POST["testimoni"])? true : false;
+			$berita 		= isset($_POST["berita"])? true : false;
+			$all 			= isset($_POST["all"])? true : false;
+
+
+			$admin = array(
+				"nama_admin" =>$nama_admin,
+				"nip_admin" =>$nip_admin,
+				"telp_admin" =>$telp_admin,
+				"email_admin" =>$email_admin,
+				"username_admin" =>$username_admin,
+				"password_admin" =>$password_admin,
+				"konfpass_admin" =>$password_admin,
+				"level"=>1,
+			);
+
+			$this->db->insert('akun', $admin);
+			$id_admin = $this->db->get_where("akun",["email_admin"=>$email_admin,"username_admin"=>$username_admin])->result()[0]->id;
+			
+			$adminAccess = array(
+				"id_admin" 		=> $id_admin,
+				"hal_statis" 	=> $hal_statis,
+				"menu" 			=> $menu,
+				"sub_menu" 		=> $sub_menu,
+				"event" 		=> $event,
+				"banner" 		=> $banner,
+				"wisata" 		=> $wisata,
+				"produk" 		=> $produk,
+				"testimoni" 	=> $testimoni,
+				"berita" 		=> $berita,
+				"semua" 		=> $all,
+				"superadmin" 	=> true,
+			);
+
+			$adminAccess["semua"] = false;
+			foreach ($adminAccess as $key => $data) {
+				$adminAccess['semua'] = $data;
+				if(!$data){
+					break;
+				}
+			} 
+			$adminAccess["superadmin"] = false; 
+
+			
+			$this->db->insert('access',$adminAccess);
+
+			redirect('spradm_sarugo/akun_read');
+	}
     
 
     public function akun_update($id)

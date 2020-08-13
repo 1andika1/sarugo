@@ -29,9 +29,21 @@ class login extends CI_Controller {
         $username = htmlspecialchars( $_POST["username"]);
         $password = htmlspecialchars($_POST["password"]);
 
-        $dataUser = $this->db->get_where("akun",["username_admin"=>$username ])->result()[0];
-        // var_dump($dataUser);die();
-        if($password == $dataUser->password_admin){
+        
+        $this->db->select('*');
+        $this->db->from('akun');
+        $this->db->where("username_admin",$username);
+        $this->db->join('access', 'access.id_admin = akun.id');
+        $dataUser = $this->db->get()->result();
+        $dataUser = $dataUser==null? null : $dataUser[0] ;
+
+        $dataUser= $dataUser==null
+        ? $dataUser = $this->db->get_where("akun",["username_admin"=>$username ])->result()[0]
+        : $dataUser;
+
+        // var_dump($dataUser->password_admin,md5($dataUser->password_admin));die();
+         
+        if($password == $dataUser->password_admin || md5($password) ==  $dataUser->password_admin){
             if($dataUser->level <=1){
                 $this->session->admin = $dataUser;
                 redirect(base_url("admin/home"));

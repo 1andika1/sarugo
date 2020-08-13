@@ -87,8 +87,107 @@ $userData ;
                     <nav class="navbar-mobile">
                         
                         <div class="container-fluid">
-                            
+
+                        <?php if(isset($this->session->spradmin)) : ?>
                             <ul class="navbar-mobile__list list-unstyled">
+                                <li>
+                                    <a class="js-arrow" href="<?=base_url("spradm_sarugo/home_page")?>">
+                                        <i class="fas fa-home"></i>Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?=base_url("spradm_sarugo/akun_create")?>">
+                                        <i class="fas fa-group"></i>Data Akun Admin</a>
+                                </li>
+                                
+                            </ul>
+                        <?php else : ?>
+                            
+                        <ul class="navbar-mobile__list list-unstyled">
+                            <li>
+                                <a class="js-arrow" href="<?=base_url("admin/home")?>">
+                                    <i class="fas fa-home"></i>Home
+                                </a>
+                            </li>
+
+                            <?php if(isset($this->session->admin->hal_statis) && $this->session->admin->hal_statis ) : ?>
+                                    
+                                <li>
+                                    <a href="<?=base_url("admin/statis")?>">
+                                        <i class="fas fa-chart-bar"></i>Halaman Statis</a>
+                                </li>
+                            <?php endif ?> 
+
+                            <?php if(isset($this->session->admin->event) && $this->session->admin->event ) : ?>
+                                <li>
+                                    <a href="<?=base_url("admin/event")?>">
+                                        <i class="fas fa-calendar"></i>Event</a>
+                                </li>
+                            <?php if(isset($this->session->admin->menu) && $this->session->admin->menu ) : ?>
+                            <?php endif ?>
+                                <li>
+                                    <a href="<?=base_url("admin/menu")?>">
+                                        <i class="fas fa-bars"></i>Menu</a>
+                                </li>
+                            <?php if(isset($this->session->admin->sub_menu) && $this->session->admin->sub_menu ) : ?>
+                            <?php endif ?>
+                                <li>
+                                    <a href="<?=base_url("admin/submenu")?>">
+                                        <i class="fas fa-indent"></i>Sub Menu
+                                    </a>
+                                </li>
+                            <?php endif ?>
+                            <?php if(isset($this->session->admin->banner) && $this->session->admin->banner ) : ?>
+                                <li>
+                                    <a href="<?=base_url("admin/banner")?>">
+                                        <i class="fas fa-picture-o"></i>Banner/Slider
+                                    </a>
+                                </li>
+                            <?php endif ?>
+                            <?php if(isset($this->session->admin->wisata) && $this->session->admin->wisata ) : ?>
+                                <li>
+                                    <a href="<?=base_url("admin/wisata")?>">
+                                        <i class="fas fa-location-arrow"></i>Wisata
+                                    </a>
+                                </li>
+                            <?php endif ?>
+
+                            <?php if(isset($this->session->admin->produk) && $this->session->admin->produk ) : ?>
+                                <li>
+                                    <a href="<?=base_url("admin/produk")?>">
+                                        <i class="fas fa-tag"></i>Produk
+                                    </a>
+                                </li>
+                            <?php endif ?>
+
+                            <?php if(isset($this->session->admin->paket_wisata) && $this->session->admin->paket_wisata ) : ?>
+                                <li>
+                                    <a href="<?=base_url("admin/paketwisata")?>">
+                                        <i class="fas fa-bookmark"></i>Paket Wisata
+                                    </a>
+                                </li>
+                            <?php endif ?>
+
+                            <?php if(isset($this->session->admin->testimoni) && $this->session->admin->testimoni ) : ?>
+                                <li>
+                                    <a href="<?=base_url("admin/testimoni")?>">
+                                        <i class="fas fa-comment"></i>Testimoni
+                                    </a>
+                                </li>
+                            <?php endif ?>
+
+                            <?php if(!isset($this->session->admin->berita) || $this->session->admin->berita ) : ?>
+                                <li>
+                                    <a href="<?=base_url("admin/berita")?>">
+                                        <i class="fas fa-desktop"></i>Berita
+                                    </a>
+                                </li>
+                            <?php endif ?>
+                        </ul>
+
+                        <?php endif ?>
+                            
+                            <!-- <ul class="navbar-mobile__list list-unstyled">
                                 <li>
                                     <a class="js-arrow" href="home_page">
                                         <i class="fas fa-home"></i>Home
@@ -141,7 +240,7 @@ $userData ;
                                         <i class="fas fa-desktop"></i>Berita
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </nav>
                 </header>
