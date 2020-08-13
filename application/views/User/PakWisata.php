@@ -33,7 +33,7 @@
                 <li>+ Pemandu Wisata</li> 
                 <li class="na">Massa ultricies mi</li>
               </ul>
-              <h4><sup>Rp.</sup><?= $paketWisata->biaya ?><span></span></h4>
+              <h4><?= format_rp($paketWisata->biaya); ?></h4>
               <div class="btn-wrap">
                 <a href="<?=base_url("paket?paket=paket1")?>" class="btn-buy">Lihat Selengkapnya</a>
               </div>
@@ -51,7 +51,7 @@
                 <li class="na">Pharetra massa</li>
                 <li class="na">Massa ultricies mi</li>
               </ul>
-              <h4><sup>Rp.</sup>200.000<span></span></h4>
+              <h4><?= format_rp(200000)?></h4>
               <div class="btn-wrap">
                 <a href="<?=base_url("paket?paket=paket1")?>" class="btn-buy">Lihat Selengkapnya</a>
               </div>
@@ -68,7 +68,7 @@
                 <li>Pharetra massa</li>
                 <li class="na">Massa ultricies mi</li>
               </ul>
-              <h4><sup>Rp.</sup>200.000<span></span></h4>
+              <h4><?= format_rp(200000)?></h4>
               <div class="btn-wrap">
                 <a href="<?=base_url("paket?paket=paket2")?>" class="btn-buy">Lihat Selengkapnya</a>
               </div>
@@ -85,7 +85,7 @@
                 <li></li>
                 <li></li>
               </ul>
-              <h4><sup>Rp. </sup>200.000<span></span></h4>
+              <h4><sup><?= format_rp(200000)?></h4>
               <div class="btn-wrap">
                 <a href="<?=base_url("paket?paket=paket3")?>" class="btn-buy">Lihat Selengkapnya</a>
               </div>
@@ -103,7 +103,7 @@
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
               </ul>
-              <h4><sup>Rp.</sup>200.000<span></span></h4>
+              <h4><?= format_rp(200000)?></h4>
               <div class="btn-wrap">
                 <a href="<?=base_url("paket?paket=paket4")?>" class="btn-buy">Lihat Selengkapnya</a>
               </div>
