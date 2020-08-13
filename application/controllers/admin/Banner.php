@@ -5,8 +5,12 @@ class Banner extends CI_Controller{
     function __construct()
     {
         parent::__construct();
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar_adm');
+        if(isset($this->session->admin->banner) && $this->session->admin->banner ){
+            $this->load->view('templates/header');
+            $this->load->view('templates/sidebar_adm');
+        } else {
+            redirect(base_url("admin/login"));
+        }
     }
 
     public function index()
