@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SARUGO</title>
+  <title>SARUGO | Kabupaten Lima Puluh Kota</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
   
@@ -46,7 +46,7 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Favicons -->
-  <link href="Web_Statis/assets/img/favicon.png" rel="icon">
+  <!--<link href="Web_Statis/assets/img/favicon.png" rel="icon">
   <link href="Web_Statis/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -102,7 +102,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="<?=base_url()?>"><img src="<?=base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <nav class="logo"><a href="<?=base_url()?>"><img src="<?=base_url()?>assets/images/logo-BULAT.png" alt="logo" />  SARUGO</a></nav>
      
       <nav class="nav-menu d-none d-lg-block">
 
@@ -132,7 +132,6 @@
               <li><a href="<?=base_url("paket")?>?paket=paket1">Paket Wisata 1</a></li>
               <li><a href="<?=base_url("paket")?>?paket=paket2">Paket Wisata 2</a></li>
               <li><a href="<?=base_url("paket")?>?paket=paket3">Paket Wisata 3</a></li>
-              <li><a href="<?=base_url("paket")?>?paket=paket4">Paket Wisata 4</a></li>
             </ul>
           </li>
           <li><a href="<?=base_url("Testimoni")?>">Testimoni</a></li>

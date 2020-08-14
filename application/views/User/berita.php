@@ -45,7 +45,7 @@
                   <?= substr($berita->keterangan,0,200)."..." ?>
                 </p>
                 <div class="read-more">
-                  <a href="<?=base_url("berita/detailberita?id_berita=$berita->id_berita")?>">Read More</a>
+                  <a href="<?=base_url("berita/detailberita?id_berita=$berita->id_berita")?>">Baca Selengkapnya</a>
                 </div>
               </div>
 

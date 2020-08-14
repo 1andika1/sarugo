@@ -52,37 +52,37 @@
     <?php endforeach  ?>
 
     <!-- template produk -->
-    <?php foreach($dataProduk as $key => $produk): ?>
-      <div class="row  justify-content-md-center">
+    <?php //foreach($dataProduk as $key => $produk): ?>
+   <!--   <div class="row  justify-content-md-center">
         <div class="col-md-10">
           <div class="icon-box">
             <div class="container">
               <div class="row justify-content-md-center border">
-                <h4><?= $produk->nama_produk ?></h4>
+                <h4><?//echo $produk->nama_produk ?></h4>
               </div>
             </div>
             <div class="container">
               <div class="row">
                 <div class="col-md-4 border">
-                  <img width="100%" src="<?= base_url("$produk->gambar")?> " alt="">
+                  <img width="100%" src="<?// echo base_url("$produk->gambar")?> " alt="">
                 </div>
                 <div class="col-md-8 border">
                   <table class="table border" >
                       <tr>
-                        <td>Harga Satuan: <?=format_rp($produk->harga_satuan) ?> </td>
+                        <td>Harga Satuan: <?// echo format_rp($produk->harga_satuan) ?> </td>
                       </tr>
                       <tr>
-                        <td>Berat Satuan: <?= $produk->berat_satuan ?> </td>
+                        <td>Berat Satuan: <?// echo $produk->berat_satuan ?> </td>
                       </tr>
                       <tr>
-                        <td>Komposisi: <?= $produk->komposisi ?> </td>
+                        <td>Komposisi: <?// echo $produk->komposisi ?> </td>
                       </tr>
                       <tr>
-                        <td>Keterangan: <?= $produk->keterangan ?> </td>
+                        <td>Keterangan: <?// echo $produk->keterangan ?> </td>
                       </tr>
                       <tr>
                         <td  >Penjelasan produk : 
-                          <?= $produk->penjelasan_produk ?> 
+                          <?// echo $produk->penjelasan_produk ?> 
                         </td>
                         
                       </tr>
@@ -94,5 +94,5 @@
         </div>
       </div>
       <!-- akhir template Produk -->
-      <?php endforeach  ?>
+      <!--<?//php endforeach  ?>-->
   </main><!-- End #main -->

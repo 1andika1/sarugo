@@ -17,64 +17,8 @@
 
 <div class="container">
   <div class="row">
-    <div id="kotakTestimony" class="card mr-auto" style="width: 35rem; margin: 20px; padding: 10px;">
-      <!-- rating1 -->
-      <?php foreach ($dataTestimoni as $key => $testi) : ?>
-
-        <div class="container" style="margin-bottom: 20px; text-align: center;">
-          <div class="row">
-            <div class="col border bg-light" style="padding: 10px;"><?= $testi->nama_testi ?></div>
-            <div class="col-md-auto border bg-light center" style="padding: 10px;"><?= $testi->pekerjaan_testi ?></div>
-            <div class="col border bg-light" style="padding: 10px;"><?= $testi->alamat_testi ?></div>
-          </div>
-          <div class="row"> 
-            <div class="container rating" >
-              <?php for($index=1;$index<=5;$index++) : ?>
-                 <?php if($index==strval($testi->bintang)): ?>
-                    <input checked type="radio" name="star"  id="star<?=$index?>" value="<?= 6-$index?>"><label for="star<?=$index?>"></label>
-                 <?php else : ?>
-                    <input  type="radio" name="star" id="star<?=$index?>" value="<?= 6-$index?>"><label for="star<?=$index?>"></label>
-                 <?php endif ?>
-              <?php endfor  ?> 
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-12 border bg-light" style="padding: 10px;"><?= $testi->pesan_testi ?></div>
-          </div>
-        </div>
-
-      <?php endforeach ?>
-      <!-- rating2 -->
-      <div class="container" style="margin-bottom: 20px; text-align: center;">
-        <div class="row">
-          <div class="col border bg-light" style="padding: 10px;">Dokter Strange</div>
-          <div class="col-md-auto border bg-light center" style="padding: 10px;">Dokter</div>
-          <div class="col border bg-light" style="padding: 10px;">Koto nan IV</div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Rating</div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Keren Bangettt ngab</div>
-        </div>
-      </div>
-      <!-- rating3 -->
-      <div class="container" style="margin-bottom: 20px; text-align: center;">
-        <div class="row">
-          <div class="col border bg-light" style="padding: 10px;">Thor and Loki</div>
-          <div class="col-md-auto border bg-light center" style="padding: 10px;">Pedagang</div>
-          <div class="col border bg-light" style="padding: 10px;">Batang Tabik</div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Rating</div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Bagus, Lestariakn Budaya Lima Puluh Kota</div>
-        </div>
-      </div>
-    </div>
-    <div class="card"  style="width: 35rem; margin: 20px; padding: 10px;">
+    
+    <div class="card shadow"  style="width: 35rem; margin: 20px; padding: 10px;">
       <form method="post" action="<?=base_url("testimoni/add")?>" style="padding-right: 10px; padding-bottom: 10px;">
         <div class="form-group row" style="padding-top: 10px; padding-left: 5px; padding-right: 5px;">
           <label for="inputNama" class="col-sm-4 col-form-label" >Nama</label>
@@ -107,9 +51,149 @@
           <input type="radio" name="star" id="star4" value="2"><label for="star4"></label>
           <input type="radio" name="star" id="star5" value="1"><label for="star5"></label>
         </div>
-        <button id=" " type="submit" class="btn btn-primary float-right" style=" padding-right: 10px">Berikan Testimoni</button>
+        <div class="row">
+  <div class="col-6 col-md-4"></div>
+  <div class="col-6 col-md-4"><button id=" " type="submit" class="btn btn-success float-center" style=" padding-right: 10px; ">Kirim Testimoni</button></div>
+  <div class="col-6 col-md-4"></div>
+</div>
+        
       </form>
   </div>
+
+  
+    <div id="kotakTestimony" class="card mr-auto shadow" style="width: 35rem; margin: 20px; padding: 10px;">
+
+     <!-- Add icon library -->
+<link rel="stylesheet" href="<?= base_url() ?>assets/css/rating.css">
+
+
+
+<span class="heading">RATING PENGGUNA</span>
+<div >
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+</div>
+<p>4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row-center">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+   
+      <!-- rating1 -->
+      <!--<?//php foreach ($dataTestimoni as $key => $testi) : ?>
+
+        <div class="container" style="margin-bottom: 20px; text-align: center;">
+          <div class="row">
+            <div class="col border bg-light" style="padding: 10px;"><?//= $testi->nama_testi ?></div>
+            <div class="col-md-auto border bg-light center" style="padding: 10px;"><//?= $testi->pekerjaan_testi ?></div>
+            <div class="col border bg-light" style="padding: 10px;"><//?= $testi->alamat_testi ?></div>
+          </div>
+          <div class="row"> 
+            <div class="container rating" >
+              <//?php for($index=1;$index<=5;$index++) : ?>
+                 <//?php if($index==strval($testi->bintang)): ?>
+                    <input checked type="radio" name="star"  id="star<//?=$index?>" readonly value="<//?= 6-$index?>"><label for="star<//?=$index?>"></label>
+                 <?//php else : ?>
+                    <input  type="radio" name="star" id="star<?//=$index?>" readonly value="<?//= 6-$index?>"><label for="star</?=$index?>"></label>
+                 <//?php endif ?>
+              <//?php endfor  ?> 
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-12 border bg-light" style="padding: 10px;"><?//= $testi->pesan_testi ?></div>
+          </div>
+        </div>
+
+      <?//php endforeach ?>
+      <!-- rating2 -->
+     <!-- <div class="container" style="margin-bottom: 20px; text-align: center;">
+        <div class="row">
+          <div class="col border bg-light" style="padding: 10px;">Dokter Strange</div>
+          <div class="col-md-auto border bg-light center" style="padding: 10px;">Dokter</div>
+          <div class="col border bg-light" style="padding: 10px;">Koto nan IV</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Rating</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Keren Bangettt ngab</div>
+        </div>
+      </div>
+      <!-- rating3 -->
+   <!--   <div class="container" style="margin-bottom: 20px; text-align: center;">
+        <div class="row">
+          <div class="col border bg-light" style="padding: 10px;">Thor and Loki</div>
+          <div class="col-md-auto border bg-light center" style="padding: 10px;">Pedagang</div>
+          <div class="col border bg-light" style="padding: 10px;">Batang Tabik</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Rating</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Bagus, Lestariakn Budaya Lima Puluh Kota</div>
+        </div>
+      </div>
+    </div>
+    
 </div>
 <!-- end bagian utama -->
 </main><br> 

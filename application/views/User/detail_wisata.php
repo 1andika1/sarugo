@@ -103,7 +103,7 @@
     <section>
       <div class="container">
         <div class="row justify-content-md-center">
-            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#basicModal">Lihat Rute Wisata Adat</a>
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#basicModal">Lihat Rute Wisata</a>
         </div>
       </div>
       <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">

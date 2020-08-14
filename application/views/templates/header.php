@@ -406,7 +406,7 @@ $userData ;
                                                         <i class="zmdi zmdi-settings"></i>Setting</a>
                                                 </div>
                                             </div>-->
-                                                    <div class="account-dropdown__footer">
+                                                    <div class="account-dropdown__footer" >
                                                         <a href="<?= base_url("admin/login/logout") ?>">
                                                             <i class="zmdi zmdi-power"></i>Logout</a>
                                                     </div>
