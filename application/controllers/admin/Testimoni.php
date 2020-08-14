@@ -4,8 +4,12 @@ class Testimoni extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar_adm');
+        if(isset($this->session->admin->testimoni) && $this->session->admin->testimoni ){
+            $this->load->view('templates/header');
+            $this->load->view('templates/sidebar_adm');
+        } else {
+            redirect(base_url("admin/login"));
+        }
     }
 
     public function index()

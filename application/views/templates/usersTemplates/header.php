@@ -123,7 +123,7 @@
             </ul>
           </li>
 
-          <li><a href="<?=base_url("product")?>">Product</a></li>
+          <li><a href="<?=base_url("product")?>">Produk</a></li>
           <li class="drop-down"><a href="<?=base_url("paket")?>" >Paket Wisata</a>
             <ul>
               <?php foreach ($subMenuPaketWisata as $key => $paketWisata) : ?>
