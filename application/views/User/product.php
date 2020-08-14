@@ -27,7 +27,7 @@
             <div class="owl-carousel portfolio-details-carousel" >
               <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
               <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-              <img src="<?= base_url("$produk->gambar")?> class="img-fluid" alt="">
+              <img src="<?= base_url("$produk->gambar")?>" class="img-fluid" alt="">
             </div>
           </div>
 
