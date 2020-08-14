@@ -55,6 +55,7 @@
   <div class="container">
     <!-- test -->
         <div class="row">
+          
           <!-- <div class="col-md-8"></div> -->
           <div class="col-lg-12 position-sticky bg-light ">
             <article id="event" class="entry entry-single  shadow  rounded">
@@ -250,6 +251,7 @@
           </div><!-- End sidebar recent posts-->
         </div><!-- End sidebar -->
       </div><!-- End blog sidebar -->
+      
     </div>
   </div>
 </section><!-- End Blog Section -->

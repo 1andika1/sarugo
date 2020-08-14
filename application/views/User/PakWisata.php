@@ -35,7 +35,7 @@
               </ul>
               <h4><?= format_rp($paketWisata->biaya); ?></h4>
               <div class="btn-wrap">
-                <a href="<?=base_url("paket?paket=paket1")?>" class="btn-buy">Lihat Selengkapnya</a>
+                <a href="<?=base_url("paket?paket=detail_paket_wisata")?>" class="btn-buy">Lihat Selengkapnya</a>
               </div>
             </div>
           </div>
@@ -92,23 +92,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box featured">
-              <!-- <span class="advanced">Paket Wisata</span> -->
-              <h3>Paket Wisata 4</h3>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <h4><?= format_rp(200000)?></h4>
-              <div class="btn-wrap">
-                <a href="<?=base_url("paket?paket=paket4")?>" class="btn-buy">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section><!-- End Pricing Section -->

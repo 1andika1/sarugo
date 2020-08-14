@@ -21,7 +21,7 @@
     <div class="container">
 
       <div class="section-title">
-        <h2></h2>
+        <h2>SARUGO</h2>
         <p><?= $dataPaketWisata->nama_paket_wisata ?></p>
       </div>
 
@@ -46,7 +46,7 @@
               <div class="row">
                 <div class="col-lg-8 details order-2 order-lg-1">
                   <h3>Harga Paket Wisata</h3>
-                  <table style="width: 75%; background-color: white;">
+                  <table style="width: 75%; background-color: white; text-align:left; ">
                     <tr>
                       <td>Jumlah orang</td>
                       <td><?= $dataPaketWisata->jumlah_orang ?> Orang</td>
@@ -73,7 +73,7 @@
                   <table style="width: 75%; background-color: white;" >
                 
                       <tr>
-                        <td style="width: 30%; text-align: center;">Object Wisata</td>
+                        <td style="width: 30%;">Object Wisata</td>
                         <td>
                           <ul>
                             <!-- <li> Wisata ambil jeruk</li>
@@ -84,7 +84,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td style="width: 30%; text-align: center;">Fasilitas</td>
+                        <td style="width: 30%;">Fasilitas</td>
                         <td>
                           <ul>
                             <!-- <li>Makan</li>
@@ -110,8 +110,8 @@
 
                     <?php foreach ($dataJadwal as $key => $jadwal) : ?>
                       <tr>
-                        <td style="width: 30%; text-align: center;"> Hari <?= $jadwal->hari_jadwal == 1 ? "Pertama" : "ke-" . $jadwal->hari_jadwal ?> </td>
-                        <td style="text-align: center;"><?= $jadwal->kegiatan ?></td>
+                        <td style="width: 30%;"> Hari <?= $jadwal->hari_jadwal == 1 ? "Pertama" : "ke-" . $jadwal->hari_jadwal ?> </td>
+                        <td ><?= $jadwal->kegiatan ?></td>
                       </tr>
                     <?php endforeach ?>
                     <!-- <tr>
