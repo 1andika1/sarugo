@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SARUGO</title>
+  <title>SARUGO | Kabupaten Lima Puluh Kota</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
   
@@ -37,11 +37,16 @@
   </script>
   <!-- end maps -->
 
+
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
   <!-- rating -->
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Favicons -->
-  <link href="Web_Statis/assets/img/favicon.png" rel="icon">
+  <!--<link href="Web_Statis/assets/img/favicon.png" rel="icon">
   <link href="Web_Statis/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -97,7 +102,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"> <a href="<?=base_url()?>"><img src="<?=base_url()?>Web_Statis/assets/img/logo.jpg" alt="logo" /></a></h1>
+      <nav class="logo"><a href="<?=base_url()?>"><img src="<?=base_url()?>assets/images/logo-BULAT.png" alt="logo" />  SARUGO</a></nav>
      
       <nav class="nav-menu d-none d-lg-block">
 
@@ -127,7 +132,6 @@
               <li><a href="<?=base_url("paket")?>?paket=paket1">Paket Wisata 1</a></li>
               <li><a href="<?=base_url("paket")?>?paket=paket2">Paket Wisata 2</a></li>
               <li><a href="<?=base_url("paket")?>?paket=paket3">Paket Wisata 3</a></li>
-              <li><a href="<?=base_url("paket")?>?paket=paket4">Paket Wisata 4</a></li>
             </ul>
           </li>
           <li><a href="<?=base_url("Testimoni")?>">Testimoni</a></li>
