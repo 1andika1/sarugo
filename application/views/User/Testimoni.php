@@ -16,7 +16,8 @@
    <!-- bagian utama -->
 
    <div class="container">
-     <div class="row">
+   <h3 style="text-align: center;">Masukkan Testimoni Anda</h3>
+     <div class="row justify-content-md-center">
 
        <div class="card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
          <form method="post" action="<?= base_url("testimoni/add") ?>" style="padding-right: 10px; padding-bottom: 10px;">
@@ -61,7 +62,7 @@
        </div>
 
 
-       <div id="kotakTestimony" class="card mr-auto shadow" style="width: 35rem; margin: 20px; padding: 10px;">
+       <div id="kotakTestimony" class="card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
 
          <!-- Add icon library -->
          <link rel="stylesheet" href="<?= base_url() ?>assets/css/rating.css">
