@@ -58,7 +58,7 @@
                         <label for="textarea-input" class=" form-control-label">Komposisi</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="komposisi" id="isi_hlmstat" rows="9" placeholder="Masukkan komposisi produk ..." class="form-control"></textarea>
+                        <textarea name="komposisi" id="isi_hlmstat" rows="9" placeholder="Masukkan komposisi produk ..." class="form-control summernote"></textarea>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                         <label for="textarea-input" class=" form-control-label">Penjelasan Tambahan</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="penjelasan_produk" id="isi_hlmstat" rows="9" placeholder="Masukkan penjelasan produk ..." class="form-control"></textarea>
+                        <textarea name="penjelasan_produk" id="isi_hlmstat" rows="9" placeholder="Masukkan penjelasan produk ..." class="form-control summernote"></textarea>
                     </div>
                 </div>
                 
@@ -98,6 +98,15 @@
                     </div>
                     <div class="col-12 col-md-9">
                         <input required type="file" id="gbr_hlmstat" name="gambar" class="form-control-file">
+                        <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="file-input" class=" form-control-label">Upload Multiple Gambar</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input multiple required type="file" id="gbr_hlmstat" name="multiple_gambar[]" class="form-control-file">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>

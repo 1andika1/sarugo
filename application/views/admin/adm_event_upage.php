@@ -63,7 +63,7 @@
                         <label for="textarea-input" class=" form-control-label">Deskripsi Event</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea required name="keterangan" id="isi_hlmstat" rows="9" placeholder="Masukkan isi berita ..." class="form-control"><?= $dataEvent->keterangan ?></textarea>
+                        <textarea required name="keterangan" id="summernote" rows="9" placeholder="Masukkan isi berita ..." class="form-control"><?= $dataEvent->keterangan ?></textarea>
                     </div>
                 </div>
                 

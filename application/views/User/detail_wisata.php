@@ -119,6 +119,11 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="container">
+        <iframe onLoad="getLocation()" id="maps" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d63836.776201681205!2d100.61971866398304!3d-0.18054218412874248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d-0.23371419999999998!2d100.6298569!4m5!1s0x2e2aae8062d23863%3A0x4039d80b220d9c0!2sHarau%2C%20Lima%20Puluh%20Kota%20Regency%2C%20West%20Sumatra!3m2!1d-0.1285112!2d100.68724569999999!5e0!3m2!1sen!2sid!4v1597720061302!5m2!1sen!2sid" width="100%" height="500px"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </section>
   </main><!-- End #main -->
 
 
@@ -144,4 +149,30 @@
 
 
 
+  </script>
+
+  
+<script> 
+  const maps = document.querySelector("#maps")
+  let lat ;
+  let long;
+
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition(showPosition);
+    } else { 
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+      
+  function showPosition(position) { 
+      
+      lat = position.coords.latitude;
+      long = position.coords.longitude;
+
+      maps.src = `https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d63836.776201681205!2d100.61971866398304!3d-0.18054218412874248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d${lat}!2d${long}!4m5!1s0x2e2aae8062d23863%3A0x4039d80b220d9c0!2sHarau%2C%20Lima%20Puluh%20Kota%20Regency%2C%20West%20Sumatra!3m2!1d-0.1285112!2d100.68724569999999!5e0!3m2!1sen!2sid!4v1597720061302!5m2!1sen!2sid`
+      
+      console.log(lat,long);
+  }
   </script>

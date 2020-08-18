@@ -38,35 +38,74 @@
                 <script src="<?= base_url() ?>assets/vendor/vector-map/jquery.vmap.min.js"></script>
                 <script src="<?= base_url() ?>assets/vendor/vector-map/jquery.vmap.sampledata.js"></script>
                 <script src="<?= base_url() ?>assets/vendor/vector-map/jquery.vmap.world.js"></script>
+                
+                <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
                 <!-- Main JS-->
                 <script src="<?= base_url() ?>assets/js/main.js"></script>
 
                 <script>
                     $(document).ready(function(){ 
-                    $(".perbesar").fancybox({
-                        openEffect: "none",
-                        closeEffect: "none"
-                    });
+                    $('#summernote').summernote();
+                    $('.summernote').summernote();
+                     
+                });
+
+
+                $('#summernote').summernote({
+                    placeholder: 'Silahkan ketik disini',
+                    tabsize: 2,
+                    height: 120,
+                    toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                    ]
+                });
+                $('.summernote').summernote({
+                    placeholder: 'Silahkan ketik disini',
+                    tabsize: 2,
+                    height: 120,
+                    toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                    ]
                 });
                 
                 
                 </script>
 
 
-<script defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeJNuO2KtgjA59chaLOW-R2gniZDIRk4g&callback=initMap">
-</script>
-      
+    <!-- <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeJNuO2KtgjA59chaLOW-R2gniZDIRk4g&callback=initMap">
+    </script>
+       -->
 
 
-  <script>
+  <!-- <script>
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
                 center: {lat: -34.397, lng: 150.644},
                 zoom: 8
             });
 
-  </script>
+  </script> -->
+
+    <!-- <script>
+    $(document).ready(function() {
+        
+    });
+    </script> -->
 
 </body>
 

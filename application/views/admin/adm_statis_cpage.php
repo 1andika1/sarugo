@@ -16,10 +16,7 @@
              </div>
  
 <div class="col-lg-12">
-    <div class="card">
-        <!--<div class="card-header">
-            <strong>Basic Form</strong> Elements
-        </div>-->
+    <div class="card"> 
         <div class="card-body card-block">
             <form action="<?php echo site_url('admin/statis/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
@@ -38,7 +35,7 @@
                         <label for="textarea-input" class=" form-control-label">Isi Halaman Statis</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="isi_hlmsat" id="isi_hlmstat" rows="9" placeholder="Masukkan isi halaman statis ..." class="form-control"></textarea>
+                        <textarea  name="isi_hlmsat" id="summernote" rows="9" placeholder="Masukkan isi halaman statis ..." ></textarea>
                     </div>
                 </div>
                 
@@ -80,3 +77,5 @@
     </div>
     
 </div>
+
+

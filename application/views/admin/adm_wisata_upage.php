@@ -55,7 +55,7 @@
                         <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="keterangan" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control">
+                        <textarea name="keterangan" id="summernote" rows="9" placeholder="Masukkan deskripsi ..." class="form-control">
                          <?=$dataWisata->keterangan?>
                         </textarea>
                     </div>
@@ -135,7 +135,7 @@
                         <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea required name="keterangan" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
+                        <textarea required name="keterangan"  rows="9" placeholder="Masukkan deskripsi ..." class="form-control summernote"></textarea>
                     </div>
                 </div>
 
@@ -215,7 +215,7 @@
                         <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea required name="keterangan" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
+                        <textarea required name="keterangan" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control summernote"></textarea>
                     </div>
                 </div>
 

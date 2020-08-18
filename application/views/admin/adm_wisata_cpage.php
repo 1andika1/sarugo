@@ -53,7 +53,7 @@
                         <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="keterangan" id="isi_hlmstat" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
+                        <textarea name="keterangan" id="summernote" rows="9" placeholder="Masukkan deskripsi ..." class="form-control"></textarea>
                     </div>
                 </div>
 

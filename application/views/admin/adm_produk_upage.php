@@ -58,7 +58,7 @@
                         <label for="textarea-input" class=" form-control-label">Komposisi</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="komposisi" id="isi_hlmstat" rows="9" placeholder="Masukkan komposisi produk ..." class="form-control"><?= $produk->komposisi ?> 
+                        <textarea name="komposisi" id="isi_hlmstat" rows="9" placeholder="Masukkan komposisi produk ..." class="form-control summernote"><?= $produk->komposisi ?> 
                         </textarea>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                         <label for="textarea-input" class=" form-control-label">Penjelasan Tambahan</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="penjelasan_produk" id="isi_hlmstat" rows="9" placeholder="Masukkan penjelasan produk ..." class="form-control"><?= $produk->penjelasan_produk ?> 
+                        <textarea name="penjelasan_produk" id="isi_hlmstat" rows="9" placeholder="Masukkan penjelasan produk ..." class="summernote form-control"><?= $produk->penjelasan_produk ?> 
                         </textarea>
                     </div>
                 </div>

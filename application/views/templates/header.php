@@ -24,7 +24,7 @@ $userData ;
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/images/logo-bulat.png">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Title Page-->
     <title>SARUGO | Kabupaten Lima Puluh Kota</title>
 
@@ -51,14 +51,20 @@ $userData ;
     <link href="<?= base_url() ?>assets/css/theme.css" rel="stylesheet" media="all">
 
 
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    
+
 </head>
 
-<body class="animsition">
+<body class="animation">
     <div class="page-wrapper">
 
         <body class="animsition">
@@ -123,20 +129,23 @@ $userData ;
                                     <a href="<?=base_url("admin/event")?>">
                                         <i class="fas fa-calendar"></i>Event</a>
                                 </li>
-                            <?php if(isset($this->session->admin->menu) && $this->session->admin->menu ) : ?>
                             <?php endif ?>
+                            
+                            <?php if(isset($this->session->admin->menu) && $this->session->admin->menu ) : ?>
                                 <li>
                                     <a href="<?=base_url("admin/menu")?>">
                                         <i class="fas fa-bars"></i>Menu</a>
                                 </li>
-                            <?php if(isset($this->session->admin->sub_menu) && $this->session->admin->sub_menu ) : ?>
                             <?php endif ?>
+
+                            <?php if(isset($this->session->admin->sub_menu) && $this->session->admin->sub_menu ) : ?>
                                 <li>
                                     <a href="<?=base_url("admin/submenu")?>">
                                         <i class="fas fa-indent"></i>Sub Menu
                                     </a>
                                 </li>
                             <?php endif ?>
+                            
                             <?php if(isset($this->session->admin->banner) && $this->session->admin->banner ) : ?>
                                 <li>
                                     <a href="<?=base_url("admin/banner")?>">
@@ -185,62 +194,8 @@ $userData ;
                             <?php endif ?>
                         </ul>
 
-                        <?php endif ?>
-                            
-                            <!-- <ul class="navbar-mobile__list list-unstyled">
-                                <li>
-                                    <a class="js-arrow" href="home_page">
-                                        <i class="fas fa-home"></i>Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="statis_read">
-                                        <i class="fas fa-chart-bar"></i>Halaman Statis</a>
-                                </li>
-                                <li>
-                                    <a href="menu_read">
-                                        <i class="fas fa-bars"></i>Menu</a>
-                                </li>
-                                <li>
-                                    <a href="submenu_read">
-                                        <i class="fas fa-indent"></i>Sub Menu
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="banner_read">
-                                        <i class="fas fa-picture-o"></i>Banner-Slider
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="wisata_read">
-                                        <i class="fas fa-location-arrow"></i>Wisata
-                                    </a>
-                                </li>
+                        <?php endif ?> 
 
-                                <li>
-                                    <a href="produk_read">
-                                        <i class="fas fa-tag"></i>Produk
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="paketwisata_read">
-                                        <i class="fas fa-bookmark"></i>Paket Wisata
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="testimoni_read">
-                                        <i class="fas fa-comment"></i>Testimoni
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="berita_read">
-                                        <i class="fas fa-desktop"></i>Berita
-                                    </a>
-                                </li>
-                            </ul> -->
                         </div>
                     </nav>
                 </header>
@@ -255,140 +210,18 @@ $userData ;
                             <div class="container-fluid">
                                 <div class="header-wrap">
                                     <h5>WEBSITE RESMI KAMPUNG WISATA SARIBU RUMAH GADANG</h5>
-                                    <!--<form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
-                            </form>-->
+                                    
                                     <div class="header-button">
-                                        <!--<div class="noti-wrap">
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-comment-more"></i>
-                                        <span class="quantity">1</span>
-                                        <div class="mess-dropdown js-dropdown">
-                                            <div class="mess__title">
-                                                <p>You have 2 news message</p>
-                                            </div>
-                                            <div class="mess__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-06.jpg" alt="Michelle Moreno" />
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Michelle Moreno</h6>
-                                                    <p>Have sent a photo</p>
-                                                    <span class="time">3 min ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="mess__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-04.jpg" alt="Diane Myers" />
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Diane Myers</h6>
-                                                    <p>You are now connected on message</p>
-                                                    <span class="time">Yesterday</span>
-                                                </div>
-                                            </div>
-                                            <div class="mess__footer">
-                                                <a href="#">View all messages</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-email"></i>
-                                        <span class="quantity">1</span>
-                                        <div class="email-dropdown js-dropdown">
-                                            <div class="email__title">
-                                                <p>You have 3 New Emails</p>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, 3 min ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, Yesterday</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, April 12,,2018</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__footer">
-                                                <a href="#">See all emails</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-notifications"></i>
-                                        <span class="quantity">3</span>
-                                        <div class="notifi-dropdown js-dropdown">
-                                            <div class="notifi__title">
-                                                <p>You have 3 Notifications</p>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c1 img-cir img-40">
-                                                    <i class="zmdi zmdi-email-open"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a email notification</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c2 img-cir img-40">
-                                                    <i class="zmdi zmdi-account-box"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>Your account has been blocked</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c3 img-cir img-40">
-                                                    <i class="zmdi zmdi-file-text"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a new file</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__footer">
-                                                <a href="#">All notifications</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
+                                         
                                         <div class="account-wrap">
                                             <div class="account-item clearfix js-item-menu">
-                                                <!-- <div class="image">
-                                            <img src="images/" />
-                                        </div>-->
+                                                 
                                                 <div class="content">
                                                     <a class="js-acc-btn" href="#"><?= $userData->username_admin?></a>
                                                 </div>
                                                 <div class="account-dropdown js-dropdown">
                                                     <div class="info clearfix">
-                                                        <!--<div class="image">
-                                                            <a href="#">
-                                                                <img src="<?= base_url() ?>assets/images/icon/avatar-06.jpg" />
-                                                            </a>
-                                                        </div>-->
+                                                        
                                                         <div class="content">
                                                             <h5 class="name">
                                                                 <a href="#"><?= $userData->username_admin?></a>
@@ -396,16 +229,7 @@ $userData ;
                                                             <span class="email"><?= $userData->email_admin ?></span>
                                                         </div>
                                                     </div>
-                                                    <!-- <div class="account-dropdown__body">
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
-                                                </div>
-                                            </div>-->
+                                                    
                                                     <div class="account-dropdown__footer">
                                                         <a href="<?= base_url("admin/login/logout") ?>">
                                                             <i class="zmdi zmdi-power"></i>Logout</a>

@@ -104,7 +104,7 @@
                         <label for="textarea-input" class=" form-control-label">Objek Wisata</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="objek_wisata" id="isi_hlmstat" rows="9" placeholder="Masukkan objek wisata apa saja yang dapat dikunjungi oleh pengunjung ..." class="form-control"></textarea>
+                        <textarea name="objek_wisata" id="isi_hlmstat" rows="9" placeholder="Masukkan objek wisata apa saja yang dapat dikunjungi oleh pengunjung ..." class="form-control summernote"></textarea>
                     </div>
                 </div>
 
@@ -113,7 +113,7 @@
                         <label for="textarea-input" class=" form-control-label">Fasilitas</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="fasilitas" id="isi_hlmstat" rows="9" placeholder="Masukkan fasilitas yang disediakan untuk pengunjung ..." class="form-control"></textarea>
+                        <textarea name="fasilitas" id="isi_hlmstat" rows="9" placeholder="Masukkan fasilitas yang disediakan untuk pengunjung ..." class="form-control summernote"></textarea>
                     </div>
                 </div>
                 

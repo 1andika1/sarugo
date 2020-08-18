@@ -38,7 +38,7 @@
                         <label for="textarea-input" class=" form-control-label">Isi Berita</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="isi_berita" id="isi_hlmstat" rows="9" placeholder="Masukkan isi berita ..." class="form-control"><?= $dataBerita->keterangan ?></textarea>
+                        <textarea name="isi_berita" id="summernote" rows="9" placeholder="Masukkan isi berita ..." class="form-control"><?= $dataBerita->keterangan ?></textarea>
                     </div>
                 </div>
                 

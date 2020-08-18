@@ -34,20 +34,24 @@
                                         <a href="<?=base_url("admin/event")?>">
                                             <i class="fas fa-calendar"></i>Event</a>
                                     </li>
-                                <?php if(isset($this->session->admin->menu) && $this->session->admin->menu ) : ?>
                                 <?php endif ?>
+
+                                <?php if(isset($this->session->admin->menu) && $this->session->admin->menu ) : ?>
+                                
                                     <li>
                                         <a href="<?=base_url("admin/menu")?>">
                                             <i class="fas fa-bars"></i>Menu</a>
                                     </li>
+                                <?php endif ?>   
+
                                 <?php if(isset($this->session->admin->sub_menu) && $this->session->admin->sub_menu ) : ?>
-                                <?php endif ?>
                                     <li>
                                         <a href="<?=base_url("admin/submenu")?>">
                                             <i class="fas fa-indent"></i>Sub Menu
                                         </a>
                                     </li>
                                 <?php endif ?>
+
                                 <?php if(isset($this->session->admin->banner) && $this->session->admin->banner ) : ?>
                                     <li>
                                         <a href="<?=base_url("admin/banner")?>">
@@ -55,6 +59,7 @@
                                         </a>
                                     </li>
                                 <?php endif ?>
+
                                 <?php if(isset($this->session->admin->wisata) && $this->session->admin->wisata ) : ?>
                                     <li>
                                         <a href="<?=base_url("admin/wisata")?>">
@@ -94,6 +99,7 @@
                                         </a>
                                     </li>
                                 <?php endif ?>
+                                
                             </ul>
                         </nav>
                     </div>
