@@ -19,6 +19,7 @@ class ProdukModel extends CI_Model{
     public function addNewProduk($data)
     {
         $this->db->insert("produk",$data);
+        return $this->db->insert_id();
     }
 
     public function delete($id)

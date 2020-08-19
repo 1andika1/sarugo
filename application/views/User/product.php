@@ -1,4 +1,4 @@
- 
+  
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -25,9 +25,13 @@
           <div class="col-lg-5">
             <h2 class="portfolio-title"></h2>
             <div class="owl-carousel portfolio-details-carousel" >
-              <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-              <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-              <img src="<?= base_url("$produk->gambar")?>" class="img-fluid" alt="">
+              <?php foreach ($gambarProduk as $key => $gambar) : ?>
+                <?php if($gambar->id_produk == $produk->id_produk) : ?>
+                  <img src="<?= base_url("$gambar->src")?>" class="img-fluid" alt="">
+                <?php endif ?>
+              <?php endforeach ?>
+              <!-- <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url("$produk->gambar")?>" class="img-fluid" alt=""> -->
             </div>
           </div>
 

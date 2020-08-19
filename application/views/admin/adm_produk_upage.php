@@ -96,10 +96,10 @@
                 
                 <div class="row form-group">
                     <div class="col col-md-3">
-                        <label for="file-input" class=" form-control-label">Upload Gambar</label>
+                        <label for="file-input" class=" form-control-label">Tambah Gambar</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input   type="file" id="gbr_hlmstat" name="gambar" class="form-control-file">
+                        <input multiple  type="file" id="gbr_hlmstat" name="gambar[]" class="form-control-file">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>

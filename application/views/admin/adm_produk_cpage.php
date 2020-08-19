@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 
-                <div class="row form-group">
+                <!-- <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="file-input" class=" form-control-label">Upload Gambar</label>
                     </div>
@@ -100,13 +100,13 @@
                         <input required type="file" id="gbr_hlmstat" name="gambar" class="form-control-file">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
-                </div>
+                </div> -->
                 <div class="row form-group">
                     <div class="col col-md-3">
-                        <label for="file-input" class=" form-control-label">Upload Multiple Gambar</label>
+                        <label for="file-input" class=" form-control-label">Upload Gambar Produk</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input multiple required type="file" id="gbr_hlmstat" name="multiple_gambar[]" class="form-control-file">
+                        <input accept="image/*" multiple required type="file" id="gbr_hlmstat" name="gambar[]" class="form-control-file">
                         <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
                     </div>
                 </div>
@@ -121,8 +121,7 @@
                 </div>
                 
             </form>
-        </div>
-        <
+        </div> 
     </div>
     
 </div>
