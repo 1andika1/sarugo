@@ -1,3 +1,35 @@
+
+<?php 
+$lima = $empat = $tiga = $dua = $satu = $count = $mean = 0;
+foreach ($dataTestimoni as $key => $testi) {
+  $count ++;
+  switch ($testi->bintang) {
+    case 1:
+      $satu++;
+      break;
+    case 2:
+      $dua++;
+      break;
+    case 3:
+      $tiga++;
+      break;
+    case 4:
+      $empat++;
+      break;
+    case 5:
+      $lima++;
+      break;
+    
+  }
+
+}
+
+$mean = $satu*1 + $dua*2 + $tiga*3 + $empat*4 + $lima*5;
+$mean = $mean/5;
+
+?>
+    
+ 
  <main id="main">
    <!-- ======= Breadcrumbs ======= -->
    <section id="breadcrumbs" class="breadcrumbs">
@@ -16,9 +48,10 @@
    <!-- bagian utama -->
 
    <div class="container">
-     <div class="row">
+     <div class="row  justify-content-md-center">
 
-       <div class="card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
+       <div class="text-center card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
+          <h2>Beri Kami Ulasan Anda</h2>
          <form method="post" action="<?= base_url("testimoni/add") ?>" style="padding-right: 10px; padding-bottom: 10px;">
            <div class="form-group row" style="padding-top: 10px; padding-left: 5px; padding-right: 5px;">
              <label for="inputNama" class="col-sm-4 col-form-label">Nama</label>
@@ -44,12 +77,12 @@
                <input required name="pesan_testi" type="text" class="form-control" id="inputTesti" placeholder="Masukkan Testimoni">
              </div>
            </div><br>
-           <div class="container rating">
-             <input type="radio" name="star" id="star1" value="5"><label for="star1"></label>
-             <input type="radio" name="star" id="star2" value="4"><label for="star2"></label>
-             <input checked type="radio" name="star" id="star3" value="3"><label for="star3"></label>
-             <input type="radio" name="star" id="star4" value="2"><label for="star4"></label>
-             <input type="radio" name="star" id="star5" value="1"><label for="star5"></label>
+           <div class="text-center  rating">
+             <input type="radio" name="star" id="star<?=1?>"   value="5"><label for="star1"></label>
+             <input type="radio" name="star" id="star<?=2?>"  value="4"><label for="star2"></label>
+             <input checked type="radio" name="star" id="star<?=3?>"  value="3"><label for="star3"></label>
+             <input type="radio" name="star" id="star<?=4?>"  value="2"><label for="star4"></label>
+             <input type="radio" name="star" id="star<?=5?>"  value="1"><label for="star5"></label>
            </div>
            <div class="row">
              <div class="col-6 col-md-4"></div>
@@ -76,7 +109,7 @@
            <span class="fa fa-star checked"></span>
            <span class="fa fa-star"></span>
          </div>
-         <p>Dinilai <b> 4.1 </b> Bintang dari <b>254</b> Pengunjung </p>
+         <p>Dinilai <b> <?=$mean?> </b> Bintang dari <b><?=$count?></b> Ulasan </p>
          <hr style="border:3px solid #f1f1f1">
 
          <div class="row-center">
@@ -89,7 +122,7 @@
              </div>
            </div>
            <div class="side right">
-             <div>150</div>
+             <div><?=$lima?></div>
            </div>
            <div class="side">
              <div>4 star</div>
@@ -100,7 +133,7 @@
              </div>
            </div>
            <div class="side right">
-             <div>63</div>
+             <div><?=$empat?></div>
            </div>
            <div class="side">
              <div>3 star</div>
@@ -111,7 +144,7 @@
              </div>
            </div>
            <div class="side right">
-             <div>15</div>
+             <div><?=$tiga?></div>
            </div>
            <div class="side">
              <div>2 star</div>
@@ -122,7 +155,7 @@
              </div>
            </div>
            <div class="side right">
-             <div>6</div>
+             <div><?=$dua?></div>
            </div>
            <div class="side">
              <div>1 star</div>
@@ -133,7 +166,7 @@
              </div>
            </div>
            <div class="side right">
-             <div>20</div>
+             <div><?=$satu?></div>
            </div>
          </div>
 
@@ -146,65 +179,34 @@
                  <div class="row">
                    <div class="col border bg-light" style="padding: 10px;"><?= $testi->nama_testi ?></div>
                    <!-- <div class="col-md-auto border bg-light center" style="padding: 10px;">
-      <?//= $testi->pekerjaan_testi ?></div>-->
-    <div class="col border bg-light" style="padding: 10px;">
-      <?= $testi->alamat_testi ?></div>
+                    <?//= $testi->pekerjaan_testi ?></div>-->
+                  <div class="col border bg-light" style="padding: 10px;">
+                    <?= $testi->alamat_testi ?></div>
 
                    <div class="col border bg-light" style="padding: 10px;">
-                     <?php for ($index = 1; $index <= 5; $index++) : ?>
+                     <!-- <?php for ($index = 1; $index <= 5; $index++) : ?>
                        <?php if ($index == strval($testi->bintang)) : ?>
                          <span class="fa fa-star checked" name="star" id="star<?= $index ?>" value="<?= 6 - $index ?>"><label for="star<?= $index ?>"></label>
                          <?php else : ?>
                            <span class="fa fa-star" name="star" id="star<?= $index ?>" value="<?= 6 - $index ?>"><label for="star<?= $index ?>"></label>
                            <?php endif ?>
+                         <?php endfor  ?> -->
+
+
+                         <?php for ($index = 1; $index <= $testi->bintang; $index++) : ?> 
+                             <span class="fa fa-star checked"></span>
+                             
                          <?php endfor  ?>
                    </div>
 
-                 </div>
-                 <!-- <div class="row">
-    <div class="col-12 col-md-12 border bg-light" style="padding: 10px;"><?//= $testi->pesan_testi ?></div>
-  </div> -->
+                 </div> 
                </div>
 
 
              <?php endforeach ?>
            </div>
 
-         </div>
-         <!-- rating1 -->
-
-         <!-- rating2 -->
-         <!--     <div class="container" style="margin-bottom: 20px; text-align: center;">
-               <div class="row">
-                 <div class="col border bg-light" style="padding: 10px;">Dokter Strange</div>
-                 <div class="col-md-auto border bg-light center" style="padding: 10px;">Dokter</div>
-                 <div class="col border bg-light" style="padding: 10px;">Koto nan IV</div>
-               </div>
-               <div class="row">
-                 <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Rating</div>
-               </div>
-               <div class="row">
-                 <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Keren Bangettt ngab</div>
-               </div>
-             </div>
-             <!-- rating3 -->
-         <!--        <div class="container" style="margin-bottom: 20px; text-align: center;">
-               <div class="row">
-                 <div class="col border bg-light" style="padding: 10px;">Thor and Loki</div>
-                 <div class="col-md-auto border bg-light center" style="padding: 10px;">Pedagang</div>
-                 <div class="col border bg-light" style="padding: 10px;">Batang Tabik</div>
-               </div>
-               <div class="row">
-                 <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Rating</div>
-               </div>
-               <div class="row">
-                 <div class="col-12 col-md-12 border bg-light" style="padding: 10px;">Bagus, Lestariakn Budaya Lima Puluh Kota</div>
-               </div>
-             </div>
-           </div>
-
-         </div>
-         <!-- end bagian utama -->
+         </div> 
        </div>
 
      </div>
