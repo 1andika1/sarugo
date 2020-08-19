@@ -25,7 +25,7 @@ foreach ($dataTestimoni as $key => $testi) {
 }
 
 $mean = $satu*1 + $dua*2 + $tiga*3 + $empat*4 + $lima*5;
-$mean = $mean/5;
+$mean = $mean/$count;
 
 ?>
     
@@ -48,10 +48,11 @@ $mean = $mean/5;
    <!-- bagian utama -->
 
    <div class="container">
-     <div class="row  justify-content-md-center">
+   <h1 style="text-align: center;">Masukkan Testimoni Anda</h1>
+     <div class="row justify-content-md-center">
 
        <div class="text-center card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
-          <h2>Beri Kami Ulasan Anda</h2>
+           <span class="heading">Form Testimoni</span> 
          <form method="post" action="<?= base_url("testimoni/add") ?>" style="padding-right: 10px; padding-bottom: 10px;">
            <div class="form-group row" style="padding-top: 10px; padding-left: 5px; padding-right: 5px;">
              <label for="inputNama" class="col-sm-4 col-form-label">Nama</label>
@@ -94,7 +95,7 @@ $mean = $mean/5;
        </div>
 
 
-       <div id="kotakTestimony" class="card mr-auto shadow" style="width: 35rem; margin: 20px; padding: 10px;">
+       <div id="kotakTestimony" class="card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
 
          <!-- Add icon library -->
          <link rel="stylesheet" href="<?= base_url() ?>assets/css/rating.css">
@@ -151,7 +152,7 @@ $mean = $mean/5;
            </div>
            <div class="middle">
              <div class="bar-container">
-               <div class="bar-2"></div>
+               <div class="bar-0"></div>
              </div>
            </div>
            <div class="side right">
