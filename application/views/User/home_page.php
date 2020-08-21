@@ -69,7 +69,6 @@
                                 </a>
                               <?php endforeach ?>
                               end -->
-<<<<<<< HEAD
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -120,106 +119,6 @@
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
                                     <img class="rounded-circle " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-1.jpg " alt="#" />
-=======
-                              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <div class="container">
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                            <div class="row justify-content-md-center">
-                                            <img class="rounded-circle " style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-4.jpg " alt="#" /> 
-                                            </div>
-                                            <a   href="<?=base_url("#event")?>" class=" btn-btn-danger"><h4>Pawai Ulang Tahun Sarugo</h4></a>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                            <div class="row justify-content-md-center">
-                                              <img class="rounded-circle" style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-3.jpg" alt="#" />
-                                            </div>
-                                              <a   href="<?=base_url("#event")?>" class="btn-info" ><h4>Panen Jeruk</h4></a>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                            <div class="row justify-content-md-center">
-                                              <img class="rounded-circle" style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-1.jpg" alt="#" />
-                                            </div>
-                                            <a style="background:red" href="<?=base_url("#event")?>" class="btn-info" ><h4>Bakar-Bakar Gonjong</h4></a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                  <div class="container">
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                          <div class="row justify-content-md-center">
-                                            <img class="rounded-circle " style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-1.jpg " alt="#" /> 
-                                            </div>
-                                            <a style="background:red" href="<?=base_url("#event")?>" class="btn-info"><h4>Pameran Kebudayaan</h4></a>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                            <div class="row justify-content-md-center">
-                                              <img class="rounded-circle" style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-4.jpg" alt="#" />
-                                            </div>
-                                              <a style="background:red" href="<?=base_url("#event")?>" class="btn-info" ><h4>Barandai</h4></a>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                            <div class="row justify-content-md-center">
-                                              <img class="rounded-circle" style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-3.jpg" alt="#" />
-                                            </div>
-                                            <a style="background:red" href="<?=base_url("#event")?>" class="btn-info" ><h4>Tari Galombang sa Sarugo</h4></a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                  <div class="container">
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                          <div class="row justify-content-md-center">
-                                            <img class="rounded-circle " style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-2.jpg " alt="#" /> 
-                                            </div>
-                                            <a style="background:red" href="<?=base_url("#event")?>" class="btn-info"><h4>Baralek Gadang</h4></a>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                            <div class="row justify-content-md-center">
-                                              <img class="rounded-circle" style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-5.jpg" alt="#" />
-                                            </div>
-                                            <div class="btn-wrap">
-                                              <a style="background:red" href="<?=base_url("#event")?>" class="btn-buy" ><h4>Lomba Kemerdekaan</h4></a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <div class="full blog_img_popular">
-                                            <div class="row justify-content-md-center">
-                                              <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url()?>Web_Statis/assets/img/comments-4.jpg" alt="#" />
-                                            </div>
-                                            <a style="background:red" href="<?=base_url("#event")?>" class="btn-info" ><h4>Bantai Jawi adat Sarugo </h4></a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
->>>>>>> d022b3a673d675a5f75ebfa6b32d910664f3921d
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Pameran Kebudayaan</h4>

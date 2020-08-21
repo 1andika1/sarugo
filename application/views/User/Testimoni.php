@@ -48,11 +48,7 @@ $mean = $mean/$count;
    <!-- bagian utama -->
 
    <div class="container">
-<<<<<<< HEAD
     
-=======
-   <h1 style="text-align: center;">Masukkan Testimoni Anda</h1>
->>>>>>> d022b3a673d675a5f75ebfa6b32d910664f3921d
      <div class="row justify-content-md-center">
 
        <div class="text-center card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
