@@ -21,8 +21,68 @@ class Produk extends CI_Controller{
 
     public function create()
     {
-        $this->load->view('admin/adm_produk_cpage');
-        $this->load->view('templates/footer');
+        $config = array(
+            array(
+                'field' => 'nama_produk',
+                'label' => 'Nama Produk',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            ),
+
+            array(
+                'field' => 'harga_satuan',
+                'label' => 'Harga Satuan',
+                'rules' => 'required|numeric',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                    'numeric' => '%s hanya berisi angka'
+                )
+            ),
+
+            array(
+                'field' => 'berat_satuan',
+                'label' => 'Berat Satuan',
+                'rules' => 'required|numeric',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                    'numeric' => '%s hanya berisi angka'
+
+                )
+            ),
+
+            array(
+                'field' => 'komposisi',
+                'label' => 'Komposisi',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            ),
+            array(
+                'field' => 'penjelasan_tambahan',
+                'label' => 'Penjelasan Tambahan',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            )
+
+        );
+
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+        $this->form_validation->set_rules($config);
+
+        if ($this->form_validation->run() == FALSE) {
+            //$this->load->view('template/header');
+            $this->load->view('admin/adm_produk_cpage');
+            $this->load->view('templates/footer');
+        } else {
+            $this->add();
+            redirect('admin/produk');
+        }
+
     } 
 
     public function edit()
@@ -34,7 +94,7 @@ class Produk extends CI_Controller{
 
     public function add()
     {
-        var_dump($_POST,$_FILES);die();
+        //var_dump($_POST,$_FILES);die();
 
         // get data from post method
         $nama_produk        = $_POST["nama_produk"];
@@ -132,7 +192,7 @@ class Produk extends CI_Controller{
     public function delete()
     {
        $this->ProdukModel->delete($_GET["id_produk"]);
-       redirect(base_url("admin/wisata"));
+       redirect(base_url("admin/produk"));
     }
 
      

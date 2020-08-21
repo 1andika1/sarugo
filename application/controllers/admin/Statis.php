@@ -10,8 +10,6 @@ class Statis extends CI_Controller{
         } else {
             redirect(base_url("admin/login"));
         }
-
-        
     }
     
     public function index()
@@ -25,8 +23,37 @@ class Statis extends CI_Controller{
      */
     public function statis_create()
     {
-        $this->load->view('admin/adm_statis_cpage');
-        $this->load->view('templates/footer');
+        $config = array(
+            array(
+                'field' => 'judul_hlmstat',
+                'label' => 'Judul Halaman',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            ),
+
+            array(
+                'field' => 'isi_hlmsat',
+                'label' => 'Isi Halaman',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            )
+                );
+
+                $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+                $this->form_validation->set_rules($config);
+        
+                if ($this->form_validation->run() == FALSE) {
+                    //$this->load->view('template/header');
+                    $this->load->view('admin/adm_statis_cpage');
+                    $this->load->view('templates/footer');
+                } else {
+                    $this->add();
+                    redirect('admin/statis');
+                }
     }
 
     // methode to add new data of static page

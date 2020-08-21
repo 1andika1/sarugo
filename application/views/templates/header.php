@@ -1,21 +1,17 @@
 <?php
-$userData ;
-    // var_dump($this->session->userdata);die();
-    // check admin
-    if(isset($this->session->spradmin)){ 
-        $userData = $this->session->spradmin;
-    }else if(!isset($this->session->admin)){
-        redirect(base_url("admin"));
-    }else{
-        $userData = $this->session->admin;
-    }
-    
-
-
+$userData;
+// var_dump($this->session->userdata);die();
+// check admin
+if (isset($this->session->spradmin)) {
+    $userData = $this->session->spradmin;
+} else if (!isset($this->session->admin)) {
+    redirect(base_url("admin"));
+} else {
+    $userData = $this->session->admin;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -25,6 +21,7 @@ $userData ;
     <meta name="keywords" content="au theme template">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/images/logo-bulat.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Title Page-->
     <title>SARUGO | Kabupaten Lima Puluh Kota</title>
 
@@ -49,24 +46,19 @@ $userData ;
 
     <!-- Main CSS-->
     <link href="<?= base_url() ?>assets/css/theme.css" rel="stylesheet" media="all">
-
-
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
     <!-- include libraries(jQuery, bootstrap) -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    
-
 </head>
 
 <body class="animation">
     <div class="page-wrapper">
-
         <body class="animsition">
             <div class="page-wrapper">
                 <!-- HEADER MOBILE-->
@@ -74,133 +66,112 @@ $userData ;
                     <div class="header-mobile__bar">
                         <div class="container-fluid">
                             <div class="header-mobile-inner">
-                            <!--<a class="logo" href="home_page">
+                                <!--<a class="logo" href="home_page">
                             <img src="<?= base_url() ?>assets/images/sarugo-logo-mob.png" alt="CoolAdmin" />
-                        </a>--> <h2>SARUGO</h2>
+                        </a>-->
+                                <h2>SARUGO</h2>
                                 <button class="hamburger hamburger--slider" type="button">
                                     <span class="hamburger-box">
                                         <span class="hamburger-inner"></span>
                                     </span>
-                                    
                                 </button>
-                                
                             </div>
-                            
-                        
-                    </div>
-                    
-                    
-                    <nav class="navbar-mobile">
-                        
-                        <div class="container-fluid">
-
-                        <?php if(isset($this->session->spradmin)) : ?>
-                            <ul class="navbar-mobile__list list-unstyled">
-                                <li>
-                                    <a class="js-arrow" href="<?=base_url("spradm_sarugo/home_page")?>">
-                                        <i class="fas fa-home"></i>Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?=base_url("spradm_sarugo/akun_create")?>">
-                                        <i class="fas fa-group"></i>Data Akun Admin</a>
-                                </li>
-                                
-                            </ul>
-                        <?php else : ?>
-                            
-                        <ul class="navbar-mobile__list list-unstyled">
-                            <li>
-                                <a class="js-arrow" href="<?=base_url("admin/home")?>">
-                                    <i class="fas fa-home"></i>Home
-                                </a>
-                            </li>
-
-                            <?php if(isset($this->session->admin->hal_statis) && $this->session->admin->hal_statis ) : ?>
-                                    
-                                <li>
-                                    <a href="<?=base_url("admin/statis")?>">
-                                        <i class="fas fa-chart-bar"></i>Halaman Statis</a>
-                                </li>
-                            <?php endif ?> 
-
-                            <?php if(isset($this->session->admin->event) && $this->session->admin->event ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/event")?>">
-                                        <i class="fas fa-calendar"></i>Event</a>
-                                </li>
-                            <?php endif ?>
-                            
-                            <?php if(isset($this->session->admin->menu) && $this->session->admin->menu ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/menu")?>">
-                                        <i class="fas fa-bars"></i>Menu</a>
-                                </li>
-                            <?php endif ?>
-
-                            <?php if(isset($this->session->admin->sub_menu) && $this->session->admin->sub_menu ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/submenu")?>">
-                                        <i class="fas fa-indent"></i>Sub Menu
-                                    </a>
-                                </li>
-                            <?php endif ?>
-                            
-                            <?php if(isset($this->session->admin->banner) && $this->session->admin->banner ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/banner")?>">
-                                        <i class="fas fa-picture-o"></i>Banner/Slider
-                                    </a>
-                                </li>
-                            <?php endif ?>
-                            <?php if(isset($this->session->admin->wisata) && $this->session->admin->wisata ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/wisata")?>">
-                                        <i class="fas fa-location-arrow"></i>Wisata
-                                    </a>
-                                </li>
-                            <?php endif ?>
-
-                            <?php if(isset($this->session->admin->produk) && $this->session->admin->produk ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/produk")?>">
-                                        <i class="fas fa-tag"></i>Produk
-                                    </a>
-                                </li>
-                            <?php endif ?>
-
-                            <?php if(isset($this->session->admin->paket_wisata) && $this->session->admin->paket_wisata ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/paketwisata")?>">
-                                        <i class="fas fa-bookmark"></i>Paket Wisata
-                                    </a>
-                                </li>
-                            <?php endif ?>
-
-                            <?php if(isset($this->session->admin->testimoni) && $this->session->admin->testimoni ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/testimoni")?>">
-                                        <i class="fas fa-comment"></i>Testimoni
-                                    </a>
-                                </li>
-                            <?php endif ?>
-
-                            <?php if(!isset($this->session->admin->berita) || $this->session->admin->berita ) : ?>
-                                <li>
-                                    <a href="<?=base_url("admin/berita")?>">
-                                        <i class="fas fa-desktop"></i>Berita
-                                    </a>
-                                </li>
-                            <?php endif ?>
-                        </ul>
-
-                        <?php endif ?> 
-
                         </div>
-                    </nav>
+                        <nav class="navbar-mobile">
+                            <div class="container-fluid">
+                                <?php if (isset($this->session->spradmin)) : ?>
+                                    <ul class="navbar-mobile__list list-unstyled">
+                                        <li>
+                                            <a class="js-arrow" href="<?= base_url("spradm_sarugo/home_page") ?>">
+                                                <i class="fas fa-home"></i>Home
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url("spradm_sarugo/akun_create") ?>">
+                                                <i class="fas fa-group"></i>Data Akun Admin</a>
+                                        </li>
+                                    </ul>
+                                <?php else : ?>
+
+                                    <ul class="navbar-mobile__list list-unstyled">
+                                        <li>
+                                            <a class="js-arrow" href="<?= base_url("admin/home") ?>">
+                                                <i class="fas fa-home"></i>Home
+                                            </a>
+                                        </li>
+                                        <?php if (isset($this->session->admin->hal_statis) && $this->session->admin->hal_statis) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/statis") ?>">
+                                                    <i class="fas fa-chart-bar"></i>Halaman Statis</a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->event) && $this->session->admin->event) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/event") ?>">
+                                                    <i class="fas fa-calendar"></i>Event</a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->menu) && $this->session->admin->menu) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/menu") ?>">
+                                                    <i class="fas fa-bars"></i>Menu</a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->sub_menu) && $this->session->admin->sub_menu) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/submenu") ?>">
+                                                    <i class="fas fa-indent"></i>Sub Menu
+                                                </a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->banner) && $this->session->admin->banner) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/banner") ?>">
+                                                    <i class="fas fa-picture-o"></i>Banner/Slider
+                                                </a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->wisata) && $this->session->admin->wisata) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/wisata") ?>">
+                                                    <i class="fas fa-location-arrow"></i>Wisata
+                                                </a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->produk) && $this->session->admin->produk) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/produk") ?>">
+                                                    <i class="fas fa-tag"></i>Produk
+                                                </a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->paket_wisata) && $this->session->admin->paket_wisata) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/paketwisata") ?>">
+                                                    <i class="fas fa-bookmark"></i>Paket Wisata
+                                                </a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (isset($this->session->admin->testimoni) && $this->session->admin->testimoni) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/testimoni") ?>">
+                                                    <i class="fas fa-comment"></i>Testimoni
+                                                </a>
+                                            </li>
+                                        <?php endif ?>
+                                        <?php if (!isset($this->session->admin->berita) || $this->session->admin->berita) : ?>
+                                            <li>
+                                                <a href="<?= base_url("admin/berita") ?>">
+                                                    <i class="fas fa-desktop"></i>Berita
+                                                </a>
+                                            </li>
+                                        <?php endif ?>
+                                    </ul>
+                                <?php endif ?>
+                            </div>
+                        </nav>
                 </header>
                 <!-- END HEADER MOBILE-->
-
 
                 <!-- PAGE CONTAINER-->
                 <div class="page-container">
@@ -209,22 +180,18 @@ $userData ;
                         <div class="section__content section__content--p30">
                             <div class="container-fluid">
                                 <div class="header-wrap">
-                                    <h5>WEBSITE RESMI KAMPUNG WISATA SARIBU RUMAH GADANG</h5>
-                                    
+                                    <h5>WEBSITE RESMI KAMPUNG WISATA SARIBU GONJONG</h5>
                                     <div class="header-button">
-                                         
                                         <div class="account-wrap">
                                             <div class="account-item clearfix js-item-menu">
-                                                 
                                                 <div class="content">
-                                                    <a class="js-acc-btn" href="#"><?= $userData->username_admin?></a>
+                                                    <a class="js-acc-btn" href="#"><?= $userData->username_admin ?></a>
                                                 </div>
                                                 <div class="account-dropdown js-dropdown">
                                                     <div class="info clearfix">
-                                                        
                                                         <div class="content">
                                                             <h5 class="name">
-                                                                <a href="#"><?= $userData->username_admin?></a>
+                                                                <a href="#"><?= $userData->username_admin ?></a>
                                                             </h5>
                                                             <span class="email"><?= $userData->email_admin ?></span>
                                                         </div>
@@ -239,7 +206,7 @@ $userData ;
                                                         <i class="zmdi zmdi-settings"></i>Setting</a>
                                                 </div>
                                             </div>-->
-                                                    <div class="account-dropdown__footer" >
+                                                    <div class="account-dropdown__footer">
                                                         <a href="<?= base_url("admin/login/logout") ?>">
                                                             <i class="zmdi zmdi-power"></i>Logout</a>
                                                     </div>
@@ -252,3 +219,4 @@ $userData ;
                         </div>
                     </header>
                     <!-- HEADER DESKTOP-->
+                    

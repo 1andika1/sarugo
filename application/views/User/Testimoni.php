@@ -4,7 +4,7 @@
      <div class="container">
 
        <div class="d-flex justify-content-between align-items-center">
-         <h2>Testimoni</h2>
+         <h2>Testimonial Pengunjung</h2>
          <ol>
            <li><a href="<?= base_url() ?>">Beranda</a></li>
            <li>Testimoni</li>
@@ -16,7 +16,7 @@
    <!-- bagian utama -->
 
    <div class="container">
-   <h3 style="text-align: center;">Masukkan Testimoni Anda</h3>
+    
      <div class="row justify-content-md-center">
 
        <div class="card shadow" style="width: 35rem; margin: 20px; padding: 10px;">

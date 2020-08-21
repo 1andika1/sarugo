@@ -30,6 +30,8 @@
                     <div class="col-12 col-md-9">
                         <input value="<?= $dataBerita->judul_berita ?>" type="text" id="judul_hlmstat" name="judul_berita" class="form-control">
                         <small class="form-text text-muted">Masukan Judul Berita</small>
+                        <span class="text-danger"><?php echo form_error('judul_berita') ?></span>
+
                     </div>
                 </div>
                 
@@ -39,6 +41,7 @@
                     </div>
                     <div class="col-12 col-md-9">
                         <textarea name="isi_berita" id="summernote" rows="9" placeholder="Masukkan isi berita ..." class="form-control"><?= $dataBerita->keterangan ?></textarea>
+                        <span class="text-danger"><?php echo form_error('isi_berita') ?></span>
                     </div>
                 </div>
                 

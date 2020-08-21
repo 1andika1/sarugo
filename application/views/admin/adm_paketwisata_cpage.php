@@ -18,7 +18,7 @@
 <div class="col-lg-12">
     <div class="card"> 
         <div class="card-body card-block">
-            <form action="<?= base_url('admin/paketwisata/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?= base_url('admin/paketwisata/create'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 
                 <div class="row form-group">
                     <div class="col col-md-3">

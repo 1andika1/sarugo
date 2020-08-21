@@ -79,7 +79,7 @@
             <div class="full">
               <div class="topbar-left">
                 <ul class="list-inline">
-                  <li> <span class="topbar-label"><i class="bx bxl-home"></i></span> <span class="topbar-hightlight">Website Resmi Kampung Wisata Saribu Rumah Gonjong</span> </li>
+                  <li> <span class="topbar-label"><i class="bx bxl-home"></i></span> <span class="topbar-hightlight">Website Resmi Kampung Wisata Saribu Gonjong</span> </li>
                 </ul>
               </div>
             </div>
@@ -116,10 +116,6 @@
             <?php foreach($subMenuWisata as $key => $sub) : ?>
               <li><a href="<?=base_url("wisata/detailwisata?id=$sub->id_wisata")?> "><?=$sub->nama_wisata?></a></li>
             <?php endforeach ?>
-              <li><a href="<?=base_url("wisata?wisata=wisataAlam")?> ">Wisata Alam</a></li>
-              <li><a href="<?=base_url("wisata?wisata=wisataAgro")?> ">Wisata Agro</a></li>
-              <li><a href="<?=base_url("wisata?wisata=wisataKuliner")?> ">Wisata Kuliner</a></li>
-              <li><a href="<?=base_url("wisata?wisata=wisataAdat")?> ">Wisata Adat/Budaya</a></li>
             </ul>
           </li>
 
@@ -129,9 +125,6 @@
               <?php foreach ($subMenuPaketWisata as $key => $paketWisata) : ?>
                 <li><a href="<?=base_url("paket/detailpaket?id_paket_wisata=$paketWisata->id_paket_wisata")?> "><?= $paketWisata->nama_paket_wisata ?> </a></li>
               <?php endforeach ?>
-              <li><a href="<?=base_url("paket")?>?paket=paket1">Paket Wisata 1</a></li>
-              <li><a href="<?=base_url("paket")?>?paket=paket2">Paket Wisata 2</a></li>
-              <li><a href="<?=base_url("paket")?>?paket=paket3">Paket Wisata 3</a></li>
             </ul>
           </li>
           <li><a href="<?=base_url("Testimoni")?>">Testimoni</a></li>

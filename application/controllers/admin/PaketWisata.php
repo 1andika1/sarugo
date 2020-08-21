@@ -21,8 +21,71 @@ class PaketWisata extends CI_Controller{
 
     public function create()
     {
-        $this->load->view('admin/adm_paketwisata_cpage');
-        $this->load->view('templates/footer');
+        $config = array(
+            array(
+                'field' => 'nama_paket_wisata',
+                'label' => 'Nama Paket Wisata',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            ),
+            array(
+                'field' => 'jumlah_orang',
+                'label' => 'Jumlah Orang',
+                'rules' => 'required|numeric',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                    'numeric' => '%s hanya berisi angka'
+                )
+            ),
+            array(
+                'field' => 'Biaya',
+                'label' => 'Biaya',
+                'rules' => 'required|numeric',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                    'numeric' => '%s hanya berisi angka'
+                )
+            ),
+            array(
+                'field' => 'jumlah_hari',
+                'label' => 'Jumlah Hari',
+                'rules' => 'required|numeric',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                    'numeric' => '%s hanya berisi angka'
+                )
+            ),
+            array(
+                'field' => 'object_wisata',
+                'label' => 'Object Wisata',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            ),
+            array(
+                'field' => 'fasilitas',
+                'label' => 'Fasilitas',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => '%s tidak boleh kosong',
+                )
+            )
+        );
+
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+        $this->form_validation->set_rules($config);
+
+        if ($this->form_validation->run() == FALSE) {
+            //$this->load->view('template/header');
+            $this->load->view('admin/adm_paketwisata_cpage');
+            $this->load->view('templates/footer');
+        } else {
+            $this->add();
+            redirect('admin/PaketWisata');
+        }
     } 
 
     public function edit()

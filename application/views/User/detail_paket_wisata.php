@@ -73,7 +73,7 @@
                   <table style="width: 75%; background-color: white;" >
                 
                       <tr>
-                        <td style="width: 30%;">Object Wisata</td>
+                        <td style="width: 30%;">Objek Wisata</td>
                         <td>
                           <ul>
                             <!-- <li> Wisata ambil jeruk</li>

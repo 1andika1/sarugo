@@ -1,11 +1,60 @@
  <!-- ======= Footer ======= -->
- <footer id="footer">
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+                    
+            <div class="footer-info">
+            
+              <!--<h3>SARUGO</h3>-->
+              <a  href="<?=base_url()?>">
+                            <img src="<?= base_url() ?>assets/images/sarugo-logo.png" width="100%" height="100%" style="margin-left: -25%; margin-top: -3%; " alt="SARUGO" />
+                        </a>
+              
+              <p>
+                Koto Tinggi, Gunuang Omeh, Kabupaten Lima Puluh Kota <br>
+                Sumatera Barat, Indonesia<br><br>
+                <strong>Telepon:</strong> +62 8123 45678 90<br>
+                <strong>Email:</strong> email@contoh.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <!--<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Menu Pintasan</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url("event")?>">Event</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url("wisata")?>">Wisata</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url("product")?>">Produk</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url("paket")?>">Paket Wisata</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url("testimoni")?>">Testimoni</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Pemerintah Daerah Kabupaten Lima Puluh Kota</h4>
+            <p>Kampung Wisata Saribu Gonjong Smart Brand Kabupaten Lima Puluh Kota</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div> 
     <div class="container">
       <div class="copyright">
-        &copy; 2020<strong><span> Website Sarugo</span></strong>
+        &copy; 2020<strong><span> SARUGO</span></strong>
       </div>
       <div class="credits">
-      Designed by <a href="https://kominfo.limapuluhkotakab.go.id/">Diskominfo Kab. Lima Puluh Kota</a>
+      Designed by <a href="https://kominfo.limapuluhkotakab.go.id/">Diskominfo Kabupaten Lima Puluh Kota</a>
       </div>
     </div>
   </footer>
