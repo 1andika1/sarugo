@@ -13,8 +13,9 @@ class Testimoni extends CI_Controller {
 
 	public function index()
 	{
+		$this->db->order_by('id_testi', 'DESC');
 		$data["dataTestimoni"] = $this->db->get_where("testimoni",["tampilkan"=>true])->result();
-		
+
 		// var_dump($data);die();
 		$this->load->view('User/Testimoni',$data);
 		$this->load->view('templates/usersTemplates/footer');
@@ -37,7 +38,7 @@ class Testimoni extends CI_Controller {
             "alamat_testi"=>$alamat_testi,
             "pesan_testi"=>$pesan_testi,
             "bintang"=>$bintang,
-            "tampilkan"=>false,
+            "tampilkan"=>true,
         );
 		 
 		if($this->security->xss_clean($data,true)){

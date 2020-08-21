@@ -102,4 +102,33 @@
                         </form>
                     </div>
                 </div>
+<<<<<<< HEAD
             </div>
+=======
+                
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="file-input" class=" form-control-label">Tambah Gambar</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input multiple  type="file" id="gbr_hlmstat" name="gambar[]" class="form-control-file">
+                        <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Simpan Perubahan
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Batal
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+    
+</div>
+>>>>>>> d022b3a673d675a5f75ebfa6b32d910664f3921d

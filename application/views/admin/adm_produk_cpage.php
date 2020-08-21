@@ -36,6 +36,7 @@
                                     <span class="text-danger"><?php echo form_error('harga_satuan') ?></span>
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="text-input" class=" form-control-label">Berat Satuan(Kg)</label>
@@ -113,3 +114,52 @@
                     </div>
                 </div>
             </div>
+=======
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="textarea-input" class=" form-control-label">Penjelasan Tambahan</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <textarea name="penjelasan_produk" id="isi_hlmstat" rows="9" placeholder="Masukkan penjelasan produk ..." class="form-control summernote"></textarea>
+                    </div>
+                </div>
+                
+                <!-- <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="file-input" class=" form-control-label">Upload Gambar</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input required type="file" id="gbr_hlmstat" name="gambar" class="form-control-file">
+                        <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
+                    </div>
+                </div> -->
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="file-input" class=" form-control-label">Upload Gambar Produk</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input accept="image/*" multiple required type="file" id="gbr_hlmstat" name="gambar[]" class="form-control-file">
+                        <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
+                
+            </form>
+        </div> 
+    </div>
+    
+</div>
+>>>>>>> d022b3a673d675a5f75ebfa6b32d910664f3921d

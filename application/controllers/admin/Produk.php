@@ -94,7 +94,11 @@ class Produk extends CI_Controller{
 
     public function add()
     {
+<<<<<<< HEAD
         //var_dump($_POST,$_FILES);die();
+=======
+        // var_dump($_POST,$_FILES,sizeof($_FILES['gambar'])); die();
+>>>>>>> d022b3a673d675a5f75ebfa6b32d910664f3921d
 
         // get data from post method
         $nama_produk        = $_POST["nama_produk"];
@@ -112,7 +116,7 @@ class Produk extends CI_Controller{
 
         $data = array(
             "nama_produk"=>$nama_produk,
-            "gambar"=>$gambar  ,
+            "gambar"=>"images are in gambar_produk table"  ,
             "harga_satuan"=>$harga_satuan,
             "komposisi"=>$komposisi,
             "keterangan"=>$keterangan,
@@ -121,7 +125,20 @@ class Produk extends CI_Controller{
         );
 
         
-            $this->ProdukModel->addNewProduk($data);
+            $id_produk = $this->ProdukModel->addNewProduk($data); 
+
+
+            $gambarProduk = array();
+
+            foreach ($gambar as $dataGambar) {
+                array_push($gambarProduk,array(
+                    "id_produk"=>$id_produk,
+                    "src"=>$dataGambar
+                ));
+            }
+
+            $this->db->insert_batch('gambar_produk',$gambarProduk);
+
             redirect(base_url('admin/produk/'));
         
 
@@ -130,24 +147,31 @@ class Produk extends CI_Controller{
     // function to upload image
     public function upload()
     {
-        $namafile   = $_FILES['gambar']['name'];
-        $ukuranFile = $_FILES['gambar']['size'];
-        $error      = $_FILES['gambar']['error'];
-        $tempName   = $_FILES['gambar']['tmp_name'];
-        $nama       = uniqid();
+        $gambar = [];
+        for ($index=0; $index < sizeof($_FILES['gambar']['name']); $index++) { 
+             
+        
+            $namafile   = $_FILES['gambar']['name'][$index];
+            $ukuranFile = $_FILES['gambar']['size'][$index];
+            $error      = $_FILES['gambar']['error'][$index];
+            $tempName   = $_FILES['gambar']['tmp_name'][$index];
+            $nama       = uniqid();
 
-        $extensiValid   = ['jpg','jpeg','png'];
-        $fileExtensi    = explode('.',$namafile);
-        $fileExtensi    = strtolower(end($fileExtensi));
-        $nama           = $nama.'.'.$fileExtensi;
+            $extensiValid   = ['jpg','jpeg','png'];
+            $fileExtensi    = explode('.',$namafile);
+            $fileExtensi    = strtolower(end($fileExtensi));
+            $nama           = $nama.'.'.$fileExtensi;
 
-        if(!in_array($fileExtensi,$extensiValid)){
-            echo `<script> alert(" gagal upload gambar") </script>`;
-            return false;
-        } elseif ($ukuranFile < 10240000) {
-            move_uploaded_file($tempName,$_SERVER['DOCUMENT_ROOT'].'/sarugo/assets/images/produk/'.$nama);
-            return 'assets/images/produk/'.$nama;
+            if(!in_array($fileExtensi,$extensiValid)){
+                echo `<script> alert(" gagal upload gambar") </script>`;
+                return false;
+            } elseif ($ukuranFile < 10240000) {
+                move_uploaded_file($tempName,$_SERVER['DOCUMENT_ROOT'].'/sarugo/assets/images/produk/'.$nama);
+                array_push($gambar,'assets/images/produk/'.$nama);
+            }
+
         }
+        return $gambar;
     } 
 
     public function update()
@@ -155,17 +179,28 @@ class Produk extends CI_Controller{
         //  var_dump($_POST,$_FILES);die();
 
          $nama_produk        = $_POST["nama_produk"];
-         $harga_satuan         = $_POST["harga_satuan"];
-         $berat_satuan             = $_POST["berat_satuan"];
-         $komposisi             = $_POST["komposisi"];
-         $keterangan             = $_POST["keterangan"];
-         $penjelasan_produk             = $_POST["penjelasan_produk"]; 
+         $harga_satuan       = $_POST["harga_satuan"];
+         $berat_satuan       = $_POST["berat_satuan"];
+         $komposisi          = $_POST["komposisi"];
+         $keterangan         = $_POST["keterangan"];
+         $penjelasan_produk  = $_POST["penjelasan_produk"]; 
          $gambar             = $this->upload();
 
-        if(!$gambar){
+        if(sizeof($gambar)==0){
             $gambar = $this->db->get_where("produk",["id_produk"=>$_POST["id_produk"]])->result()[0]->gambar;
+        }else{
+            $gambarProduk = array();
 
-        } 
+            foreach ($gambar as $dataGambar) {
+                array_push($gambarProduk,array(
+                    "id_produk"=>$_POST["id_produk"],
+                    "src"=>$dataGambar
+                ));
+            }
+
+            $this->db->insert_batch('gambar_produk',$gambarProduk);
+            
+        }
 
         
         if(!$gambar){
@@ -174,7 +209,7 @@ class Produk extends CI_Controller{
 
         $data = array(
             "nama_produk"=>$nama_produk,
-            "gambar"=>$gambar  ,
+            "gambar"=>"images are in gambar_produk table"  ,
             "harga_satuan"=>$harga_satuan,
             "komposisi"=>$komposisi,
             "keterangan"=>$keterangan,
