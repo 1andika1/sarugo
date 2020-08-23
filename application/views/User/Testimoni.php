@@ -1,6 +1,6 @@
 
 <?php 
-$lima = $empat = $tiga = $dua = $satu = $count = $mean = 0;
+$lima = $empat = $tiga = $dua = $satu = $count = $mean = $perslima = $persempat =$perstiga=$persdua=$perssatu= 0;
 foreach ($dataTestimoni as $key => $testi) {
   $count ++;
   switch ($testi->bintang) {
@@ -26,6 +26,12 @@ foreach ($dataTestimoni as $key => $testi) {
 
 $mean = $satu*1 + $dua*2 + $tiga*3 + $empat*4 + $lima*5;
 $mean = $mean/$count;
+$perslima = ($lima/$count)*100;
+$persempat = ($empat/$count)*100;
+$perstiga = ($tiga/$count)*100;
+$persdua = ($dua/$count)*100;
+$perssatu = ($satu/$count)*100;
+
 
 ?>
     
@@ -104,14 +110,13 @@ $mean = $mean/$count;
 
          <span class="heading">Rating Pengunjung</span>
          <div>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star"></span>
+         <?php for ($rata = 1; $rata <= round($mean); $rata++) : ?> 
+                           <big><big> <span class="fa fa-star checked"></span></big></big>
+                             
+                         <?php endfor  ?>
          </div>
-         <p>Dinilai <b> <?=$mean?> </b> Bintang dari <b><?=$count?></b> Ulasan </p>
-         <hr style="border:3px solid #f1f1f1">
+         <p>Dinilai <b> <?= $mean?> </b> Bintang dari <b><?=$count?></b> Ulasan </p>
+         <hr style="border:2px solid #f1f1f1">
 
          <div class="row-center">
            <div class="side">
@@ -119,7 +124,7 @@ $mean = $mean/$count;
            </div>
            <div class="middle">
              <div class="bar-container">
-               <div class="bar-5"></div>
+               <div class="bar-5" style="width: <?php echo $perslima; ?>%;"></div>
              </div>
            </div>
            <div class="side right">
@@ -130,7 +135,7 @@ $mean = $mean/$count;
            </div>
            <div class="middle">
              <div class="bar-container">
-               <div class="bar-4"></div>
+               <div class="bar-4" style="width: <?php echo $persempat; ?>%;"></div>
              </div>
            </div>
            <div class="side right">
@@ -141,7 +146,7 @@ $mean = $mean/$count;
            </div>
            <div class="middle">
              <div class="bar-container">
-               <div class="bar-3"></div>
+               <div class="bar-3" style="width: <?php echo $perstiga; ?>%;"></div>
              </div>
            </div>
            <div class="side right">
@@ -152,7 +157,7 @@ $mean = $mean/$count;
            </div>
            <div class="middle">
              <div class="bar-container">
-               <div class="bar-0"></div>
+               <div class="bar-2" style="width: <?php echo $persdua; ?>%;"></div>
              </div>
            </div>
            <div class="side right">
@@ -163,7 +168,7 @@ $mean = $mean/$count;
            </div>
            <div class="middle">
              <div class="bar-container">
-               <div class="bar-1"></div>
+               <div class="bar-1" style="width: <?php echo $perssatu; ?>%;"></div>
              </div>
            </div>
            <div class="side right">
@@ -178,11 +183,10 @@ $mean = $mean/$count;
 
                <div class="container" style="margin-bottom: 20px; text-align: center;">
                  <div class="row">
-                   <div class="col border bg-light" style="padding: 10px;"><?= $testi->nama_testi ?></div>
+                   <div class="col border bg-light" style="padding: 10px;"><b><?= $testi->nama_testi ?></b></div>
                    <!-- <div class="col-md-auto border bg-light center" style="padding: 10px;">
                     <?//= $testi->pekerjaan_testi ?></div>-->
-                  <div class="col border bg-light" style="padding: 10px;">
-                    <?= $testi->alamat_testi ?></div>
+                  
 
                    <div class="col border bg-light" style="padding: 10px;">
                      <!-- <?php for ($index = 1; $index <= 5; $index++) : ?>
@@ -195,10 +199,13 @@ $mean = $mean/$count;
 
 
                          <?php for ($index = 1; $index <= $testi->bintang; $index++) : ?> 
-                             <span class="fa fa-star checked"></span>
+                            <small> <span class="fa fa-star checked"></span></small>
                              
                          <?php endfor  ?>
+
                    </div>
+                   <div class="col border bg-light" style="padding: 10px;">
+                    <?= $testi->pesan_testi ?></div>
 
                  </div> 
                </div>
