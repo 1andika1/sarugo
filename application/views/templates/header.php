@@ -168,6 +168,7 @@ if (isset($this->session->spradmin)) {
                                 <?php endif ?>
                             </div>
                         </nav>
+                    </div>
                 </header>
                 <!-- END HEADER MOBILE-->
 
@@ -215,7 +216,10 @@ if (isset($this->session->spradmin)) {
                                 </div>
                             </div>
                         </div>
+                        
+                    
                     </header>
-                
+       
+                                
                     <!-- HEADER DESKTOP-->
                     

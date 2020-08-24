@@ -26,6 +26,7 @@ foreach ($dataTestimoni as $key => $testi) {
 
 $mean = $satu*1 + $dua*2 + $tiga*3 + $empat*4 + $lima*5;
 $mean = $mean/$count;
+$mean=round($mean,2);
 $perslima = ($lima/$count)*100;
 $persempat = ($empat/$count)*100;
 $perstiga = ($tiga/$count)*100;

@@ -71,7 +71,8 @@
                                                 <input type="radio" id="radio2" name="keterangan" value="tidak tersedia" class="form-check-input">Tidak Tersedia
                                             </label>
                                         </div>
-                                   
+              
+                            
                         </div>
                     </div>
                 </div>

@@ -24,10 +24,13 @@
 
           <div class="col-lg-5">
             <h2 class="portfolio-title"></h2>
-            <div class="owl-carousel portfolio-details-carousel"  >
+            <div class="owl-carousel portfolio-details-carousel"   >
+            
               <?php foreach ($gambarProduk as $key => $gambar) : ?>
                 <?php if($gambar->id_produk == $produk->id_produk) : ?>
-                  <img src="<?= base_url("$gambar->src")?>" class="img-fluid" alt="" >
+                  <div style="display: flex; justify-content:center; align-items:center; min-height:300px;">
+                  <img src="<?= base_url("$gambar->src")?>" class="img-fluid w-auto"  alt="" style=" max-height: 300px; "  >
+                  </div>
                 <?php endif ?>
               <?php endforeach ?>
               <!-- <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
