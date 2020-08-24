@@ -59,8 +59,6 @@ if (isset($this->session->spradmin)) {
 
 <body class="animation">
     <div class="page-wrapper">
-        <body class="animsition">
-            <div class="page-wrapper">
                 <!-- HEADER MOBILE-->
                 <header class="header-mobile d-block d-lg-none">
                     <div class="header-mobile__bar">
