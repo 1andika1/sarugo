@@ -14,7 +14,7 @@
                         </a>
               
               <p>
-                Koto Tinggi, Gunuang Omeh, Kabupaten Lima Puluh Kota <br>
+                Jorong Sungai Dadok, Nagari Koto Tinggi, Kecamatan Gunuang Omeh, Kabupaten Lima Puluh Kota <br>
                 Sumatera Barat, Indonesia<br><br>
                 <strong>Telepon:</strong> +62 8123 45678 90<br>
                 <strong>Email:</strong> email@contoh.com<br>
