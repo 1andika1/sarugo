@@ -82,7 +82,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-4.jpg " alt="#" />
+                                    <img class="rounded-circle " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-4.jpg " alt="#"width="50%" />
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Pawai Ulang Tahun Sarugo</h4>
@@ -92,7 +92,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-3.jpg" alt="#" />
+                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-3.jpg" alt="#" width="50%"/>
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Panen Jeruk</h4>
@@ -102,7 +102,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-1.jpg" alt="#" />
+                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-1.jpg" alt="#" width="50%"/>
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Bakar-Bakar Jagung</h4>
@@ -118,7 +118,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-1.jpg " alt="#" />
+                                    <img class="rounded-circle " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-1.jpg " alt="#" width="50%"/>
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Pameran Kebudayaan</h4>
@@ -128,7 +128,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-4.jpg" alt="#" />
+                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-4.jpg" alt="#" width="50%"/>
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Barandai</h4>
@@ -138,7 +138,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-3.jpg" alt="#" />
+                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-3.jpg" alt="#" width="50%"/>
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Pentas Seni Sarugo</h4>
@@ -154,7 +154,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-2.jpg " alt="#" />
+                                    <img class="rounded-circle " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-2.jpg " alt="#" width="50%" />
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Baralek Gadang</h4>
@@ -164,7 +164,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-5.jpg" alt="#" />
+                                    <img class="rounded-circle" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-5.jpg" alt="#" width="50%"/>
                                   </div>
                                   <div class="btn-wrap">
                                     <a href="<?= base_url("#event") ?>" class="btn-buy">
@@ -176,7 +176,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-4.jpg" alt="#" />
+                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/comments-4.jpg" alt="#"width="50%" />
                                   </div>
                                   <a href="<?= base_url("#event") ?>" class="btn-info">
                                     <h4>Bantai Jawi</h4>
