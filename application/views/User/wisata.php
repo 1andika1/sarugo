@@ -35,7 +35,7 @@
                                     <?= substr($wisata->keterangan, 0, 200) ?>
                                 </p>
                                 <div class="read-more">
-                                    <a href="<?= base_url("wisata/detailwisata?id=$wisata->id_wisata") ?>">Read More</a>
+                                    <a href="<?= base_url("wisata/detailwisata?id=$wisata->id_wisata") ?>">Baca Selengkapnya</a>
                                 </div>
                             </div>
                         </article><!-- End blog entry -->

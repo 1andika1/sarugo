@@ -56,42 +56,34 @@
                 <?php endforeach ?>   
 
 
-              <!-- gambar2 -->
               <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
                 <div class="box featured">
                   <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
                   <div class="btn-wrap">
-                    <a class="btn-buy">ket. gambar</a>
+                    <p>keterangan gambar</p>
                   </div>
                 </div>
               </div>
-              <!-- gambar3 -->
               <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
                 <div class="box featured">
                   <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
                   <div class="btn-wrap">
-                    <a class="btn-buy">ket. gambar</a>
+                    <p >keterangan gambar</p>
                   </div>
                 </div>
               </div>
-              <!-- gambar4 -->
-              <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
-                <div class="box featured">
-                  <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
-                  <div class="btn-wrap">
-                    <a class="btn-buy">ket. gambar</a>
-                  </div>
-                </div>
-              </div>
+              
             </div>
             </div>
           </div>
-
-            <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+            
+            <div class="col-lg-6 col-md-6 mt-4 mt-md-0 ">
               <div class="row">
-                <div id="#keterangan" class="box featured w-100">
+                <div id="#keterangan" class="box featured">
                   <h3>Keterangan Wisata</h3>
-                  <h5 id="keteranganUtama"><?=$wisata->keterangan?></h5>
+                  <div class="text-left">
+                  <p id="keteranganUtama"><?=$wisata->keterangan?></p>
+                  </div>
                 </div>
                 
               </div>

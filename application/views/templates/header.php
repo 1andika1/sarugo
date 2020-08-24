@@ -20,7 +20,7 @@ if (isset($this->session->spradmin)) {
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/images/logo-bulat.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
     <!-- Title Page-->
     <title>SARUGO | Kabupaten Lima Puluh Kota</title>
@@ -46,21 +46,11 @@ if (isset($this->session->spradmin)) {
 
     <!-- Main CSS-->
     <link href="<?= base_url() ?>assets/css/theme.css" rel="stylesheet" media="all">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
-    <!-- include libraries(jQuery, bootstrap) -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 </head>
 
 <body class="animation">
     <div class="page-wrapper">
-        <body class="animsition">
-            <div class="page-wrapper">
                 <!-- HEADER MOBILE-->
                 <header class="header-mobile d-block d-lg-none">
                     <div class="header-mobile__bar">
@@ -170,6 +160,7 @@ if (isset($this->session->spradmin)) {
                                 <?php endif ?>
                             </div>
                         </nav>
+                    </div>
                 </header>
                 <!-- END HEADER MOBILE-->
 
@@ -217,7 +208,10 @@ if (isset($this->session->spradmin)) {
                                 </div>
                             </div>
                         </div>
+                        
+                    
                     </header>
-                
+       
+                                
                     <!-- HEADER DESKTOP-->
                     

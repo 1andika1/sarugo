@@ -42,39 +42,41 @@
         <div class="page-content--bge5">
             <div class="container">
                 <div class="login-wrap">
-                <?php
+                    <?php
 
-if ($this->session->flashdata('message_name')) {
-    $message = $this->session->flashdata('message_name');
-?>
-    <div class="alert alert-danger"><?php echo $message; ?>
+                    if ($this->session->flashdata('message_name')) {
+                        $message = $this->session->flashdata('message_name');
+                    ?>
+                        <div class="alert alert-danger"><?php echo $message; ?>
 
-    </div>
-<?php
-}
-
-?>
-                    <div class="login-content">
-                        <div class="login-logo">
-                            <a href="#">
-                                <img src="<?= base_url() ?>assets/images/sarugo-logo.png" alt="CoolAdmin">
-                            </a>
                         </div>
+                    <?php
+                    }
+                    ?>
+                    
+                    <div class="login-content">
+                    <div class="login-logo">
+                        <a href="#">
+                            <img src="<?= base_url() ?>assets/images/sarugo-logo.png" alt="CoolAdmin">
+                        </a>
+                    </div>
                         <div class="login-form">
-                            <form action="<?= base_url("admin/login/signin") ?>" method="post">
+                            <form action="<?= base_url("admin/login/signin") ?>" method="post" class="text-center">
                                 <div class="form-group">
-                                    <label>Username</label>
-                                    <input required class="au-input au-input--full" type="text" name="username" placeholder="Username">
+                                   <!-- <label>Username</label> -->
+                                   <i class="fas fa-user mr-2"></i>
+                                    <input required class="au-input au-input" type="text" name="username" placeholder="Admin">
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
-                                    <input required class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                   <!-- <label>Password</label> -->
+                                   <i class="fas fa-lock mr-2"></i>
+                                    <input required class="au-input au-input" type="password" name="password" placeholder="***">
                                 </div>
-                                
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
-                               
+
+                                <button class="au-btn  au-btn--green m-b-20" type="submit">sign in</button>
+
                             </form>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -83,8 +85,8 @@ if ($this->session->flashdata('message_name')) {
 
     </div>
 
-     <!-- Jquery JS-->
-     <script src="<?= base_url() ?>assets/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Jquery JS-->
+    <script src="<?= base_url() ?>assets/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="<?= base_url() ?>assets/vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="<?= base_url() ?>assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
@@ -108,4 +110,5 @@ if ($this->session->flashdata('message_name')) {
     <script src="<?= base_url() ?>assets/js/main.js"></script>
 
 </body>
+
 </html>
