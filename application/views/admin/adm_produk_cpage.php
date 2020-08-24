@@ -15,7 +15,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body card-block">
-                        <form action="<?php echo base_url('admin/produk/create'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <form action="<?php echo base_url('admin/produk/add'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="text-input" class="form-control-label">Nama Produk</label>
@@ -36,7 +36,6 @@
                                     <span class="text-danger"><?php echo form_error('harga_satuan') ?></span>
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="text-input" class=" form-control-label">Berat Satuan(Kg)</label>
@@ -72,49 +71,7 @@
                                                 <input type="radio" id="radio2" name="keterangan" value="tidak tersedia" class="form-check-input">Tidak Tersedia
                                             </label>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3">
-                                    <label for="textarea-input" class=" form-control-label">Penjelasan Tambahan</label>
-                                </div>
-                                <div class="col-12 col-md-9">
-                                    <textarea name="penjelasan_produk" id="isi_hlmstat" rows="9" placeholder="Masukkan penjelasan produk ..." class="form-control summernote"></textarea>
-                                    <span class="text-danger"><?php echo form_error('penjelasan_produk') ?></span>
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3">
-                                    <label for="file-input" class=" form-control-label">Upload Gambar</label>
-                                </div>
-                                <div class="col-12 col-md-9">
-                                    <input required type="file" id="gbr_hlmstat" name="gambar" class="form-control-file">
-                                    <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3">
-                                    <label for="file-input" class=" form-control-label">Upload Multiple Gambar</label>
-                                </div>
-                                <div class="col-12 col-md-9">
-                                    <input multiple required type="file" id="gbr_hlmstat" name="multiple_gambar[]" class="form-control-file">
-                                    <small class="form-text text-muted">File JPG/JPEG/PNG max file 2Mb</small>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-dot-circle-o"></i> Submit
-                                </button>
-                                <button type="reset" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Reset
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-=======
+              
                             
                         </div>
                     </div>
@@ -162,4 +119,3 @@
     </div>
     
 </div>
->>>>>>> d022b3a673d675a5f75ebfa6b32d910664f3921d

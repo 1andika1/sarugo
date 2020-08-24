@@ -94,11 +94,7 @@ class Produk extends CI_Controller{
 
     public function add()
     {
-<<<<<<< HEAD
-        //var_dump($_POST,$_FILES);die();
-=======
         // var_dump($_POST,$_FILES,sizeof($_FILES['gambar'])); die();
->>>>>>> d022b3a673d675a5f75ebfa6b32d910664f3921d
 
         // get data from post method
         $nama_produk        = $_POST["nama_produk"];
