@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Agu 2020 pada 13.04
+-- Waktu pembuatan: 23 Agu 2020 pada 11.20
 -- Versi server: 10.4.8-MariaDB
 -- Versi PHP: 7.1.33
 
@@ -44,7 +44,7 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `gambar`, `harga_satuan`, `berat_satuan`, `komposisi`, `keterangan`, `penjelasan_produk`) VALUES
-(1, 'Keranjang Baju', 'assets/images/wisata/5f2fcf6f273e0.png', 100000, 1, 'Terbuat dari bilah bambu berkualitas tinggi, \r\n                        ', 'tidak tersedia', 'dibuat dengan sepenuh hati \r\n                        ');
+(9, 'hello', 'images are in gambar_produk table', 121, 1, '<p>HAFLJALKDFJL</p> \r\n                        ', 'tersedia', '<p>FJALJFALKJDF</p> \r\n                        ');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +64,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_produk` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

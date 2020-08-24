@@ -52,6 +52,8 @@ class login extends CI_Controller {
                 redirect(base_url("spradm_sarugo/home_page"));
             }
         }else{
+            $this->session->set_flashdata('message_name', 'Pasangan username dan password tidak ada di database <br> Cek kembali kombinasi username dan password anda');
+			$this->session->keep_flashdata('message_name');
             redirect(base_url("admin"));
         }
     }
@@ -60,6 +62,7 @@ class login extends CI_Controller {
     {       
         unset($_SESSION["spradmin"]);
         unset($_SESSION["admin"]);
+
 
         // var_dump($this->session->userdata);die();
         redirect(base_url("admin"));

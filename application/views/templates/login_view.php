@@ -42,6 +42,18 @@
         <div class="page-content--bge5">
             <div class="container">
                 <div class="login-wrap">
+                <?php
+
+if ($this->session->flashdata('message_name')) {
+    $message = $this->session->flashdata('message_name');
+?>
+    <div class="alert alert-danger"><?php echo $message; ?>
+
+    </div>
+<?php
+}
+
+?>
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
