@@ -155,62 +155,9 @@
 
 
 <div class="container">
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7850200025073!2d100.6280175144634!3d-0.23409153544863676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2ab4b0b0fe94b3%3A0x34557fa47f524888!2sDinas%20Komunikasi%20dan%20Informatika%20Kabupaten%20Lima%20Puluh%20Kota!5e0!3m2!1sen!2sid!4v1597166816715!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d31918.330686252095!2d100.61787474855514!3d-0.21072642463656302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d-0.18741939999999999!2d100.62999699999999!4m5!1s0x2e2ab4b0b0fe94b3%3A0x34557fa47f524888!2sDinas%20Komunikasi%20dan%20Informatika%20Kabupaten%20Lima%20Puluh%20Kota%2C%20Ibuh%2C%20Kec.%20Payakumbuh%20Bar.%2C%20Kota%20Payakumbuh%2C%20Sumatera%20Barat!3m2!1d-0.2340969!2d100.63020619999999!5e0!3m2!1sen!2sid!4v1597284622920!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
+ 
 </div>
-
-
-<?php 
-$geolocation = $latitude.','.$longitude;
-$request = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.$geolocation.'&sensor=false'; 
-$file_contents = file_get_contents($request);
-$json_decode = json_decode($file_contents);
-if(isset($json_decode->results[0])) {
-    $response = array();
-    foreach($json_decode->results[0]->address_components as $addressComponet) {
-        if(in_array('political', $addressComponet->types)) {
-                $response[] = $addressComponet->long_name; 
-        }
-    }
-
-    if(isset($response[0])){ $first  =  $response[0];  } else { $first  = 'null'; }
-    if(isset($response[1])){ $second =  $response[1];  } else { $second = 'null'; } 
-    if(isset($response[2])){ $third  =  $response[2];  } else { $third  = 'null'; }
-    if(isset($response[3])){ $fourth =  $response[3];  } else { $fourth = 'null'; }
-    if(isset($response[4])){ $fifth  =  $response[4];  } else { $fifth  = 'null'; }
-
-    if( $first != 'null' && $second != 'null' && $third != 'null' && $fourth != 'null' && $fifth != 'null' ) {
-        echo "<br/>Address:: ".$first;
-        echo "<br/>City:: ".$second;
-        echo "<br/>State:: ".$fourth;
-        echo "<br/>Country:: ".$fifth;
-    }
-    else if ( $first != 'null' && $second != 'null' && $third != 'null' && $fourth != 'null' && $fifth == 'null'  ) {
-        echo "<br/>Address:: ".$first;
-        echo "<br/>City:: ".$second;
-        echo "<br/>State:: ".$third;
-        echo "<br/>Country:: ".$fourth;
-    }
-    else if ( $first != 'null' && $second != 'null' && $third != 'null' && $fourth == 'null' && $fifth == 'null' ) {
-        echo "<br/>City:: ".$first;
-        echo "<br/>State:: ".$second;
-        echo "<br/>Country:: ".$third;
-    }
-    else if ( $first != 'null' && $second != 'null' && $third == 'null' && $fourth == 'null' && $fifth == 'null'  ) {
-        echo "<br/>State:: ".$first;
-        echo "<br/>Country:: ".$second;
-    }
-    else if ( $first != 'null' && $second == 'null' && $third == 'null' && $fourth == 'null' && $fifth == 'null'  ) {
-        echo "<br/>Country:: ".$first;
-    }
-  }
-?>
-
-
-
+ 
 <script> 
     const access = document.querySelectorAll(".access")
     const all    = document.querySelector(".all") 
@@ -228,6 +175,7 @@ if(isset($json_decode->results[0])) {
             });
             var checkd = document.createAttribute("checked")
             all.children[0].setAttributeNode(checkd) 
+            all.clasName +=" active"
 
         }else{
             access.forEach(element => {
@@ -249,6 +197,19 @@ if(isset($json_decode->results[0])) {
             all.children[0].removeAttribute("checked")
         
             all.className = element.className.replace(/\bactive\b/g, "");
+
+            if(!element.children[0].hasAttribute("checked")){ 
+
+                var checked = document.createAttribute("checked")
+                element.children[0].setAttributeNode(checked)
+    
+                element.className += " active"
+
+            }else{ 
+
+                element.children[0].removeAttribute("checked")
+                element.className = element.className.replace(/\bactive\b/g, "");
+            }
         })
 
     }); 
