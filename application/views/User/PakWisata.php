@@ -32,7 +32,7 @@
                </ul>
                <h4><?= format_rp($paketWisata->biaya); ?></h4>
                <div class="btn-wrap">
-                 <a href="<?= base_url("paket/detailpaket?id_paket_wisata=$paketWisata->id_paket_wisata") ?>" class="btn-buy">Lihat Selengkapnya</a>
+                 <a href="<?= base_url("paket/detailpaket?id_paket_wisata=$paketWisata->id_paket_wisata") ?>" class="btn-buy">Baca Selengkapnya</a>
                </div>
              </div>
            </div>

@@ -100,6 +100,7 @@ class Berita extends CI_Controller
 
         // get data from post method
         $judul_berita        = $_POST["judul_berita"];
+        $namaadmin        = $_POST["admin"];
         $keterangan         = $_POST["isi_berita"];
         $gambar             = $this->upload();
         $tgl_post           = date("Y:m:d h:i");
@@ -114,6 +115,7 @@ class Berita extends CI_Controller
             "gambar" => $gambar,
             "keterangan" => $keterangan,
             "tgl_post" => $tgl_post,
+            "admin_berita" => $namaadmin
 
         );
 

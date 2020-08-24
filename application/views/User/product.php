@@ -15,10 +15,10 @@
     </section><!-- End Breadcrumbs -->
     
  
-
+<div class="mt-5"></div>
     <?php foreach($dataProduk as $key => $produk): ?>
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+    <section  class="portfolio-details p-2">
+      <div class="container shadow ">
 
         <div class="row justify-content-md-center">
 
@@ -28,7 +28,7 @@
             
               <?php foreach ($gambarProduk as $key => $gambar) : ?>
                 <?php if($gambar->id_produk == $produk->id_produk) : ?>
-                  <div style="display: flex; justify-content:center; align-items:center; mingit-height:300px;">
+                  <div style="display: flex; justify-content:center; align-items:center; min-height:300px;">
                   <img src="<?= base_url("$gambar->src")?>" class="img-fluid w-auto"  alt="" style=" max-height: 300px; "  >
                   </div>
                 <?php endif ?>
@@ -38,7 +38,7 @@
             </div>
           </div>
 
-          <div class="col-lg-5 portfolio-info">
+          <div class="col-lg-5 portfolio-info p-5">
             <h3><b><?= $produk->nama_produk ?></b></h3>
             <ul>
               <li><strong>Harga Satuan: </strong><?=format_rp($produk->harga_satuan) ?></li>
@@ -57,7 +57,7 @@
       </div>
     </section>
     <?php endforeach  ?>
-
+<div class="mb-5"></div>
     <!-- template produk -->
     <?php //foreach($dataProduk as $key => $produk): ?>
    <!--   <div class="row  justify-content-md-center">

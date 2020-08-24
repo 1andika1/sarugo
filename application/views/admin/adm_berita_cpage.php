@@ -16,7 +16,8 @@
                 <div class="card">
                     <div class="card-body card-block">
                         <form action="<?= base_url('admin/berita/create'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-                            <div class="row form-group">
+                        <input type="hidden" value="<?= $this->session->admin->nama_admin ?>" name="admin">    
+                        <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="text-input" class=" form-control-label">Judul Berita</label>
                                 </div>
