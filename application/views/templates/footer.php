@@ -38,8 +38,8 @@
                 <script src="<?= base_url() ?>assets/vendor/vector-map/jquery.vmap.sampledata.js"></script>
                 <script src="<?= base_url() ?>assets/vendor/vector-map/jquery.vmap.world.js"></script>
                 
-                <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+               <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
                 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
                 
