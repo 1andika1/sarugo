@@ -99,39 +99,39 @@
                     </div>
                     <div class="col-12 col-md-9"> 
 
-                        <div required class="text-uppercase font-weight-bold btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class=" font-weight-bold m-1 rounded access btn border shadow   btn-outline-success  ">
-                                <input name="hal_statis"  id="hal_statis" type="checkbox" autocomplete="off"> Halaman Statis
+                        <div required class=" btn-group-toggle row" data-toggle="buttons">
+                            <label class="  rounded access btn border shadow   btn-outline-success  ">
+                                <input disable name="hal_statis"  id="hal_statis" type="checkbox" autocomplete="off"> Halaman Statis
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow      rounded bold btn-outline-success">
-                                <input name="menu"  id="menu"  type="checkbox" autocomplete="off"> Menu
+                            <label class=" rounded access btn border shadow btn-outline-success">
+                                <input name="menu"  id="menu"  type="checkbox"  > Menu
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="sub_menu"  id="sub_menu"  type="checkbox" autocomplete="off"> Sub Menu
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="event"  id="event"  type="checkbox" autocomplete="off"> Event
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="banner"  id="banner"  type="checkbox" autocomplete="off"> Banner/Slider
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="wisata"  id="wisata"  type="checkbox" autocomplete="off"> Wisata
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="produk"  id="produk"  type="checkbox" autocomplete="off"> Produk
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="paket_wisata"  id="paket_wisata"  type="checkbox" autocomplete="off"> Paket Wisata
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="testimoni"  id="testimoni"  type="checkbox" autocomplete="off"> Testimoni
                             </label>
-                            <label class="font-weight-bold m-1 rounded access btn border shadow  bold btn-outline-success">
+                            <label class=" rounded access btn border shadow  bold btn-outline-success">
                                 <input name="berita"  id="berita"  type="checkbox" autocomplete="off"> Berita
                             </label>
-                            <label class="all  font-weight-bold m-1 rounded btn border shadow  bold btn-outline-success">
-                                <input   name="all"    type="checkbox" autocomplete="off" > All
+                            <label class="all   rounded btn border shadow  bold btn-outline-success">
+                                <input   name="all"    type="checkbox"  > All
                             </label>
                         </div>   
 
@@ -151,16 +151,12 @@
         
     </div>
     
-</div>
-
-
-<div class="container">
- 
-</div>
+</div> 
  
 <script> 
     const access = document.querySelectorAll(".access")
     const all    = document.querySelector(".all") 
+    const data   = access[0].children[0];
 
     all.addEventListener("click",function(){  
         // console.log("has check : ",all.children[0].hasAttribute("checked"))
@@ -175,7 +171,8 @@
             });
             var checkd = document.createAttribute("checked")
             all.children[0].setAttributeNode(checkd) 
-            all.clasName +=" active"
+            all.className = all.className.replace(/\bactive\b/g, "");
+            
 
         }else{
             access.forEach(element => {
@@ -187,31 +184,40 @@
                 
             }); 
 
-            all.children[0].removeAttribute("checked")
+            all.children[0].removeAttribute("checked");
+            all.clasName +=" active"
+
              
         }
     })
 
     access.forEach(element => {
-        element.addEventListener("click",()=>{ 
-            all.children[0].removeAttribute("checked")
         
-            all.className = element.className.replace(/\bactive\b/g, "");
+        element.addEventListener("click",(event)=>{ 
 
-            if(!element.children[0].hasAttribute("checked")){ 
+            
 
-                var checked = document.createAttribute("checked")
-                element.children[0].setAttributeNode(checked)
-    
-                element.className += " active"
+            if(event.target.children[0].hasAttribute("checked")){ 
+
+                event.target.children[0].removeAttribute("checked")
+                event.target.className = event.target.className.replace(/\bactive\b/g, "");
 
             }else{ 
 
-                element.children[0].removeAttribute("checked")
-                element.className = element.className.replace(/\bactive\b/g, "");
+                var checked = document.createAttribute("checked")
+                event.target.children[0].setAttributeNode(checked)
+    
+                event.target.className += " active"
             }
+
+            all.children[0].removeAttribute("checked")
+        
+            all.className = all.className.replace(/\bactive\b/g, "");
+
         })
 
     }); 
+ 
+    // console.log(data.parentNode.className +=" active")
 
 </script> 
