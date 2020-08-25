@@ -29,7 +29,7 @@
               <?php foreach ($gambarProduk as $key => $gambar) : ?>
                 <?php if($gambar->id_produk == $produk->id_produk) : ?>
                   <div style="display: flex; justify-content:center; align-items:center; min-height:300px;">
-                  <img src="<?= base_url("$gambar->src")?>" class="img-fluid w-auto"  alt="" style=" max-height: 300px; "  >
+                  <img src="<?= base_url("$gambar->src")?>" class="img-fluid w-auto rounded"  alt="" style=" max-height: 300px; "  >
                   </div>
                 <?php endif ?>
               <?php endforeach ?>

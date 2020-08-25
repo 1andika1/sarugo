@@ -8,7 +8,9 @@ class EventModel extends CI_Model{
 
     public function getAllEvent()
     {
+        $this->db->order_by("id_event","DESC");
         return $this->db->get("event")->result();
+
     }
     public function getEventByID($id)
     {

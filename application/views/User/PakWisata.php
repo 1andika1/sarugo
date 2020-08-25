@@ -28,7 +28,7 @@
                <ul>
                  <li>Selama <?= $paketWisata->jumlah_hari ?> Hari</li>
                  <li>Max <?= $paketWisata->jumlah_orang ?> Orang</li>
-                 <li>Mengunjungi Wisata <?= $paketWisata->objek_wisata ?></li>
+                 <li><?= substr($paketWisata->objek_wisata,0,30).', dll.' ?></li>
                </ul>
                <h4><?= format_rp($paketWisata->biaya); ?></h4>
                <div class="btn-wrap">

@@ -16,7 +16,7 @@
             <div class="row">
                 <?php foreach ($dataWisata as $key => $wisata) : ?>
                     <!-- template wisata -->
-                    <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                    <div  class="col-lg-4 shadow col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                         <article class="entry">
                             <div class="entry-img">
                                 <img src="<?= base_url("$wisata->gambar") ?>" alt="" class="img-fluid">

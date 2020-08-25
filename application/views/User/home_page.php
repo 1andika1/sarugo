@@ -70,7 +70,7 @@
                               <?php endforeach ?>
                               end -->
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                      <ol class="carousel-indicators">
+                      <ol class="d-none carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -78,18 +78,24 @@
                       <div class="carousel-inner">
                         <div class="carousel-item active">
                           <div class="container">
-                            <div class="row">
+                            <div class="row d-flex justify-content-center">
+
+                            <?php foreach ($dataEvent as $key => $event) : if($key>3){break;} ?>
+
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg " alt="#"width="100%" />
+                                    <img class="rounded-circle shadow w-75 h-100" style="z-index:-10" src="<?= base_url("$event->gambar") ?>" alt="gambar event" width="100%" />
                                   </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Pawai Ulang Tahun Sarugo</h4>
+                                  <a href="<?= base_url("event?id_event=$event->id_event") ?>" class="btn-info">
+                                    <h4><?= $event->nama_event ?></h4>
                                   </a>
                                 </div>
                               </div>
-                              <div class="col-md-4">
+
+                              <?php endforeach ?>
+
+                              <!-- <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
                                     <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
@@ -108,81 +114,7 @@
                                     <h4>Bakar-Bakar Jagung</h4>
                                   </a>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg " alt="#" width="100%"/>
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Pameran Kebudayaan</h4>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Barandai</h4>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Pentas Seni Sarugo</h4>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow " style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg " alt="#" width="100%" />
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Baralek Gadang</h4>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
-                                  </div>
-                                  <div class="btn-wrap">
-                                    <a href="<?= base_url("#event") ?>" class="btn-buy">
-                                      <h4>Lomba Kemerdekaan</h4>
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#"width="100%" />
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Bantai Jawi</h4>
-                                  </a>
-                                </div>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -201,6 +133,10 @@
                   </div>
                 </div>
               </section>
+                  
+                  <div class="row float-right d-flex justify-content-center">
+                    <a href="<?= base_url("event")?>" class="btn btn-primary"><h6 class="border-bottom"><< Lihat Event Lainnya Disini >></h6></a>  
+                  </div>
               <!-- </div>  -->
             </div>
         </div>

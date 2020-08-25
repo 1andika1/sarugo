@@ -17,11 +17,11 @@
   </div>
 </section>
  <!-- ======= Pricing Section ======= -->
- <section id="pricing" class="pricing">
+ <section id="pricing" class="pricing ">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="box featured">
+          <div class="col-lg-6 col-md-6  ">
+            <div class="box featured shadow">
               <h3>Foto dan Video</h3>
               <div class="row">
               <!-- gambar1 --> 
@@ -38,8 +38,8 @@
                         </div>
                     </div>
                 <?php else : ?>
-                <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
-                        <div class="box featured"> 
+                <div class="col-lg-6 col-md-6 mt-4 mt-md-0 ">
+                        <div class="box featured "> 
                         <video controls  autoplay    name="media" width="100%"   >
                             <source src="<?=base_url("$resource->link_resource")?>" type="video/mp4" style>
                         </video>
@@ -57,7 +57,7 @@
 
 
               <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
-                <div class="box featured">
+                <div class="box featured ">
                   <img src="<?=base_url("")?>Web_Statis/assets/img/favicon.png" alt="pict1">
                   <div class="btn-wrap">
                     <p>keterangan gambar</p>
@@ -77,7 +77,7 @@
             </div>
           </div>
             
-            <div class="col-lg-6 col-md-6 mt-4 mt-md-0 ">
+            <div class="col-lg-6 col-md-6 mt-4 mt-md-0 shadow ">
               <div class="row">
                 <div id="#keterangan" class="box featured">
                   <h3>Keterangan Wisata</h3>
@@ -95,7 +95,7 @@
     <section>
       <div class="container">
         <div class="row justify-content-md-center">
-            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#basicModal">Lihat Rute Wisata</a>
+            <a id="rute" target="_blank" href="https://www.google.com/maps/dir/-0.2339557,100.6301166/Kampuang+Wisata+Saribu+Gonjong,+Unnamed+Road,+Koto+Tinggi,+Gunuang+Omeh,+Kabupaten+Lima+Puluh+Kota,+Sumatera+Barat+26256/@-0.1279185,100.4200331,12z/data=!3m1!4b1!4m17!1m6!3m5!1s0x2fd559434c687f03:0xfabd53b2266f129f!2sKampuang+Wisata+Saribu+Gonjong!8m2!3d-0.0228638!4d100.3500092!4m9!1m1!4e1!1m5!1m1!1s0x2fd559434c687f03:0xfabd53b2266f129f!2m2!1d100.3500092!2d-0.0228638!3e0" class="btn btn-info" >Lihat Rute Wisata</a>
         </div>
       </div>
       <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
@@ -112,7 +112,7 @@
       </div>
     </section>
     <section>
-      <div class="container">
+      <div class="container shadow">
         <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d255347.73412373007!2d100.35000145672721!3d-0.1281180170612779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-0.2340119!2d100.63011759999999!4m5!1s0x2fd559434c687f03%3A0xfabd53b2266f129f!2swisata%20saribu%20gonjong!3m2!1d-0.0228638!2d100.3500092!5e0!3m2!1sen!2sid!4v1597813134635!5m2!1sen!2sid" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
          
       </div>
@@ -123,7 +123,6 @@
   <script>
     const banyakResource = document.querySelector("#banyakResource").value;
     const keteranganUtama = document.querySelector("#keteranganUtama");
-    const keterangan = []
     const buttonKet = []
 
     for(let index=1;index<=parseInt(banyakResource);index++){
@@ -147,8 +146,11 @@
   
 <script> 
   const maps = document.querySelector("#maps")
+  const rute = document.querySelector("#rute")
   let lat ;
   let long;
+
+  document.addEventListener('DOMContentLoaded', getLocation, false);
 
 
   function getLocation() {
@@ -164,6 +166,8 @@
       lat = position.coords.latitude;
       long = position.coords.longitude; 
       maps.src = `https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d255347.73412373007!2d100.35000145672721!3d-0.1281180170612779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d${lat}!2d${long}!4m5!1s0x2fd559434c687f03%3A0xfabd53b2266f129f!2swisata%20saribu%20gonjong!3m2!1d-0.0228638!2d100.3500092!5e0!3m2!1sen!2sid!4v1597813134635!5m2!1sen!2sid`
+
+      rute.href = `https://www.google.com/maps/dir/${lat},${long}/Kampuang+Wisata+Saribu+Gonjong,+Unnamed+Road,+Koto+Tinggi,+Gunuang+Omeh,+Kabupaten+Lima+Puluh+Kota,+Sumatera+Barat+26256/@-0.1279185,100.4200331,12z/data=!3m1!4b1!4m17!1m6!3m5!1s0x2fd559434c687f03:0xfabd53b2266f129f!2sKampuang+Wisata+Saribu+Gonjong!8m2!3d-0.0228638!4d100.3500092!4m9!1m1!4e1!1m5!1m1!1s0x2fd559434c687f03:0xfabd53b2266f129f!2m2!1d100.3500092!2d-0.0228638!3e0`
       
       console.log(lat,long);
   }

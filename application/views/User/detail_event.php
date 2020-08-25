@@ -65,40 +65,15 @@
         <div class="sidebar ">
  
 
-          <h3 class="sidebar-title">Recent Posts</h3>
+          <h3 class="sidebar-title">Events</h3>
           <div class="sidebar-item recent-posts">
             <?php foreach ($dataEvent as $key => $event) : ?>
                 <div class="post-item clearfix">
-                    <img width="100%" src="<?= base_url("$event->gambar") ?>" alt="gambar">
+                    <img class="rounded" width="100%" src="<?= base_url("$event->gambar") ?>" alt="gambar">
                     <h4><a href="event2.html"><?=  $event->nama_event ?></a></h4>
                     <time datetime="<?=  $event->tgl_awal ?>"><?=  $event->tgl_awal ?></time>
                 </div>
             <?php endforeach ?>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/business-20.jpg" alt="">
-              <h4><a href="Berita3.html">Quidem autem et impedit</a></h4>
-              <time datetime="2020-01-01">Jan 1, 2020</time>
-            </div>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/business-26.jpg" alt="">
-              <h4><a href="Berita4.html">Id quia et et ut maxime similique occaecati ut</a></h4>
-              <time datetime="2020-01-01">Jan 1, 2020</time>
-            </div>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/business-30.jpg" alt="">
-              <h4><a href="Berita5.html">Laborum corporis quo dara net para</a></h4>
-              <time datetime="2020-01-01">Jan 1, 2020</time>
-            </div>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/business-16.jpg" alt="">
-              <h4><a href="Berita6.html">Et dolores corrupti quae illo quod dolor</a></h4>
-              <time datetime="2020-01-01">Jan 1, 2020</time>
-            </div>
-
           </div><!-- End sidebar recent posts-->
         </div><!-- End sidebar -->
       </div><!-- End blog sidebar -->

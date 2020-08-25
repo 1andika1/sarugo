@@ -16,6 +16,7 @@ class home_page extends CI_Controller {
 	{ 
 		$data['dataHalStatis'] = $this->StaticPageModel->getAllStaticPage(); 
 		$data['dataEvent'] = $this->EventModel->getAllEvent();  
+		
 		$this->load->view('User/home_page',$data);
 		$this->load->view('templates/usersTemplates/footer');
     }

@@ -10,23 +10,6 @@ class Event extends CI_Controller {
     $this->load->view('templates/usersTemplates/header',$data);
   }
 
-// 	public function index($berita = "berita")
-// 	{
-//         $berita = isset($_GET["berita"]) ? $_GET["berita"] : $berita;
-//         $data["dataBerita"] = $this->BeritaModel->getAllBerita(); 
-//         // var_dump($data);die();
-
-//         $this->load->view("User/$berita",$data);
-// 		    $this->load->view('templates/usersTemplates/footer');
-//   }
-
-//   public function detailBerita()
-//   {
-//     $data["dataBerita"] = $this->BeritaModel->getAllBerita();
-//     $data["berita"] = $this->BeritaModel->getBeritaByID($_GET["id_berita"])[0];
-//     $this->load->view("User/detailberita",$data);
-//     $this->load->view('templates/usersTemplates/footer');
-//   }
   public function index()
   {   
     $data["dataEvent"] = $this->EventModel->getAllEvent();
