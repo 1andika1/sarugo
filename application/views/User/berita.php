@@ -36,7 +36,7 @@
               <div class="entry-meta">
                 <ul>
                   <li class="d-flex align-items-center"><i class="icofont-user"></i> <?= $berita->admin_berita ?> </li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time datetime="2020-01-01"><?= $berita->tgl_post ?></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time data-date-format="DD MM YYYY"><?= $berita->tgl_post ?></a></li>
                 </ul>
               </div>
 
