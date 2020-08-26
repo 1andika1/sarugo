@@ -48,16 +48,16 @@
                   <h3>Harga Paket Wisata</h3>
                   <table style="width: 75%; background-color: white; text-align:left; ">
                     <tr>
-                      <td>Jumlah orang</td>
-                      <td><?= $dataPaketWisata->jumlah_orang ?> Orang</td>
+                      <td><b>Jumlah orang</td>
+                      <td>: <?= $dataPaketWisata->jumlah_orang ?> Orang</td>
                     </tr>
                     <tr>
-                      <td>Jumlah Hari</td>
-                      <td><?= $dataPaketWisata->jumlah_hari ?> Hari</td>
+                      <td><b> Hari</td>
+                      <td>: <?= $dataPaketWisata->jumlah_hari ?> Hari</td>
                     </tr>
                     <tr>
-                      <td>Total Biaya</td>
-                      <td><?= format_rp($dataPaketWisata->biaya) ?></td>
+                      <td><b>Total Biaya</td>
+                      <td>: <?= format_rp($dataPaketWisata->biaya) ?></td>
                     </tr>
                   </table>
                 </div>
@@ -73,7 +73,7 @@
                   <table style="width: 75%; background-color: white;" >
                 
                       <tr>
-                        <td style="width: 30%;">Objek Wisata</td>
+                        <td style="width: 30%;"><b>Objek Wisata</td>
                         <td>
                           <ul>
                             <!-- <li> Wisata ambil jeruk</li>
@@ -84,7 +84,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td style="width: 30%;">Fasilitas</td>
+                        <td style="width: 30%;"><b>Fasilitas</td>
                         <td>
                           <ul>
                             <!-- <li>Makan</li>
@@ -110,7 +110,7 @@
 
                     <?php foreach ($dataJadwal as $key => $jadwal) : ?>
                       <tr>
-                        <td style="width: 30%;"> Hari <?= $jadwal->hari_jadwal == 1 ? "Pertama" : "ke-" . $jadwal->hari_jadwal ?> </td>
+                        <td style="width: 30%;"><b> Hari <?=  "ke-" . $jadwal->hari_jadwal ?> </td>
                         <td ><?= $jadwal->kegiatan ?></td>
                       </tr>
                     <?php endforeach ?>

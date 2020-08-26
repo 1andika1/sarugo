@@ -46,12 +46,12 @@
                  <table class="table table-data2">
                      <thead>
                          <tr>
-                             <th>
+                          <!--   <th>
                                  <label class="au-checkbox">
                                      <input type="checkbox">
                                      <span class="au-checkmark"></span>
                                  </label>
-                             </th>
+                             </th>-->
                              <th>no</th>
                              <th>NIP</th>
                              <th>Nama</th>
@@ -71,12 +71,12 @@
                                     
                                 ?>
                          <tr>
-                             <td>
+                          <!--   <td>
                                  <label class="au-checkbox">
                                      <input type="checkbox">
                                      <span class="au-checkmark"></span>
                                  </label>
-                             </td>
+                             </td>-->
                              <td><?php echo $no; ?></td>
                              <td><?php echo $row->nip_admin; ?></td>
                              <td><?php echo $row->nama_admin; ?></td>
@@ -85,9 +85,9 @@
                              <td><?php echo $row->username_admin ?></td>
 
                              <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
+                                 <div class="table-data-feature d-flex justify-content-start">
+                                     <!--<button class="item" data-toggle="tooltip" data-placement="top" title="View">
+                                         <i class="zmdi zmdi-eye"></i>-->
                                      </button>
                                      <a href="akun_update/<?php echo $row->nip_admin; ?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                              <i class="zmdi zmdi-edit"></i>

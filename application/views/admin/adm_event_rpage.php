@@ -70,7 +70,7 @@
                                      </span>
                                  </td>
                                  <td>
-                                     <div class="table-data-feature">
+                                     <div class="table-data-feature d-flex justify-content-start">
                                          <a href="<?= base_url("admin/event/edit?id_event=$event->id_event ") ?>">
                                              <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                  <i class="zmdi zmdi-edit"></i>

@@ -53,7 +53,7 @@
                                  </td>
                                  <td class="link"><?= substr($wisata->keterangan, 0, 150) . '.....' ?></td>
                                  <td>
-                                     <div class="table-data-feature">
+                                     <div class="table-data-feature d-flex justify-content-start">
                                         <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                              <i class="zmdi zmdi-eye"></i>
                                          </button>-->

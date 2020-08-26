@@ -24,6 +24,7 @@
 
           <div class="col-lg-5">
             <h2 class="portfolio-title"></h2>
+            <h3></h3>
             <div class="owl-carousel portfolio-details-carousel"   >
             
               <?php foreach ($gambarProduk as $key => $gambar) : ?>
@@ -38,18 +39,32 @@
             </div>
           </div>
 
+          
           <div class="col-lg-5 portfolio-info p-5">
-            <h3><b><?= $produk->nama_produk ?></b></h3>
-            <ul>
-              <li><strong>Harga Satuan: </strong><?=format_rp($produk->harga_satuan) ?></li>
-              <li><strong>Berat Satuan: </strong><?= $produk->berat_satuan ?></li>
-              <li><strong>Komposisi: </strong><?= $produk->komposisi ?> </li>
-              <li><strong>Keterangan: </strong><?= $produk->keterangan ?> </li>
-              <li><strong>Penjelasan produk : </strong><?= $produk->penjelasan_produk ?></li>
-
-            </ul>
-
-           
+            <h3 class="text-center"><b><?= $produk->nama_produk ?></b></h3>
+            
+            <table class="table table-responsive-md " style="background-color: white; text-align:left; ">
+                    <tr>
+                      <td><b>Harga Satuan</td>
+                      <td>: <?=format_rp($produk->harga_satuan) ?></td>
+                    </tr>
+                    <tr>
+                      <td><b>Berat Satuan</td>
+                      <td>: <?= $produk->berat_satuan ?></td>
+                    </tr>
+                    <tr>
+                      <td><b>Keterangan</td>
+                      <td >: <?= $produk->keterangan ?></td>
+                    </tr>
+                    <tr>
+                      <td><b>Penjelasan Produk</td>
+                      <td>: <?= $produk->penjelasan_produk ?></td>
+                    </tr>
+                    <tr>
+                      <td><b>Komposisi</td>
+                      <td >: <?= $produk->komposisi ?></td>
+                    </tr>
+                  </table>
           </div>
 
         </div>

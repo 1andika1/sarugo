@@ -16,10 +16,10 @@
             <div class="row">
                 <?php foreach ($dataWisata as $key => $wisata) : ?>
                     <!-- template wisata -->
-                    <div  class="col-lg-4 shadow col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                    <div  class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                         <article class="entry">
                             <div class="entry-img">
-                                <img src="<?= base_url("$wisata->gambar") ?>" alt="" class="img-fluid">
+                                <img src="<?php $gambar=strlen($wisata->gambar)<1?"assets/images/6.png":"$wisata->gambar"; echo  base_url("$gambar"); ?>" alt="" class="img-fluid">
                             </div>
                             <h2 class="entry-title">
                                 <a href="<?= base_url("wisata/detailwisata?id=$wisata->id_wisata") ?>"><?= $wisata->nama_wisata ?></a>

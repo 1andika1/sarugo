@@ -51,7 +51,6 @@
                              </th> -->
                              <th>no</th>
                              <th>judul</th>
-                             <th>link halaman</th>
                              <th>aksi</th>
                          </tr>
                      </thead>
@@ -69,9 +68,8 @@
                                  <td>
                                      <span><?= $value->judul ?></span>
                                  </td>
-                                 <td class="link">halamanprofil.html</td>
                                  <td>
-                                     <div class="table-data-feature">
+                                     <div class="table-data-feature d-flex justify-content-start">
                                          <!--<button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                              <i class="zmdi zmdi-eye"></i>
                                          </button>-->
@@ -87,7 +85,6 @@
                                          </a>
                                      </div>
                                  </td>
-                                 <td></td>
                              </tr>
                          <?php endforeach ?>
                      </tbody>
