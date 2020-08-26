@@ -63,9 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------------------------------------
 # Rating
  -------------------------------------------------------*/
- .rating{
-  
-  transform: translate(-20%, -10%) rotateY(180deg);
+ .rating{ 
+  transform: translate(0%, -10%) rotateY(180deg);
 	display: flex;
 }
 .rating input{
