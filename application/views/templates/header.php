@@ -20,7 +20,6 @@ if (isset($this->session->spradmin)) {
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/images/logo-bulat.png">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
     <!-- Title Page-->
     <title>SARUGO | Kabupaten Lima Puluh Kota</title>
@@ -31,8 +30,6 @@ if (isset($this->session->spradmin)) {
     <link href="<?= base_url() ?>assets/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="<?= base_url() ?>assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
-    <!-- Bootstrap CSS-->
-    <link href="<?= base_url() ?>assets/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
     <link href="<?= base_url() ?>assets/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
@@ -47,6 +44,8 @@ if (isset($this->session->spradmin)) {
     <!-- Main CSS-->
     <link href="<?= base_url() ?>assets/css/theme.css" rel="stylesheet" media="all">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS-->
+    <link href="<?= base_url() ?>assets/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animation">

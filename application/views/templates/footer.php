@@ -52,10 +52,10 @@
                     $('#summernote').summernote();
                     $('.summernote').summernote();
                      
-                });
+                        });
 
 
-                $('#summernote').summernote({
+                    $('#summernote').summernote({
                     placeholder: 'Silahkan ketik disini',
                     tabsize: 2,
                     height: 120,
@@ -82,13 +82,10 @@
                     ['insert', ['link']],
                     ['view', ['fullscreen', 'codeview', 'help']]
                     ]
-                });
+                    });
                 
                 
-                </script>
-
-
-
+            </script>
 
 </body>
 

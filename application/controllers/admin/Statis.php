@@ -147,5 +147,58 @@ class Statis extends CI_Controller{
        redirect(base_url("admin/statis"));
     }
 
+    public function fetch()
+    {
+        $q=$_GET["q"];
+        $response = "";
+
+        $this->db->like("judul",$q);
+        $this->db->or_like("id",$q);
+        $data = $this->db->get("hal_statis")->result();
+
+        if(sizeof($data)>0){
+            $counter = 1;
+            foreach ($data as $key => $value) {
+                $edit = base_url("admin/statis/edit?id=").$value->id;
+                $delete = base_url("admin/statis/delete?id=").$value->id;
+                $judul = $value->judul;
+
+                $response .=' <tr class="tr-shadow">
+                <td width="40px"><span>'.$counter.'</span></td>
+                <td>
+                    <span>'.$judul.'</span>
+                </td>
+                <td>
+                    <div class="table-data-feature">
+                        <a href="'.$edit.'">
+                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                <i class="zmdi zmdi-edit"></i>
+                            </button>
+                           </a>
+                        <a href="'.$delete.'">
+                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                <i class="zmdi zmdi-delete"></i>
+                            </button>
+                        </a>
+                    </div>
+                </td>
+                <td></td>
+            </tr>';
+            // $response = $response." hello";
+
+            $counter++;
+            }
+        }else{
+            $response = "<tr>
+                    <td>
+                        <div class='row justify-content-center'>
+                            <h4> Data tidak ditemukan! </h4>
+                        </div>
+                    </td>
+                </tr>";
+        }
+        echo $response;
+    }
+
 }
 ?>
