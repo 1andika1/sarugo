@@ -47,7 +47,7 @@
                              <th>no</th>
                              <th>sub menu</th>
                              <th>menu utama</th>
-                             <th>link halaman</th>
+                             <th>Judul Halaman Statis</th>
                              <th>Status</th>
                              <th>aksi</th>
                          </tr>
@@ -71,9 +71,9 @@
                                  <span class="status--<?=$subMenu->status_sub_menu>0?'process':'denied'?>"><?=$subMenu->status_sub_menu>0?"Aktif" : "Nonaktif"?></span>
                              </td>
                              <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
+                                 <div class="table-data-feature d-flex justify-content-start">
+                                     <!--<button class="item" data-toggle="tooltip" data-placement="top" title="View">
+                                         <i class="zmdi zmdi-eye"></i>-->
                                      </button>
                                      <a href='<?= base_url("admin/submenu/update?id=$subMenu->id")?>' ><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>

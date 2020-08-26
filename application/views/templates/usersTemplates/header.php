@@ -84,7 +84,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-4 col-sm-4 right_section_header_top">
+          <div class="col-md-4 col-lg-4 col-sm-4 float-right right_section_header_top">
             <div class="topbar-right">
               <div class="social_icon">
                 <ul class="list-inline">
@@ -102,7 +102,7 @@
     <!-- end headertop -->
     <div class="container d-flex align-items-center">
 
-      <nav class="logo"><a href="<?=base_url()?>"><img src="<?=base_url()?>assets/images/logo-BULAT.png" alt="logo" />  SARUGO</a></nav>
+      <nav class="logo"><a href="<?=base_url()?>"><img src="<?=base_url()?>assets/images/publik-sarugo.png" alt="logo" /></a></nav>
      
       <nav class="nav-menu d-none d-lg-block">
 

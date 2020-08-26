@@ -188,6 +188,7 @@ class spradm_sarugo extends CI_Controller {
 				"event" 		=> $event,
 				"banner" 		=> $banner,
 				"wisata" 		=> $wisata,
+				"paket_wisata" 		=> $paket_wisata,
 				"produk" 		=> $produk,
 				"testimoni" 	=> $testimoni,
 				"berita" 		=> $berita,

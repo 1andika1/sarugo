@@ -36,7 +36,7 @@
               <div class="entry-meta">
                 <ul>
                   <li class="d-flex align-items-center"><i class="icofont-user"></i> <?= $berita->admin_berita ?> </li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time datetime="2020-01-01"><?= $berita->tgl_post ?></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time data-date-format="DD MM YYYY"><?= $berita->tgl_post ?></a></li>
                 </ul>
               </div>
 
@@ -56,7 +56,7 @@
           
         </div>
 
-        <div class="blog-pagination" data-aos="fade-up">
+        <!--<div class="blog-pagination" data-aos="fade-up">
           <ul class="justify-content-center">
             <li class="disabled"><i class="icofont-rounded-left"></i></li>
             <li class="active"><a href="#">1</a></li>
@@ -64,7 +64,7 @@
             <li><a href="#">3</a></li>
             <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
           </ul>
-        </div>
+        </div>-->
 
       </div>
     </section><!-- End Blog Section -->

@@ -64,9 +64,9 @@
                                  <span class="status--<?= $value->status_menu? "process" : "denied"?>"><?= $value->status_menu ? "Aktif" : "Nonaktif" ?></span>
                              </td>
                              <td>
-                                 <div class="table-data-feature">
-                                     <button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>
+                                 <div class="table-data-feature d-flex justify-content-start">
+                                     <!--<button class="item" data-toggle="tooltip" data-placement="top" title="View">
+                                         <i class="zmdi zmdi-eye"></i>-->
                                      </button>
                                      <a href="<?=base_url("admin/menu/update?id=$value->id")?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>

@@ -55,10 +55,9 @@ if (isset($this->session->spradmin)) {
                     <div class="header-mobile__bar">
                         <div class="container-fluid">
                             <div class="header-mobile-inner">
-                                <!--<a class="logo" href="home_page">
-                            <img src="<?= base_url() ?>assets/images/sarugo-logo-mob.png" alt="CoolAdmin" />
-                        </a>-->
-                                <h2>SARUGO</h2>
+                                <a class="logo" href="home_page">
+                            <img style="width: 150px; position:left;" src="<?= base_url() ?>assets/images/publik-sarugo.png" alt="CoolAdmin" />
+                        </a>
                                 <button class="hamburger hamburger--slider" type="button">
                                     <span class="hamburger-box">
                                         <span class="hamburger-inner"></span>

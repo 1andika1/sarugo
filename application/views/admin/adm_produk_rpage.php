@@ -56,7 +56,7 @@
                                  <td>Rp <?= $produk->harga_satuan ?></td>
                                  <td><?= $produk->berat_satuan ?> Kg</td>
                                  <td>
-                                     <?= $produk->komposisi ?>
+                                     <?= substr($produk->komposisi, 0,10) ?>
                                  </td>
                                  <td>
                                      <div class="table-data-feature">

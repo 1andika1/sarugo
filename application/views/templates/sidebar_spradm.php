@@ -5,7 +5,7 @@
                             <img src="<?= base_url() ?>assets/images/sarugo-logo.png" alt="SARUGO" />
                         </a>
                     </div>
-                    <div class="menu-sidebar2__content js-scrollbar1">
+                    <div class="menu-sidebar2__content">
                         <!--<div class="account2">
                     <div class="image img-cir img-120">
                         <img src="assets/images/logo-kominfo.jpg" />

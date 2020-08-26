@@ -5,12 +5,13 @@
     <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
     <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active px-0" style="margin:0;padding:0;">
-        <div class="carousel-container mx-0" style="margin:0;padding:0;">
-          <video autoplay muted loop id="myVideo" width="100%" style=" min-height: 100%; min-width: 100%; right: 0px; bottom: 0px; position: center">
+      <div class="carousel-item active">
+      
+          <video autoplay muted loop id="myVideo" width="100%" style=" min-height: 110%; min-width: 100%; right: 0px; bottom: 0px; position: center">
             <source src="https://limapuluhkotakab.go.id/assets/images/iconhome/videopakai.mp4" type="video/mp4" style>
+            
           </video>
-        </div>
+          
       </div>
       <?php foreach ($dataBanner as $key => $banner) : ?>
         <div class="carousel-item " style='background-image:url(<?= base_url() . $banner->foto ?>)'>
@@ -85,7 +86,7 @@
                               <div class="col-md-4">
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow w-75 h-100" style="z-index:-10" src="<?= base_url("$event->gambar") ?>" alt="gambar event" width="100%" />
+                                    <img class="rounded-circle shadow w-75 h-100" style="z-index:-10; min-height:200px;" src="<?= base_url("$event->gambar") ?>" alt="gambar event" width="100%" />
                                   </div>
                                   <a href="<?= base_url("event?id_event=$event->id_event") ?>" class="btn-info">
                                     <h4><?= $event->nama_event ?></h4>
@@ -134,8 +135,8 @@
                 </div>
               </section>
                   
-                  <div class="row float-right d-flex justify-content-center">
-                    <a href="<?= base_url("event")?>" class="btn btn-primary"><h6 class="border-bottom"><< Lihat Event Lainnya Disini >></h6></a>  
+                  <div class="row d-flex justify-content-center">
+                    <a href="<?= base_url("event")?>" class="btn btn-success"><b>Event Lainnya</b></a>  
                   </div>
               <!-- </div>  -->
             </div>
@@ -210,7 +211,7 @@
 
             <h2 class="entry-title text-center" id="tengah"> Akses Lokasi</h2>
             <!-- maps -->
-            <div id="googleMap" style="width:100%;height:380px;"> </div>
+            <div ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8180028233132!2d100.34782051432003!3d-0.02285843555805685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd559434c687f03%3A0xfabd53b2266f129f!2sKampuang%20Wisata%20Saribu%20Gonjong!5e0!3m2!1sid!2sid!4v1598428920152!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> </div>
             <!-- end maps -->
             <br>
             <p>

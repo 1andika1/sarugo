@@ -62,7 +62,7 @@
                                  <span class="status--process"><?= $testi->tampilkan? "Tampil":"Belum Tampil" ?></span>
                              </td>
                              <td>
-                                 <div class="table-data-feature">
+                                 <div class="table-data-feature d-flex justify-content-start">
                                     <?php if(!$testi->tampilkan) : ?>
                                         <form action="<?= base_url("admin/testimoni/tampilkan") ?>" method="post">
                                             <input type="hidden" name="id_testi" value="<?= $testi->id_testi ?>">

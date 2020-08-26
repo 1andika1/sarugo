@@ -60,7 +60,7 @@
                              <span class="status--process">Aktif</span>
                          </td> -->
                                  <td>
-                                     <div class="table-data-feature">
+                                     <div class="table-data-feature d-flex justify-content-start">
                                          <a href="<?= base_url("admin/berita/edit?id_berita=$berita->id_berita ") ?>">
                                              <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                  <i class="zmdi zmdi-edit"></i>
