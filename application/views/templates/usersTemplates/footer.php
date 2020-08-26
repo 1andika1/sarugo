@@ -75,10 +75,10 @@
 
 
   <!-- Template Main JS File -->
-  <script src="Web_Statis/assets/js/main.js"></script>
+  <script src="<?= base_url()?>Web_Statis/assets/js/main.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?= base_url()?>assets/js/main.js"></script>
     <script>
       const kirim = document.querySelector("#kirim")
       const inputNama = document.querySelector("#inputNama")

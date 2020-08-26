@@ -105,7 +105,6 @@
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-              <iframe width="1100" height="315" src="https://www.google.co.id/maps/place/Bofet+Pergaulan/@-0.229835,100.6309176,15z/data=!4m5!3m4!1s0x2e2ab4aefa212925:0xb1f0b044ce780890!8m2!3d-0.2272335!4d100.6275344" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>

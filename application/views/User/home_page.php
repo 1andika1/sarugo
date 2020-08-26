@@ -79,43 +79,25 @@
                       <div class="carousel-inner">
                         <div class="carousel-item active">
                           <div class="container">
-                            <div class="row d-flex justify-content-center">
+                            <div class="row   justify-content-center">
 
                             <?php foreach ($dataEvent as $key => $event) : if($key>3){break;} ?>
 
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
+                              <div class="col-md-4 col-sm-8 col-lg-4">
+                                <div class="blog_img_popular">
                                   <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow w-75 h-100" style="z-index:-10; min-height:200px;" src="<?= base_url("$event->gambar") ?>" alt="gambar event" width="100%" />
+                                    <img class="rounded-circle shadow w-100 h-100" style="z-index:-10; min-height:200px;" src="<?= base_url("$event->gambar") ?>" alt="gambar event" width="100%" />
                                   </div>
-                                  <a href="<?= base_url("event?id_event=$event->id_event") ?>" class="btn btn-danger">
-                                    <span><?= $event->nama_event ?></span>
-                                  </a>
+                                  <div class="row justify-content-center">
+                                    <a href="<?= base_url("event?id_event=$event->id_event") ?>" class="btn btn-danger">
+                                      <span><?= $event->nama_event ?></span>
+                                    </a>
+                                  </div>
                                 </div>
                               </div>
 
-                              <?php endforeach ?>
+                              <?php endforeach ?> 
 
-                              <!-- <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Panen Jeruk</h4>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Bakar-Bakar Jagung</h4>
-                                  </a>
-                                </div>
-                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -129,8 +111,7 @@
                         <span class="sr-only">Next</span>
                       </a>
                     </div>
-                    <!-- </div>   -->
-                    <!-- </div> -->
+                    
                   </div>
                 </div>
               </section>
@@ -138,13 +119,12 @@
                   <div class="row d-flex justify-content-center">
                     <a href="<?= base_url("event")?>" class="btn btn-success"><b>Event Lainnya</b></a>  
                   </div>
-              <!-- </div>  -->
+                  
             </div>
         </div>
         </article>
       </div>
-      <!-- </div> -->
-      <!-- test -->
+      '
 
 
       <!-- Sejarah, Lokasi dan halaman statis -->
@@ -156,7 +136,7 @@
               Profil dan Sejarah
             </h2>
 
-<br>
+            <br>
             <div class="row justify-content-md-center">
               <div class="col-md-8 ">
                 <div class="entry-img">
@@ -165,12 +145,7 @@
               </div>
             </div>
 
-            <div class="entry-meta">
-              <!-- <ul>
-              <li class="d-flex align-items-center"><i class="icofont-user"></i>  Admin </li>
-              <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>  <time datetime="123456">123456</time> </li>
-             
-             </ul> -->
+            <div class="entry-meta"> 
             </div>
 
             <div class="entry-content">
@@ -193,16 +168,7 @@
 
             </div>
 
-           <!-- <div class="entry-footer clearfix">
-              <!-- xx 
-
-              <div class="float-right share">
-                <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
-                <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
-                <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
-              </div>
-
-            </div>-->
+           
 
           </article><!-- End blog entry -->
 
@@ -264,42 +230,7 @@
 
         </div><!-- End blog entries list -->
 
-        <div class="d-none col-lg-4 position-sticky bg-light">
-
-          <div class="sidebar  ">
-
-
-            <h3 class="sidebar-title">Recent Posts</h3>
-            <div class="sidebar-item recent-posts">
-
-
-              <div class="post-item clearfix">
-                <img src="assets/img/business-20.jpg" alt="">
-                <h4><a href="Berita3.html">Quidem autem et impedit</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-              <div class="post-item clearfix">
-                <img src="assets/img/business-26.jpg" alt="">
-                <h4><a href="Berita4.html">Id quia et et ut maxime similique occaecati ut</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-              <div class="post-item clearfix">
-                <img src="assets/img/business-30.jpg" alt="">
-                <h4><a href="Berita5.html">Laborum corporis quo dara net para</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-              <div class="post-item clearfix">
-                <img src="assets/img/business-16.jpg" alt="">
-                <h4><a href="Berita6.html">Et dolores corrupti quae illo quod dolor</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-            </div><!-- End sidebar recent posts-->
-          </div><!-- End sidebar -->
-        </div><!-- End blog sidebar -->
+        
 
       </div>
     </div>
