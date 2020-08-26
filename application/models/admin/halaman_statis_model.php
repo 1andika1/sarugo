@@ -12,10 +12,12 @@ class HalamanStatisModel extends CI_Model{
             "judul":$dataMentah["judul"],
             "isi":$dataMentah["isi"],
             "gambar":$dataMentah["gambar"],
-            "judul":$dataMentah["judul"],
+            "judul":$dataMentah["judul"]
 
-        )
+        );
         $this->db->insert('hal_statis', $data);
         
     }
+
+    
 }
