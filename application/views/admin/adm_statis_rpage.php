@@ -52,17 +52,11 @@
                                  <td>
                                      <span><?= $value->judul ?></span>
                                  </td>
-<<<<<<< HEAD
-                                 <!-- <td class="link">halamanprofil.html</td> -->
-                                 <td>
-                                     <div class="table-data-feature">
-=======
                                  <td>
                                      <div class="table-data-feature d-flex justify-content-start">
                                          <!--<button class="item" data-toggle="tooltip" data-placement="top" title="View">
                                              <i class="zmdi zmdi-eye"></i>
                                          </button>-->
->>>>>>> 454905985d2dd8fd47dce40b9b5748c1fb4b8b40
                                          <a href='<?= base_url("admin/statis/edit?id=$value->id") ?>'>
                                          <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                  <i class="zmdi zmdi-edit"></i>
