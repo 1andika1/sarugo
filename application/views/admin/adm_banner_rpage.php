@@ -17,9 +17,9 @@
              <div class="table-data__tool">
                  <div class="table-data__tool-left">
                      <div class="rs-select2--light rs-select2--md">
-                         <form class="form-header form-header" action="" method="post">
-                             <input class="au-input au-input--w400" type="text" placeholder="Cari data banner ...">
-                             <button class="au-btn--submit" type="submit">
+                        <form class="form-header form-header">
+                             <input  id="search" class="au-input au-input--w400" type="text" placeholder="Cari data ...">
+                             <button disabled class="au-btn--submit" type="submit">
                                  <i class="zmdi zmdi-search"></i>
                              </button>
                          </form>
@@ -36,17 +36,17 @@
                      </div>
                  </div>
              </div>
-             <div class="table-responsive table-responsive-data2">
-                 <table class="table table-data2">
+             <div class="table-responsive table-responsive-data3">
+                 <table class="table table-data3">
                      <thead>
                          <tr>
                              <th>no</th>
                              <th>judul</th>
                              <th>Foto</th>
-                             <th>aksi</th>
+                             <th class="text-center">aksi</th>
                          </tr>
                      </thead>
-                     <tbody>
+                     <tbody id="livesearch">
                          <?php $counter = 1;
                             foreach ($dataBanner as $key => $banner) : ?>
                              <tr class="tr-shadow">
@@ -82,8 +82,26 @@
      </div>
  </div>
  </div>
+ </div> 
+ 
  </div>
- <!-- END MAIN CONTENT-->
- <!-- END PAGE CONTAINER-->
  </div>
- </div>
+
+ <script>
+
+    const search = document.querySelector("#search")
+    search.addEventListener("keyup",event=>{
+        console.log("hello")
+        let str = event.target.value
+
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function() {
+            if (this.readyState==4 && this.status==200) {
+            document.getElementById("livesearch").innerHTML=this.responseText;
+            }
+        }
+        xmlhttp.open("GET","<?=base_url("admin/banner/fetch?q=")?>"+str,true);
+        xmlhttp.send();
+    })
+
+</script>

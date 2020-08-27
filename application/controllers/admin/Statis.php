@@ -165,7 +165,7 @@ class Statis extends CI_Controller{
                 $judul = $value->judul;
 
                 $response .=' <tr class="tr-shadow">
-                <td width="40px"><span>'.$counter.'</span></td>
+                <td class="w-5"><span>'.$counter.'</span></td>
                 <td>
                     <span>'.$judul.'</span>
                 </td>
@@ -182,19 +182,16 @@ class Statis extends CI_Controller{
                             </button>
                         </a>
                     </div>
-                </td>
-                <td></td>
+                </td> 
             </tr>';
             // $response = $response." hello";
 
             $counter++;
             }
         }else{
-            $response = "<tr>
-                    <td colspan='3>
-                        <div class=' '>
-                            <h4> Data tidak ditemukan! </h4>
-                        </div>
+            $response .= "<tr>
+                    <td colspan='3> 
+                        <h4> Data tidak ditemukan! </h4> 
                     </td>
                 </tr>";
         }

@@ -19,23 +19,19 @@
              <div class="table-data__tool">
                  <div class="table-data__tool-left">
                      <div class="rs-select2--light rs-select2--md">
-                     <form class="form-header form-header" action="" method="post">
-                                    <input class="au-input au-input--w400" type="text" placeholder="Cari SubMenu ...">
-                                    <button class="au-btn--submit" type="submit">
-                                        <i class="zmdi zmdi-search"></i>
-                                    </button>
-                                </form>
+                        <form class="form-header form-header">
+                             <input  id="search" class="au-input au-input--w400" type="text" placeholder="Cari data ...">
+                             <button disabled class="au-btn--submit" type="submit">
+                                 <i class="zmdi zmdi-search"></i>
+                             </button>
+                         </form>
                      </div>
                  </div>
                  <div class="table-data__tool-right">
                     <a href="<?= base_url('admin/submenu/create')?>"> <button class="au-btn au-btn-icon au-btn--green au-btn--small">
                          <i class="zmdi zmdi-plus"></i>Tambah SubMenu</button></a>
                      <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                        <!-- <select class="js-select2" name="type">
-                             <option selected="selected">Export</option>
-                             <option value="">Option 1</option>
-                             <option value="">Option 2</option>
-                         </select> -->
+                   
                          <div class="dropDownSelect2"></div>
                      </div>
                  </div>
@@ -52,7 +48,7 @@
                              <th>aksi</th>
                          </tr>
                      </thead>
-                     <tbody>
+                     <tbody id="livesearch111">
                           <?php $count=1; foreach ($dataSubMenu as $key => $subMenu) : ?>
                          <tr class="tr-shadow">
                               
@@ -72,8 +68,7 @@
                              </td>
                              <td>
                                  <div class="table-data-feature d-flex justify-content-start">
-                                     <!--<button class="item" data-toggle="tooltip" data-placement="top" title="View">
-                                         <i class="zmdi zmdi-eye"></i>-->
+                                  
                                      </button>
                                      <a href='<?= base_url("admin/submenu/update?id=$subMenu->id")?>' ><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                          <i class="zmdi zmdi-edit"></i>
@@ -103,3 +98,22 @@
  </div>
 
  </div>
+
+ <script>
+
+const search = document.querySelector("#search")
+search.addEventListener("keyup",event=>{
+    console.log("hello")
+    let str = event.target.value
+
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+        if (this.readyState==4 && this.status==200) {
+        document.getElementById("livesearch").innerHTML=this.responseText;
+        }
+    }
+    xmlhttp.open("GET","<?=base_url("admin/menu/fetch?q=")?>"+str,true);
+    xmlhttp.send();
+})
+
+</script>

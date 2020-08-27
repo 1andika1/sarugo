@@ -34,4 +34,11 @@ class BannerModel extends CI_Model{
       $this->db->where("id_banner",$id);
       $this->db->update("banner",$data);
     }
+
+    public function getBannerLike($query = '')
+    {
+       $this->db->like("judul",$query);
+       $this->db->or_like("id",$query);
+       return $this->db->get("banner")->result();
+    }
 }

@@ -41,7 +41,7 @@
                          <tr>
                              <th>no</th>
                              <th>judul</th>
-                             <th>aksi</th>
+                             <th>aksi</th> 
                          </tr>
                      </thead>
                      <tbody id="livesearch">

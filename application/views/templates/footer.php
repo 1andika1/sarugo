@@ -88,6 +88,8 @@
                 
             </script>
 
+            <script src="<?= base_url("assets/js/banner.js")?>"></script>
+
 </body>
 
 </html>
