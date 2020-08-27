@@ -133,4 +133,61 @@ class Banner extends CI_Controller
         $this->BannerModel->update($id_banner, $data);
         redirect(base_url('admin/banner/'));
     }
+
+
+    public function fetch()
+    {  
+        $q=$_GET["q"];
+        $response = "";
+        
+        // $this->db->like("judul",$q);
+        // $this->db->or_like("id",$q); 
+        // $data = $this->db->get("banner")->result();
+
+        $data = $this->BannerModel->getBannerLike();
+        echo $data[0]->judul; return;
+
+        if(sizeof($data)>0){
+            $counter = 1;
+            foreach ($data as $key => $value) {
+                $edit = base_url("admin/banner/edit?id=").$value->id_banner;
+                $delete = base_url("admin/banner/delete?id=").$value->id_banner;
+                $statusStyle = $value->status_menu? "process" : "denied";
+                $statusMenu  = $value->status_menu ? "Aktif" : "Nonaktif";
+
+                $response .='
+                <tr class="tr-shadow">
+                    <td>'.$counter++.'</td>
+                    <td>
+                        <span>'. $value->judul .'</span>
+                    </td> 
+                    <td class="link">'.$value->foto.'</td>
+                    <td>
+                        <div class="table-data-feature d-flex justify-content-start">
+                            <a href="'.$edit.'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-edit"></i>
+                                </button>
+                            </a>
+                            <a href="'.$delete .'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-delete"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </td>
+                </tr>'; 
+ 
+            }
+        }else{
+            $response = "<tr class='text-center'>
+                    <td colspan='4'>
+                        <div class='row justify-content-center'>
+                            <h4> Banner tidak ditemukan! </h4>
+                        </div>
+                    </td> 
+                </tr>";
+        }
+        echo $response;
+    }
 }

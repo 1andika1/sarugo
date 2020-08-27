@@ -74,4 +74,71 @@ class SubMenu extends CI_Controller{
         $this->SubMenuModel->delete($_GET["id"]);
         redirect(base_url("admin/submenu"));
     }
+
+    public function fetch()
+    {  
+        $q=$_GET["q"];
+        $response = "";
+
+        $this->db->like("nama_sub_menu",$q);
+        $this->db->or_like("hal_statis",$q);
+        $this->db->or_like("id",$q); 
+        $data = $this->db->get("submenu")->result();
+
+        if(sizeof($data)>0){
+            $counter = 1;
+            foreach ($data as $key => $value) {
+                $edit = base_url("admin/subMenu/update?id=").$value->id;
+                $delete = base_url("admin/subMenu/delete?id=").$value->id;
+                $statusStyle = $value->status_sub_menu? "process" : "denied";
+                $statusMenu  = $value->status_sub_menu ? "Aktif" : "Nonaktif";
+                $nama_menu   = $this->MenuModel->getMenuById()->nama_menu;
+                // $nama_menu = $nama_menu->nama_menu;
+                var_dump($nama_menu);
+
+                
+
+                $response .='
+                <tr class="tr-shadow">
+                    <td>'.$counter++.'</td>
+                    <td>
+                        <span>'. $value->nama_sub_menu .'</span>
+                    </td> 
+                    <td class="link">'.'hello'.'</td>
+                    <td class="link">'.$value->hal_statis.'</td>
+                    <td>
+                        <span style="font-weight:bold" class="status--'. $statusStyle.'">
+                            '.
+                             $statusMenu
+                            .'
+                        </span>
+                    </td>
+                    <td>
+                        <div class="table-data-feature d-flex justify-content-start">
+                            <a href="'.$edit.'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-edit"></i>
+                                </button>
+                            </a>
+                            <a href="'.$delete .'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-delete"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </td>
+                </tr>'; 
+ 
+            }
+        }else{
+            $response = "<tr class='text-center'>
+                    <td colspan='6'>
+                        <div class='row justify-content-center'>
+                            <h4> SubMenu tidak ditemukan! </h4>
+                        </div>
+                    </td> 
+                </tr>";
+        }
+        echo $response;
+    }
 }
