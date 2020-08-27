@@ -89,9 +89,9 @@
               <div class="social_icon">
                 <ul class="list-inline">
                   <div class="social-links mt-3">
-                    <a href="https://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
-                    <a href="https://www.whatsapp.com" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-                    <a href="https://www.instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://www.facebook.com/kampung.wisata.sarugo" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://wa.me/6282285046121" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/kampung.wisata.sarugo/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
                   </div>
                 </ul>
               </div>

@@ -7,7 +7,7 @@
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
       
-          <video autoplay muted loop id="myVideo" width="100%" style=" min-height: 110%; min-width: 100%; right: 0px; bottom: 0px; position: center">
+          <video autoplay muted loop id="myVideo"  style=" min-height: 110%; min-width: 100%; right: 0px; bottom: 0px; position: center">
             <source src="https://limapuluhkotakab.go.id/assets/images/iconhome/videopakai.mp4" type="video/mp4" style>
             
           </video>

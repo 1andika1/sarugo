@@ -16,15 +16,14 @@
               <p>
                 Jorong Sungai Dadok, Nagari Koto Tinggi, Kecamatan Gunuang Omeh, Kabupaten Lima Puluh Kota <br>
                 Sumatera Barat, Indonesia<br><br>
-                <strong>Telepon:</strong> +62 8123 45678 90<br>
-                <strong>Email:</strong> email@contoh.com<br>
+                <strong>Telepon:</strong> +628-228-504-6121<br>
+                <strong>Email:</strong> sarugo@limapuluhkota.go.id<br>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <!--<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
+                <a href="https://www.youtube.com/channel/UC6XZt7Ylh8I9fdTV5j27NfA" target="_blank" class="youtuve"><i class="bx bxl-youtube"></i></a>
+                <a href="https://www.facebook.com/kampung.wisata.sarugo" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://wa.me/6282285046121" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://www.instagram.com/kampung.wisata.sarugo/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -75,10 +74,10 @@
 
 
   <!-- Template Main JS File -->
-  <script src="Web_Statis/assets/js/main.js"></script>
+  <script src="<?= base_url()?>Web_Statis/assets/js/main.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?= base_url()?>assets/js/main.js"></script>
     <script>
       const kirim = document.querySelector("#kirim")
       const inputNama = document.querySelector("#inputNama")
