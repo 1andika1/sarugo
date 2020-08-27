@@ -62,7 +62,7 @@
                   </table>
                 </div>
                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                  <img src="assets/img/features-1.png" alt="" class="img-fluid">
+                  <img src="<?=base_url()?>assets/img/features-1.png" alt="" class="img-fluid">
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@
                   </table>
                 </div>
                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                  <img src="assets/img/features-2.png" alt="" class="img-fluid">
+                  <img src="<?=base_url()?>assets/img/features-2.png" alt="" class="img-fluid">
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
                   </table>
                 </div>
                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                  <img src="assets/img/features-3.png" alt="" class="img-fluid">
+                  <img src="<?=base_url()?>assets/img/features-3.png" alt="" class="img-fluid">
                 </div>
               </div>
             </div>

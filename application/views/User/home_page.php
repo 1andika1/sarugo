@@ -81,41 +81,24 @@
                           <div class="container">
                             <div class="row d-flex justify-content-center">
 
-                            <?php foreach ($dataEvent as $key => $event) : if($key>3){break;} ?>
+                            <?php foreach ($dataEvent as $key => $event) : if($key>2){break;} ?>
 
-                              <div class="col-md-4">
+                              <div class="col-md-4"  >
                                 <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow w-75 h-100" style="z-index:-10; min-height:200px;" src="<?= base_url("$event->gambar") ?>" alt="gambar event" width="100%" />
+                                  <div class="row justify-content-center ">
+                                    <img class="rounded-circle m-2 shadow w-auto h-100" style="z-index:-10; min-height:200px; max-height:200px" src="<?= base_url("$event->gambar") ?>" alt="gambar event"   />
                                   </div>
                                   <a href="<?= base_url("event?id_event=$event->id_event") ?>" class="btn-info">
-                                    <h4><?= $event->nama_event ?></h4>
+                                    <div class="text-center">
+                                    <span class="btn btn-danger"><?= $event->nama_event ?></span>
+                                    </div>
                                   </a>
                                 </div>
                               </div>
 
                               <?php endforeach ?>
 
-                              <!-- <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Panen Jeruk</h4>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="full blog_img_popular">
-                                  <div class="row justify-content-md-center">
-                                    <img class="rounded-circle shadow" style="z-index:-10" src="<?= base_url() ?>Web_Statis/assets/img/logo.jpg" alt="#" width="100%"/>
-                                  </div>
-                                  <a href="<?= base_url("#event") ?>" class="btn-info">
-                                    <h4>Bakar-Bakar Jagung</h4>
-                                  </a>
-                                </div>
-                              </div> -->
+                               
                             </div>
                           </div>
                         </div>
@@ -156,7 +139,7 @@
               Profil dan Sejarah
             </h2>
 
-<br>
+            <br>
             <div class="row justify-content-md-center">
               <div class="col-md-8 ">
                 <div class="entry-img">
