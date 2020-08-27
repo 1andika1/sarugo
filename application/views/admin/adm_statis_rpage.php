@@ -36,7 +36,7 @@
                  </div>
              </div>
              <div class="table-responsive table-responsive-data2">
-                 <table class="table table-data2">
+                 <table class="table table-data3">
                      <thead>
                          <tr>
                              <th>no</th>
@@ -87,19 +87,19 @@
 
  <script>
 
-const search = document.querySelector("#search")
-search.addEventListener("keyup",event=>{
-    console.log("hello")
-    let str = event.target.value
+    const search = document.querySelector("#search")
+    search.addEventListener("keyup",event=>{
+        console.log("hello")
+        let str = event.target.value
 
-    var xmlhttp=new XMLHttpRequest();
-    xmlhttp.onreadystatechange=function() {
-        if (this.readyState==4 && this.status==200) {
-        document.getElementById("livesearch").innerHTML=this.responseText;
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function() {
+            if (this.readyState==4 && this.status==200) {
+            document.getElementById("livesearch").innerHTML=this.responseText;
+            }
         }
-    }
-    xmlhttp.open("GET","<?=base_url("admin/statis/fetch?q=")?>"+str,true);
-    xmlhttp.send();
-})
+        xmlhttp.open("GET","<?=base_url("admin/statis/fetch?q=")?>"+str,true);
+        xmlhttp.send();
+    })
 
 </script>

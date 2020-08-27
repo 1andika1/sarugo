@@ -188,4 +188,72 @@ class Event extends CI_Controller
         $this->EventModel->delete($_GET["id_event"]);
         redirect(base_url("admin/event"));
     }
+
+    public function fetch()
+    {  
+        $q=$_GET["q"];
+        $response = "";
+
+        $this->db->like("nama_event",$q);
+        $this->db->or_like("tgl_awal",$q);
+        $this->db->or_like("keterangan",$q);
+        $data = $this->db->get("event")->result();
+
+        if(sizeof($data)>0){
+            $counter = 1;
+            foreach ($data as $key => $value) {
+                $edit = base_url("admin/event/edit?id=").$value->id_event;
+                $delete = base_url("admin/event/delete?id=").$value->id_event;
+                $isOver = (strtotime($value->tgl_awal) - strtotime("today") > 0) ?
+                                "Belum Selesai"
+                            :(strtotime($value->tgl_akhir) - strtotime("today") < 0) ?
+                                "Selesai"
+                            :   "Berlangsung";
+                $statusStyle = (strtotime($value->tgl_akhir) - strtotime("today")) < 0 ? "denied" : "process"  ;
+
+                $response .='
+                <tr class="tr-shadow">
+                    <td>'.$counter++.'</td>
+                    <td>
+                        <span>'. $value->nama_event .'</span>
+                    </td>
+                    <td>'. $value->tgl_awal .'</td>
+                    <td>'. $value->lama_event .' Hari</td>
+                    <td>
+                        <span style="font-weight:bold" class="status--'. $statusStyle.'">
+                            '.
+                             $isOver
+                            .'
+                        </span>
+                    </td>
+                    <td>
+                        <div class="table-data-feature d-flex justify-content-start">
+                            <a href="'.$edit.'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-edit"></i>
+                                </button>
+                            </a>
+                            <a href="'.$delete .'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-delete"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </td>
+                </tr>'; 
+ 
+            }
+        }else{
+            $response = "<tr class='text-center'>
+                    <td colspan='6'>
+                        <div class='row justify-content-center'>
+                            <h4> Event tidak ditemukan! </h4>
+                        </div>
+                    </td> 
+                </tr>";
+        }
+        echo $response;
+    }
+
+
 }

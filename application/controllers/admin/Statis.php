@@ -153,6 +153,7 @@ class Statis extends CI_Controller{
         $response = "";
 
         $this->db->like("judul",$q);
+        $this->db->or_like("isi",$q);
         $this->db->or_like("id",$q);
         $data = $this->db->get("hal_statis")->result();
 
@@ -190,8 +191,8 @@ class Statis extends CI_Controller{
             }
         }else{
             $response = "<tr>
-                    <td>
-                        <div class='row justify-content-center'>
+                    <td colspan='3>
+                        <div class=' '>
                             <h4> Data tidak ditemukan! </h4>
                         </div>
                     </td>

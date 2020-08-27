@@ -17,9 +17,9 @@
              <div class="table-data__tool">
                  <div class="table-data__tool-left">
                      <div class="rs-select2--light rs-select2--sm">
-                         <form class="form-header form-header" action="" method="post">
-                             <input class="au-input au-input--w400" type="text" placeholder="Cari data ...">
-                             <button class="au-btn--submit" type="submit">
+                        <form class="form-header form-header">
+                             <input  id="search" class="au-input au-input--w400" type="text" placeholder="Cari data ...">
+                             <button disabled class="au-btn--submit" type="submit">
                                  <i class="zmdi zmdi-search"></i>
                              </button>
                          </form>
@@ -47,7 +47,7 @@
                              <th>aksi</th>
                          </tr>
                      </thead>
-                     <tbody>
+                     <tbody id="livesearch">
                          <?php $counter = 1;
                             foreach ($dataEvent as $key => $event) : ?>
                              <tr class="tr-shadow">
@@ -101,3 +101,22 @@
  <!-- END PAGE CONTAINER-->
  </div>
  </div>
+
+ <script>
+
+    const search = document.querySelector("#search")
+    search.addEventListener("keyup",event=>{
+        console.log("hello")
+        let str = event.target.value
+
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function() {
+            if (this.readyState==4 && this.status==200) {
+            document.getElementById("livesearch").innerHTML=this.responseText;
+            }
+        }
+        xmlhttp.open("GET","<?=base_url("admin/event/fetch?q=")?>"+str,true);
+        xmlhttp.send();
+    })
+
+</script>

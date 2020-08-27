@@ -71,4 +71,65 @@ class Menu extends CI_Controller{
         $this->MenuModel->delete($_GET["id"]);
         redirect(base_url("admin/menu"));
     }
+
+    public function fetch()
+    {  
+        $q=$_GET["q"];
+        $response = "";
+
+        $this->db->like("nama_menu",$q);
+        $this->db->or_like("link_hal_statis",$q);
+        $this->db->or_like("id",$q); 
+        $data = $this->db->get("menu")->result();
+
+        if(sizeof($data)>0){
+            $counter = 1;
+            foreach ($data as $key => $value) {
+                $edit = base_url("admin/menu/update?id=").$value->id;
+                $delete = base_url("admin/menu/delete?id=").$value->id;
+                $statusStyle = $value->status_menu? "process" : "denied";
+                $statusMenu  = $value->status_menu ? "Aktif" : "Nonaktif";
+
+                $response .='
+                <tr class="tr-shadow">
+                    <td>'.$counter++.'</td>
+                    <td>
+                        <span>'. $value->nama_menu .'</span>
+                    </td> 
+                    <td class="link">'.$value->link_hal_statis.'</td>
+                    <td>
+                        <span style="font-weight:bold" class="status--'. $statusStyle.'">
+                            '.
+                             $statusMenu
+                            .'
+                        </span>
+                    </td>
+                    <td>
+                        <div class="table-data-feature d-flex justify-content-start">
+                            <a href="'.$edit.'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-edit"></i>
+                                </button>
+                            </a>
+                            <a href="'.$delete .'">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-delete"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </td>
+                </tr>'; 
+ 
+            }
+        }else{
+            $response = "<tr class='text-center'>
+                    <td colspan='5'>
+                        <div class='row justify-content-center'>
+                            <h4> Menu tidak ditemukan! </h4>
+                        </div>
+                    </td> 
+                </tr>";
+        }
+        echo $response;
+    }
 }
