@@ -53,7 +53,7 @@
                                  <td>
                                      <span><?= $produk->nama_produk ?></span>
                                  </td>
-                                 <td>Rp <?= $produk->harga_satuan ?></td>
+                                 <td> <?= format_rp($produk->harga_satuan) ?></td>
                                  <td><?= $produk->berat_satuan ?> Kg</td>
                                  <td>
                                      <?= substr($produk->komposisi, 0,10) ?>

@@ -124,8 +124,7 @@
         </div>
         </article>
       </div>
-      '
-
+  
 
       <!-- Sejarah, Lokasi dan halaman statis -->
       <div class="row ">

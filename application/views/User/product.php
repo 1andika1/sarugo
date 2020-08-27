@@ -41,28 +41,28 @@
 
           
           <div class="col-lg-5 portfolio-info p-5">
-            <h3 class="text-center"><b><?= $produk->nama_produk ?></b></h3>
+            <h2 class="text-center"><b><?= $produk->nama_produk ?></b></h2>
             
             <table class="table table-responsive-md " style="background-color: white; text-align:left; ">
                     <tr>
-                      <td><b>Harga Satuan</td>
-                      <td>: <?=format_rp($produk->harga_satuan) ?></td>
+                      <td><b>Harga Satuan</b>
+                      : <?=format_rp($produk->harga_satuan) ?></td>
                     </tr>
                     <tr>
-                      <td><b>Berat Satuan</td>
-                      <td>: <?= $produk->berat_satuan ?></td>
+                      <td><b>Berat Satuan</b>
+                      : <?= $produk->berat_satuan ?></td>
                     </tr>
                     <tr>
-                      <td><b>Keterangan</td>
-                      <td >: <?= $produk->keterangan ?></td>
+                      <td><b>Keterangan</b>
+                      : <?= $produk->keterangan ?></td>
                     </tr>
                     <tr>
-                      <td><b>Penjelasan Produk</td>
-                      <td>: <?= $produk->penjelasan_produk ?></td>
+                      <td><b>Penjelasan Produk</b>
+                      : <?= $produk->penjelasan_produk ?></td>
                     </tr>
                     <tr>
-                      <td><b>Komposisi</td>
-                      <td >: <?= $produk->komposisi ?></td>
+                      <td><b>Komposisi</b>
+                      : <?= $produk->komposisi ?></td>
                     </tr>
                   </table>
           </div>
