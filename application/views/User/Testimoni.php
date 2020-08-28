@@ -85,7 +85,7 @@ $perssatu = ($satu/$count)*100;
                <input required name="pesan_testi" type="text" class="form-control" id="inputTesti" placeholder="Masukkan Testimoni">
              </div>
            </div><br>
-           <div class="text-center  rating">
+           <div class="rating justify-content-center">
              <input type="radio" name="star" id="star<?=1?>"   value="5"><label for="star1"></label>
              <input type="radio" name="star" id="star<?=2?>"  value="4"><label for="star2"></label>
              <input checked type="radio" name="star" id="star<?=3?>"  value="3"><label for="star3"></label>

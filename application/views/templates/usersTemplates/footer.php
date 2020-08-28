@@ -27,7 +27,7 @@
               </div>
             </div>
           </div>
-
+<div class="col-lg-2"></div>
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Menu Pintasan</h4>
             <ul>
@@ -38,7 +38,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url("testimoni")?>">Testimoni</a></li>
             </ul>
           </div>
-
+<div class="col-md-1"></div>
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Pemerintah Daerah Kabupaten Lima Puluh Kota</h4>
             <p>Kampung Wisata Saribu Gonjong Smart Brand Kabupaten Lima Puluh Kota</p>

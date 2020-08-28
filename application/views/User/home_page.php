@@ -86,7 +86,7 @@
                               <div class="col-md-4"  >
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-center ">
-                                    <img class="rounded-circle m-2 shadow w-auto h-100" style="z-index:-10; min-height:200px; max-height:200px" src="<?= base_url("$event->gambar") ?>" alt="gambar event"   />
+                                    <img class="rounded-circle m-2 shadow " style="z-index:-10; width:300px; min-height:200px; max-height:200px" src="<?= base_url("$event->gambar") ?>" alt="gambar event"   />
                                   </div>
                                   <a href="<?= base_url("event?id_event=$event->id_event") ?>" class="btn-info">
                                     <div class="text-center">
@@ -103,14 +103,7 @@
                           </div>
                         </div>
                       </div>
-                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
+                      
                     </div>
                     <!-- </div>   -->
                     <!-- </div> -->

@@ -71,7 +71,7 @@
 <body style="background-image:url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fdjawanews.com%2Fteknologi%2Fcara-membuat-background-di-photoshop%2F&psig=AOvVaw06ru5vVaPIB9ztqQVGC_LB&ust=1598429015777000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPil_N7ytesCFQAAAAAdAAAAABAD');">
   <!-- ======= Header ======= -->
   <!-- headertop -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="fixed-top " style="padding-top: 12px;">
     <div class="header_top">
       <div id="topheader" class="container">
         <div class="row">
