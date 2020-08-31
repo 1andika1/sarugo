@@ -51,7 +51,7 @@
         <div class="col-lg-12 position-sticky  ">
           <article id="event" class="entry entry-single  shadow  rounded">
             <div class="sidebar mb-0 shadow-none bg-white ">
-              <h2 class="entry-title text-center">Event Sarugo</h2>
+              <h2 class="entry-title text-center">Event Terkini Sarugo</h2>
               <!-- <div class="sidebar-item recent-posts"> -->
               <section id="hero bg-white">
                 <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
