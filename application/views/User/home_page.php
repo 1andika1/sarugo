@@ -211,7 +211,8 @@
 
               <!-- ======= Static Page Section ======= -->
               <article class="entry entry-single shadow p-3 mb-5 bg-white rounded">
-                <div class="container display1 mb-3">
+                <div class="container display1">
+                  <br>
                   <h2 id="tengah" class="entry-title text-center"> <?= $halStatis->judul ?></h2>
                   <br>
                 </div>
@@ -225,7 +226,7 @@
                   </div>
                 </div>
 
-                <div class="container mt-5">
+                <div class="container ">
                   <p>&emsp;&emsp;
                     <?= $halStatis->isi ?>
                   </p>
