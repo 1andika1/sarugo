@@ -17,9 +17,15 @@
              </div>
              <div class="row">
                  <div class="col-lg-12">
-                     <div class="row m-t-25">
+                     <div class="row m-t-15">
                          <div class="col-sm-6 col-lg-3">
-                             <div class="overview-item overview-item--c2">
+                            
+                         </div>
+
+                     </div>
+                     <div class="au-card recent-report">
+                         <div class="au-card-inner">
+                              <div class="overview-item overview-item--c2"style="padding-bottom: 30px;">
                                  <div class="overview__inner">
                                      <div class="overview-box clearfix">
                                          <div class="icon">
@@ -27,7 +33,7 @@
                                          </div>
                                          <div class="text">
                                               <h2><?= $data ?></h2>
-                                             <span>Admin Aktif</span>
+                                             <span>Admin Terdaftar</span>
                                          </div>
                                      </div>
                                      <!--<div class="overview-chart">
@@ -35,12 +41,7 @@
                                         </div>-->
                                  </div>
                              </div>
-                         </div>
-
-                     </div>
-                     <div class="au-card recent-report">
-                         <div class="au-card-inner">
-                             <img style="width:200%;" src="<?= base_url() ?>assets/images/SRG.jpg">
+                             <img style="width:200%;" src="<?= base_url() ?>assets/images/13.png">
                              <!--<h3 class="title-2">recent reports</h3>
                                         <div class="chart-info">
                                             <div class="chart-info__left">

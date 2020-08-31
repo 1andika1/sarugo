@@ -37,11 +37,11 @@
 
 </head>
 
-<body class="animsition">
-    <div class="page-wrapper">
-        <div class="page-content--bge5">
+<body class="animsition" >
+    <div class="page-wrapper" style="padding-bottom: 0px; ";>
+        <div class="page-content--bge5" style="background-image: url('assets/images/6.png')">
             <div class="container">
-                <div class="login-wrap">
+                <div class="login-wrap" style="padding-top: 100px;">
                     <?php
 
                     if ($this->session->flashdata('message_name')) {

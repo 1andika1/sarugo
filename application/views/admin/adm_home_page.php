@@ -11,7 +11,7 @@
 
                  </div>
              </div>
-             <div class="row m-t-25">
+             <div class="row m-t-35">
                  <div class="col-sm-6 col-lg-3">
                  </div>
              </div>
@@ -19,7 +19,7 @@
                  <div class="col-lg-12">
                      <div class="au-card recent-report">
                          <div class="au-card-inner">
-                             <img style="width:200%;" src="<?= base_url() ?>assets/images/SRG.jpg">
+                             <img style="width:200%;" src="<?= base_url() ?>assets/images/18.png">
                              <!--<h3 class="title-2">recent reports</h3>
                                         <div class="chart-info">
                                             <div class="chart-info__left">
