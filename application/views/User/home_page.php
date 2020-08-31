@@ -86,11 +86,11 @@
                               <div class="col-md-4"  >
                                 <div class="full blog_img_popular">
                                   <div class="row justify-content-center ">
-                                    <img class="rounded-circle m-2 shadow " style="z-index:-10; width:300px; min-height:200px; max-height:200px" src="<?= base_url("$event->gambar") ?>" alt="gambar event"   />
+                                    <img class="rounded-circle m-2 shadow " style="z-index:-10; min-width:300px; max-width:300px; height:200px;" src="<?= base_url("$event->gambar") ?>" alt="gambar event"   />
                                   </div>
                                   <a href="<?= base_url("event?id_event=$event->id_event") ?>" class="btn-info">
-                                    <div class="text-center">
-                                    <span class="btn btn-danger"><?= $event->nama_event ?></span>
+                                    <div class="text-center" >
+                                    <span class="btn btn-danger" style="width:100%;"><?= $event->nama_event ?></span>
                                     </div>
                                   </a>
                                 </div>
@@ -110,10 +110,11 @@
                   </div>
                 </div>
               </section>
-                  
+              <div class="entry-footer clearfix">
                   <div class="row d-flex justify-content-center">
-                    <a href="<?= base_url("event")?>" class="btn btn-success"><b>Event Lainnya</b></a>  
+                    <a href="<?= base_url("event")?>"><b><i class="icofont-tasks-alt"></i> Lihat Event Lainnya</b></a>  
                   </div>
+              </div>
               <!-- </div>  -->
             </div>
         </div>

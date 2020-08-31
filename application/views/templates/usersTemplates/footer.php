@@ -53,7 +53,7 @@
         &copy; 2020<strong><span> SARUGO</span></strong>
       </div>
       <div class="credits">
-      Designed by <a href="https://kominfo.limapuluhkotakab.go.id/">Diskominfo Kabupaten Lima Puluh Kota</a>
+      Designed by <img src="https://limapuluhkotakab.go.id/assets/images/logokominfo.png" style="width: 25px; margin-bottom: 1px"> <a href="https://kominfo.limapuluhkotakab.go.id/"> Diskominfo Kabupaten Lima Puluh Kota</a>
       </div>
     </div>
   </footer>

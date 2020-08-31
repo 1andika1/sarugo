@@ -3,7 +3,7 @@
                    <div class="col-md-3"></div>
                         <div class="col-md-8">
                             <div class="copyright">
-                                <p>©2019. SARUGO by Diskominfo Kab. Lima Puluh Kota </p>
+                            <p>©2020. <b>SARUGO</b> by <img src="https://limapuluhkotakab.go.id/assets/images/logokominfo.png" style="width: 25px; margin-bottom: 1px"> <a href="https://kominfo.limapuluhkotakab.go.id/"> Diskominfo Kabupaten Lima Puluh Kota</a> </p>
                             </div>
                         </div>
                     </div>
