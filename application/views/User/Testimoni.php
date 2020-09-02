@@ -59,7 +59,7 @@ $perssatu = ($satu/$count)*100;
      <div class="row justify-content-md-center">
 
        <div class="text-center card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
-           <span class="heading">Form Testimoni</span> 
+           <span class="heading"><p>Form Testimoni</p></span> 
          <form method="post" action="<?= base_url("testimoni/add") ?>" style="padding-right: 10px; padding-bottom: 10px;">
            <div class="form-group row" style="padding-top: 10px; padding-left: 5px; padding-right: 5px;">
              <label for="inputNama" class="col-sm-4 col-form-label">Nama</label>
@@ -85,14 +85,14 @@ $perssatu = ($satu/$count)*100;
                <input required name="pesan_testi" type="text" class="form-control" id="inputTesti" placeholder="Masukkan Testimoni">
              </div>
            </div><br>
-           <div class="rating justify-content-center">
+           <div class="rating float-center">
              <input type="radio" name="star" id="star<?=1?>"   value="5"><label for="star1"></label>
              <input type="radio" name="star" id="star<?=2?>"  value="4"><label for="star2"></label>
              <input checked type="radio" name="star" id="star<?=3?>"  value="3"><label for="star3"></label>
              <input type="radio" name="star" id="star<?=4?>"  value="2"><label for="star4"></label>
              <input type="radio" name="star" id="star<?=5?>"  value="1"><label for="star5"></label>
            </div>
-           <div class="row">
+           <div class="row" >
              <div class="col-6 col-md-4"></div>
              <div class="col-6 col-md-4"><button id=" " type="submit" class="btn btn-success float-center" style=" padding-right: 10px; ">Kirim Testimoni</button></div>
              <div class="col-6 col-md-4"></div>
@@ -102,22 +102,23 @@ $perssatu = ($satu/$count)*100;
        </div>
 
 
-       <div id="kotakTestimony" class="card shadow" style="width: 35rem; margin: 20px; padding: 10px;">
+       <div id="kotakTestimony" class="card shadow text-center" style="width: 35rem; margin: 20px; padding: 10px;">
 
          <!-- Add icon library -->
          <link rel="stylesheet" href="<?= base_url() ?>assets/css/rating.css">
 
 
 
-         <span class="heading">Rating Pengunjung</span>
-         <div>
+         <span class="heading " style="margin-right: 0px;" >  <p>Rating Pengunjung</p></span>
+         <div class="text-center">
          <?php for ($rata = 1; $rata <= round($mean); $rata++) : ?> 
                            <big><big> <span class="fa fa-star checked"></span></big></big>
                              
                          <?php endfor  ?>
-         </div>
+         
          <p>Dinilai <b> <?= $mean?> </b> Bintang dari <b><?=$count?></b> Ulasan </p>
          <hr style="border:2px solid #f1f1f1">
+         </div>
 
          <div class="row-center">
            <div class="side">

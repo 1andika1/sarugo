@@ -7,7 +7,7 @@
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
       
-          <video autoplay muted loop id="myVideo"  style=" min-height: 110%; min-width: 100%; right: 0px; bottom: 0px; position: center">
+          <video autoplay muted loop id="myVideo"  style="min-height: 110%; min-width: 100%; right: 0px; bottom: 0px; position: center">
             <source src="https://limapuluhkotakab.go.id/assets/images/iconhome/videopakai.mp4" type="video/mp4" style>
             
           </video>
@@ -42,18 +42,18 @@
   <!-- test halaman berita -->
 
   <!-- ======= Blog Section ======= -->
-  <section id="blog" class="blog">
+  <section id="blog" class="blog" style=" background: #f7f9fa; padding-top:0px; ">
     <div class="container">
       <!-- test -->
       <div class="row">
 
         <!-- <div class="col-md-8"></div> -->
         <div class="col-lg-12 position-sticky  ">
-          <article id="event" class="entry entry-single  shadow  rounded">
-            <div class="sidebar mb-0 shadow-none bg-white ">
-              <h2 class="entry-title text-center">Event Terkini Sarugo</h2>
+          <article id="event" class="entry entry-single  shadow  rounded" style="padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+            <div class="sidebar mb-0 shadow-none bg-white " style="margin-left: 0px;">
+              <h2 class="entry-title text-center" style="margin-top: 20px;">Event Terkini Sarugo</h2>
               <!-- <div class="sidebar-item recent-posts"> -->
-              <section id="hero bg-white">
+              <section id="hero bg-white" style="padding-top: 15px;">
                 <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                   <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
                   <div class="carousel-inner" role="listbox">

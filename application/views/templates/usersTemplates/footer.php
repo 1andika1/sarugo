@@ -1,6 +1,6 @@
  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
+  <footer id="footer" style="padding-bottom: 10px;">
+    <div class="footer-top" style="padding-top: 3p;padding-top: 30px;padding-bottom: 0px;">
       <div class="container">
         <div class="row">
 
@@ -49,10 +49,10 @@
       </div>
     </div> 
     <div class="container">
-      <div class="copyright">
+      <div class="copyright" style="padding-top: 10px;">
         &copy; 2020<strong><span> SARUGO</span></strong>
       </div>
-      <div class="credits">
+      <div class="credits" style="padding-top: 0px;">
       Designed by <img src="https://limapuluhkotakab.go.id/assets/images/logokominfo.png" style="width: 25px; margin-bottom: 1px"> <a href="https://kominfo.limapuluhkotakab.go.id/"> Diskominfo Kabupaten Lima Puluh Kota</a>
       </div>
     </div>
