@@ -79,12 +79,12 @@
             <div class="full">
               <div class="topbar-left">
                 <ul class="list-inline">
-                  <li> <span class="topbar-label"><i class="bx bxl-home"></i></span> <span class="topbar-hightlight">Website Resmi Kampung Wisata Saribu Gonjong</span> </li>
+                  <li>  <span class="topbar-hightlight">Website Resmi Kampung Wisata Saribu Gonjong</span> </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-4 col-sm-4 float-right right_section_header_top">
+          <div style="padding-left: 25%;">
             <div class="topbar-right">
               <div class="social_icon">
                 <ul class="list-inline">
@@ -100,7 +100,7 @@
       </div>
     </div>
     <!-- end headertop -->
-    <div class="container d-flex align-items-center">
+    <div class="container d-flex align-items-center" style="padding-left: 5px;">
 
       <nav class="logo"><a href="<?=base_url()?>"><img src="<?=base_url()?>assets/images/publik-sarugo.png" alt="logo" /></a></nav>
      
