@@ -11,7 +11,7 @@
             </div>
         </div>
     </section><!-- End Breadcrumbs -->
-    <section id="blog" class="blog">
+    <section id="blog" class="blog" style="background: white;">
         <div class="container">
             <div class="row">
                 <?php foreach ($dataWisata as $key => $wisata) : ?>
